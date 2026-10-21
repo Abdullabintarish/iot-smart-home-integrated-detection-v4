@@ -1,0 +1,15 @@
+{
+  "metrics": "fig_metrics_comparison.png",
+  "per_class": "fig_per_class_f1.png",
+  "funnel": "fig_alert_reduction.png",
+  "by_dataset": "fig_alert_reduction_by_dataset.png",
+  "confusion": [
+    "fig_confusion_fragmented.png",
+    "fig_confusion_integrated.png"
+  ],
+  "importance": [
+    "fig_importance_integrated.png"
+  ],
+  "terminal_run": "fig_terminal_run.png",
+  "terminal_stage1": "fig_terminal_stage1.png"
+}

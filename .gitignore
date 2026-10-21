@@ -1,0 +1,8 @@
+# Datasets (third-party, ~1.2 GB) and data derived from them - see README.txt section 3
+code/data/
+
+# Virtual environments and caches
+.venv/
+__pycache__/
+*.pyc
+code/demo/cache/

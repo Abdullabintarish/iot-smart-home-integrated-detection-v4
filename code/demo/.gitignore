@@ -1,0 +1,4 @@
+# derived / local only
+.venv/
+cache/
+__pycache__/

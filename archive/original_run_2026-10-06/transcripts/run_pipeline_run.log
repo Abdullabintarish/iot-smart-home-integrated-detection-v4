@@ -1,0 +1,54 @@
+START 2026-10-06T08:07:00+03:00
+==> Stage 1: collecting from data/raw_combined
+found 13 source file(s) under data/raw_combined
+
+  CTU-Honeypot-Capture-4-1                       zeek        452 rows label=unknown      0.3s
+  CTU-Honeypot-Capture-5-1                       zeek      1,374 rows label=unknown      0.1s
+  CTU-IoT-Malware-Capture-1-1                    zeek  1,008,748 rows label=unknown     34.5s
+  CTU-IoT-Malware-Capture-20-1                   zeek      3,209 rows label=unknown      0.1s
+  CTU-IoT-Malware-Capture-21-1                   zeek      3,286 rows label=unknown      0.2s
+  CTU-IoT-Malware-Capture-3-1                    zeek    156,103 rows label=unknown      4.0s
+  CTU-IoT-Malware-Capture-34-1                   zeek     23,145 rows label=unknown      0.9s
+  CTU-IoT-Malware-Capture-42-1                   zeek      4,426 rows label=unknown      0.2s
+  CTU-IoT-Malware-Capture-44-1                   zeek        237 rows label=unknown      0.1s
+  CTU-IoT-Malware-Capture-8-1                    zeek     10,403 rows label=unknown      0.3s
+  data_1                                         csv   1,000,000 rows label=unknown     12.9s
+  data_10                                        csv   1,000,000 rows label=unknown     12.4s
+  data_36                                        csv   1,000,000 rows label=unknown     12.3s
+
+total 4,211,383 rows staged in 26 shard(s)
+peak RSS 609 MB
+==> Stages 2-5: preprocess, correlate, detect, evaluate
+[08:08:33] STAGE 2 - preprocessing and log normalisation
+[08:09:41]   kept 28 features, dropped 0 in 68.7s
+[08:09:41]   strongest: sport=1.000, dport=1.000, duration=1.000, fwd_bytes=1.000, bwd_bytes=1.000, missed_bytes=1.000, fwd_pkts=1.000, fwd_ip_bytes=1.000
+[08:09:41] STAGE 3 - event correlation and information integration
+[08:10:29]   mean alert reduction 0.8054 in 47.7s
+[08:10:29] sampling evaluation events (streamed, stratified)
+[08:10:35]   170,967 events across 13 source(s)
+[08:10:35] STAGE 4a - BASELINE fragmented monitoring (one isolated model per source)
+[08:17:56]   accuracy=0.9989 f1=0.9991 fpr=0.0000 sources=13 (441.1s)
+[08:17:56] STAGE 4b - INTEGRATED framework (one model over correlated incidents)
+[08:19:51]   accuracy=0.9369 f1=0.8110 fpr=0.0444 (114.3s)
+[08:19:51] STAGE 5 - risk mitigation assessment
+
+Stage 5 - Cybersecurity Risk Mitigation Summary
+============================================================
+Detection accuracy : 0.9989 -> 0.9369 (-6.19 pp)
+F1 (macro)        : 0.9991 -> 0.8110 (-18.81 pp)
+False-positive rate: 0.0000 -> 0.0444 (+4.44 pp)
+Alert reduction   : 0.8328 (4211383 alerts -> 704187 incidents)
+Baseline  train 52.2055s on 30 features
+Integrated train 15.7712s on 8 features
+[08:19:56] TOTAL 683.1s  peak RSS 1600 MB
+==> Report + screenshots
+report written: /home/n3o/hwork/results/report/REPORT.md
+  fig_alert_reduction.png  29,954 bytes
+  fig_confusion_fragmented.png  39,656 bytes
+  fig_confusion_integrated.png  44,133 bytes
+  fig_importance_integrated.png  34,684 bytes
+  fig_metrics_comparison.png  45,413 bytes
+  fig_terminal_run.png  456,689 bytes
+  fig_terminal_stage1.png  344,117 bytes
+EXIT_CODE=0
+END 2026-10-06T08:20:19+03:00

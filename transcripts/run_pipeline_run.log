@@ -1,0 +1,45 @@
+# start 2026-10-16 08:48:24 UTC: python run_pipeline.py
+[12:48:25] STAGE 2 - preprocessing and log normalisation
+[12:49:44]   kept 20 features, dropped 6 in 79.2s
+[12:49:44]   strongest: max=0.345, mean=0.331, stddev=0.253, min=0.230, sport=0.164, rate=0.130, dport=0.110, duration=0.106
+[12:49:44] STAGE 3 - event correlation and information integration
+[12:51:16]   4,211,383 events -> 704,090 incidents, alert reduction 0.8328 in 92.2s
+[12:51:16] STAGE 4 - detection: both conditions on the same held-out test events
+[12:51:16]   event features (20): sport, dport, proto, app, duration, conn_state, missed_bytes, history, bwd_pkts, bwd_ip_bytes, bytes, flgs, state, stddev, sum, min, max, rate, srate, drate
+[12:51:16]   incident features (7): n_events, n_sources, n_src_ips, n_dst_ips, span_s, events_per_s, cross_source
+C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[12:53:23]   split: 528,601 train / 175,489 test incidents, 0 mixed; 1,692,332 held-out events
+[12:53:23]   4a BASELINE fragmented (one model per source): accuracy=0.9995 f1=0.9955 fpr=0.0046 fnr=0.0001 cv_f1=0.9992+-0.0003 train=7.2547s predict=2.6276s
+[12:53:23]   4b INTEGRATED (one model over incidents): accuracy=0.9735 f1=0.8341 fpr=0.1021 fnr=0.0034 cv_f1=0.7681+-0.0283 train=1.6999s predict=0.5717s
+[12:53:23]   incident-level (secondary): accuracy=0.9480 f1=0.7017 on 175,489 test incidents
+[12:53:23]   diagnostic pooled_event_model: accuracy=0.9996 f1=0.9944 fpr=0.0039 fnr=0.0001
+[12:53:23]   diagnostic enriched_event_model: accuracy=0.9991 f1=0.9961 fpr=0.0116 fnr=0.0001
+[12:53:23]   stage 4 total 126.5s
+[12:53:23] STAGE 5 - risk mitigation assessment
+[12:53:23]   alert reduction Bot-IoT: 3,000,000 events -> 2,619 incidents (0.9991)
+[12:53:23]   alert reduction IoT-23: 1,211,383 events -> 701,471 incidents (0.4209)
+[12:53:27]   robustness (incidents <= 10,000 events; 1,329,297 events in 7 incidents excluded): f1 fragmented=0.9755 integrated=0.6472
+[12:53:27]   incident majority vote (175,489 incidents): f1 fragmented=0.9504 integrated=0.7017
+[12:53:33]   clustered bootstrap (1000 reps, percentile CI, not a significance test): macro F1 difference -0.1614 [-0.2055, -0.1280] in 10.4s
+
+Stage 5 - Cybersecurity Risk Mitigation Summary
+============================================================
+Held-out events   : 1692332 (identical set for both conditions)
+Detection accuracy : 0.9995 -> 0.9735 (-2.60 pp)
+F1 (macro)        : 0.9955 -> 0.8341 (-16.14 pp)
+False-positive rate: 0.0046 -> 0.1021 (+9.75 pp)
+False-negative rate: 0.0001 -> 0.0034 (+0.33 pp)
+Alert reduction   : 0.8328 (4211383 alerts -> 704090 incidents)
+Baseline  train 7.2547s on 20 features
+Integrated train 1.6999s on 7 features
+[12:53:36] TOTAL 311.1s  peak RSS 3819 MB
+# end 2026-10-16 08:53:36 UTC: exit 0, runtime 312.4s

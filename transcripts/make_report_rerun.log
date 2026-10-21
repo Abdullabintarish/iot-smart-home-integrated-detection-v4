@@ -1,0 +1,11 @@
+﻿# rerun 2026-10-16 09:05:28Z: make_report.py only, after cosmetic fixes to pipeline\reporting.py (sha256 F1E8ADA8BB5CBAEE9B097128043C4311289DC56F05422344BE7F346546B3C4CB); experiment outputs unchanged
+report written: C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\results\report\REPORT.md
+  fig_alert_reduction.png  26,155 bytes
+  fig_alert_reduction_by_dataset.png  41,165 bytes
+  fig_confusion_fragmented.png  56,811 bytes
+  fig_confusion_integrated.png  64,000 bytes
+  fig_importance_integrated.png  28,710 bytes
+  fig_metrics_comparison.png  44,900 bytes
+  fig_per_class_f1.png  33,806 bytes
+  fig_terminal_run.png  571,851 bytes
+  fig_terminal_stage1.png  195,337 bytes

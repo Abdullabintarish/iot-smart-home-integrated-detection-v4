@@ -1,0 +1,14 @@
+# Research Demonstration Lab - separate environment (demo/.venv).
+# Never install this into ../.venv (the verified research environment).
+#
+#   py -3.15 -m venv .venv                       (from the demo folder)
+#   .venv\Scripts\python.exe -m pip install -r requirements-demo.txt
+#
+# The research pins are reused unchanged so the saved model loads with the
+# same scikit-learn / numpy / pandas / pyarrow versions it was trained with.
+-r ../requirements.txt
+
+# Demo-only packages, resolved and tested on Python 3.15.0 / Windows 11
+# (binary wheels only; full list: .venv\Scripts\python.exe -m pip freeze).
+streamlit==1.66.0
+altair==6.3.0

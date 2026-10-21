@@ -1,0 +1,20 @@
+# start 2026-10-16 08:48:04 UTC: python stage1_collect.py --root data/raw_combined
+found 13 source file(s) under data\raw_combined
+
+  CTU-Honeypot-Capture-4-1                       zeek        452 rows    0.0s  benign=452
+  CTU-Honeypot-Capture-5-1                       zeek      1,374 rows    0.0s  benign=1374
+  CTU-IoT-Malware-Capture-1-1                    zeek  1,008,748 rows    7.4s  recon=539465 benign=469275 c2=8
+  CTU-IoT-Malware-Capture-20-1                   zeek      3,209 rows    0.0s  benign=3193 c2=16
+  CTU-IoT-Malware-Capture-21-1                   zeek      3,286 rows    0.0s  benign=3272 c2=14
+  CTU-IoT-Malware-Capture-3-1                    zeek    156,103 rows    1.2s  recon=145597 malware=5962 benign=4536 c2=8
+  CTU-IoT-Malware-Capture-34-1                   zeek     23,145 rows    0.2s  dos=14394 c2=6706 benign=1923 recon=122
+  CTU-IoT-Malware-Capture-42-1                   zeek      4,426 rows    0.1s  benign=4420 malware=3 c2=3
+  CTU-IoT-Malware-Capture-44-1                   zeek        237 rows    0.0s  benign=211 c2=25 dos=1
+  CTU-IoT-Malware-Capture-8-1                    zeek     10,403 rows    0.1s  c2=8222 benign=2181
+  data_1                                         csv   1,000,000 rows    4.0s  recon=998007 benign=1993
+  data_10                                        csv   1,000,000 rows    3.3s  dos=999970 benign=30
+  data_36                                        csv   1,000,000 rows    3.2s  dos=999969 benign=31
+
+total 4,211,383 rows staged in 26 shard(s)
+peak RSS 556 MB
+# end 2026-10-16 08:48:24 UTC: exit 0, runtime 20s

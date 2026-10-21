@@ -1,0 +1,8 @@
+Stage 5 - Cybersecurity Risk Mitigation Summary
+============================================================
+Detection accuracy : 0.9989 -> 0.9369 (-6.19 pp)
+F1 (macro)        : 0.9991 -> 0.8110 (-18.81 pp)
+False-positive rate: 0.0000 -> 0.0444 (+4.44 pp)
+Alert reduction   : 0.8328 (4211383 alerts -> 704187 incidents)
+Baseline  train 52.2055s on 30 features
+Integrated train 15.7712s on 8 features

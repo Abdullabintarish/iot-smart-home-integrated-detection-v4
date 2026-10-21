@@ -1,0 +1,344 @@
+{
+  "fragmented": {
+    "accuracy": 0.99886951360823,
+    "precision_macro": 0.9993613204991176,
+    "recall_macro": 0.9987894095706263,
+    "f1_macro": 0.9990736949435908,
+    "fpr": 1.884143986283432e-05,
+    "n_samples": 106149,
+    "confusion_matrix": [
+      [
+        22158,
+        2,
+        0,
+        0,
+        115
+      ],
+      [
+        2,
+        3745,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        33599,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1496,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        45031
+      ]
+    ],
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "condition": "fragmented",
+    "n_sources": 13,
+    "n_features": 30,
+    "train_time_s": 52.2055,
+    "sample_time_s": 441.118,
+    "per_source": {
+      "CTU-Honeypot-Capture-4-1": {
+        "n_train": 0,
+        "accuracy": 1.0,
+        "f1_macro": 0.0,
+        "fpr": 0.0,
+        "n_test": 452,
+        "note": "single-class source; no cross-source knowledge available"
+      },
+      "CTU-Honeypot-Capture-5-1": {
+        "n_train": 0,
+        "accuracy": 1.0,
+        "f1_macro": 0.0,
+        "fpr": 0.0,
+        "n_test": 1374,
+        "note": "single-class source; no cross-source knowledge available"
+      },
+      "CTU-IoT-Malware-Capture-1-1": {
+        "n_train": 90006,
+        "n_test": 30002,
+        "accuracy": 0.9950003333111126,
+        "f1_macro": 0.6633554811741842,
+        "fpr": 9.999333377774815e-05,
+        "cv_f1_mean": 0.8193027236526577,
+        "cv_f1_std": 0.13340183415039897
+      },
+      "CTU-IoT-Malware-Capture-20-1": {
+        "n_train": 2406,
+        "n_test": 803,
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "fpr": 0.0,
+        "cv_f1_mean": 0.9856358543417366,
+        "cv_f1_std": 0.028728291316526634
+      },
+      "CTU-IoT-Malware-Capture-21-1": {
+        "n_train": 2464,
+        "n_test": 822,
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "fpr": 0.0,
+        "cv_f1_mean": 0.9655613804261358,
+        "cv_f1_std": 0.04313533459153267
+      },
+      "CTU-IoT-Malware-Capture-3-1": {
+        "n_train": 52879,
+        "n_test": 17627,
+        "accuracy": 0.9998865376978499,
+        "f1_macro": 0.7498060110569265,
+        "fpr": 5.6731151075055314e-05,
+        "cv_f1_mean": 0.9165609568365178,
+        "cv_f1_std": 0.09133742547743547
+      },
+      "CTU-IoT-Malware-Capture-34-1": {
+        "n_train": 17358,
+        "n_test": 5787,
+        "accuracy": 0.9998271988940729,
+        "f1_macro": 0.9955031064646145,
+        "fpr": 0.00017280110592707794,
+        "cv_f1_mean": 0.9978422261274055,
+        "cv_f1_std": 0.0026474093464171305
+      },
+      "CTU-IoT-Malware-Capture-42-1": {
+        "n_train": 3319,
+        "n_test": 1107,
+        "accuracy": 0.999096657633243,
+        "f1_macro": 0.8997736532367587,
+        "fpr": 0.0,
+        "cv_f1_mean": 1.0,
+        "cv_f1_std": 0.0
+      },
+      "CTU-IoT-Malware-Capture-44-1": {
+        "n_train": 177,
+        "n_test": 59,
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "fpr": 0.0,
+        "cv_f1_mean": 0.9896729776247849,
+        "cv_f1_std": 0.02065404475043029,
+        "cv_excluded_classes": [
+          "dos"
+        ]
+      },
+      "CTU-IoT-Malware-Capture-8-1": {
+        "n_train": 7802,
+        "n_test": 2601,
+        "accuracy": 0.9996155324875048,
+        "f1_macro": 0.9994192974101468,
+        "fpr": 0.0,
+        "cv_f1_mean": 0.9997093246689726,
+        "cv_f1_std": 0.0005813506620549802
+      },
+      "data_1": {
+        "n_train": 46494,
+        "n_test": 15499,
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "fpr": 0.0,
+        "cv_f1_mean": 1.0,
+        "cv_f1_std": 0.0
+      },
+      "data_10": {
+        "n_train": 45022,
+        "n_test": 15008,
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "fpr": 0.0,
+        "cv_f1_mean": 1.0,
+        "cv_f1_std": 0.0
+      },
+      "data_36": {
+        "n_train": 45023,
+        "n_test": 15008,
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "fpr": 0.0,
+        "cv_f1_mean": 0.9923035258146296,
+        "cv_f1_std": 0.015392948370740943
+      }
+    },
+    "cv_f1_mean": 0.9323134522981524,
+    "cv_f1_std": 0.07749081107436097,
+    "cv_n_sources": 11
+  },
+  "integrated": {
+    "condition": "integrated",
+    "n_features": 8,
+    "n_train": 90855,
+    "n_test": 30285,
+    "sample_time_s": 0.2229,
+    "train_time_s": 15.7712,
+    "predict_time_s": 0.380881,
+    "classes_seen": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "feature_importance": [
+      {
+        "feature": "span_s",
+        "importance": 0.37345563388930203
+      },
+      {
+        "feature": "events_per_s",
+        "importance": 0.3017028614204536
+      },
+      {
+        "feature": "n_events",
+        "importance": 0.29345313826040687
+      },
+      {
+        "feature": "label_entropy",
+        "importance": 0.03138836642983741
+      },
+      {
+        "feature": "n_dst_ips",
+        "importance": 0.0
+      },
+      {
+        "feature": "n_src_ips",
+        "importance": 0.0
+      },
+      {
+        "feature": "n_sources",
+        "importance": 0.0
+      },
+      {
+        "feature": "cross_source",
+        "importance": 0.0
+      }
+    ],
+    "accuracy": 0.9369324748225194,
+    "precision_macro": 0.8488086254797128,
+    "recall_macro": 0.7834879015950975,
+    "f1_macro": 0.8109635955625537,
+    "fpr": 0.044411424797754666,
+    "n_samples": 30285,
+    "confusion_matrix": [
+      [
+        14474,
+        7,
+        0,
+        2,
+        517
+      ],
+      [
+        3,
+        169,
+        0,
+        5,
+        6
+      ],
+      [
+        10,
+        0,
+        14,
+        0,
+        2
+      ],
+      [
+        26,
+        5,
+        0,
+        44,
+        1
+      ],
+      [
+        1306,
+        8,
+        6,
+        6,
+        13674
+      ]
+    ],
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "cv_f1_mean": 0.820964804172165,
+    "cv_f1_std": 0.01899656036838782,
+    "cv_time_s": 86.9681,
+    "cv_folds": [
+      0.7929,
+      0.825,
+      0.8466,
+      0.8333,
+      0.8071
+    ],
+    "event_propagation": {
+      "accuracy": 0.9997952821304696,
+      "f1_macro": 0.9994261754119036,
+      "fpr": 2.924540993291103e-05,
+      "n_samples": 170967,
+      "note": "agreement between event labels and their incident's majority label; not a held-out detection score"
+    },
+    "event_level": true
+  },
+  "alert_reduction": {
+    "raw_alerts": 4211383,
+    "unified_incidents": 704187,
+    "alert_reduction": 0.8327896085442715,
+    "mean_alerts_per_incident": 5.9804895574613,
+    "cross_source_incidents": 0
+  },
+  "comparison": [
+    {
+      "metric": "accuracy",
+      "fragmented": 0.99886951360823,
+      "integrated": 0.9369324748225194,
+      "improvement": -0.06193703878571055,
+      "direction": "higher_is_better"
+    },
+    {
+      "metric": "precision_macro",
+      "fragmented": 0.9993613204991176,
+      "integrated": 0.8488086254797128,
+      "improvement": -0.15055269501940483,
+      "direction": "higher_is_better"
+    },
+    {
+      "metric": "recall_macro",
+      "fragmented": 0.9987894095706263,
+      "integrated": 0.7834879015950975,
+      "improvement": -0.21530150797552883,
+      "direction": "higher_is_better"
+    },
+    {
+      "metric": "f1_macro",
+      "fragmented": 0.9990736949435908,
+      "integrated": 0.8109635955625537,
+      "improvement": -0.18811009938103707,
+      "direction": "higher_is_better"
+    },
+    {
+      "metric": "fpr",
+      "fragmented": 1.884143986283432e-05,
+      "integrated": 0.044411424797754666,
+      "improvement": -0.044392583357891834,
+      "direction": "lower_is_better"
+    }
+  ]
+}

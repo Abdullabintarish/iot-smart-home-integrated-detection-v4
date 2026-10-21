@@ -1,0 +1,12 @@
+# start 2026-10-16 08:53:36 UTC: python make_report.py --run-log C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\results\transcripts\run_pipeline_run.log --stage1-log C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\results\transcripts\stage1_run.log
+report written: C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\submission\code\results\report\REPORT.md
+  fig_alert_reduction.png  26,155 bytes
+  fig_alert_reduction_by_dataset.png  41,165 bytes
+  fig_confusion_fragmented.png  56,811 bytes
+  fig_confusion_integrated.png  64,000 bytes
+  fig_importance_integrated.png  28,710 bytes
+  fig_metrics_comparison.png  44,900 bytes
+  fig_per_class_f1.png  34,835 bytes
+  fig_terminal_run.png  751,563 bytes
+  fig_terminal_stage1.png  337,784 bytes
+# end 2026-10-16 08:53:40 UTC: exit 0, runtime 3.7s

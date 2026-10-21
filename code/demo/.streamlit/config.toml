@@ -1,0 +1,24 @@
+# Research Demonstration Lab - Streamlit configuration (local use only).
+
+[theme]
+base = "dark"
+primaryColor = "#8fa8c8"          # restrained neutral accent; condition colours are set in ui.py
+backgroundColor = "#0f1318"
+secondaryBackgroundColor = "#171c23"
+textColor = "#e3e6ea"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false          # no telemetry leaves this machine
+
+[server]
+runOnSave = false
+fileWatcherType = "none"
+address = "localhost"             # local only
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = true
+
+[runner]
+fastReruns = true

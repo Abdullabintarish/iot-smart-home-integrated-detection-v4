@@ -1,0 +1,350 @@
+{
+  "timestamp_utc": "2026-10-21T16:28:59+00:00",
+  "host": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "machine": "AMD64",
+    "cpu": "AMD Ryzen 7 7800X3D 8-Core Processor",
+    "cpu_logical_cores": 16,
+    "ram_total_bytes": 33515130880,
+    "ram_total_gib": 31.21
+  },
+  "python": {
+    "version": "3.15.0 (tags/v3.15.0:d220409, Oct  9 2026, 11:55:56) [MSC v.1951 64 bit (AMD64)]",
+    "executable": "C:\\Users\\user\\Desktop\\Thesis_Part2_Report\\Thesis_Part1_Reoprt\\submission\\code\\.venv\\Scripts\\python.exe",
+    "pip_freeze": [
+      "cloudpickle==3.1.2",
+      "contourpy==1.4.0",
+      "cycler==0.12.1",
+      "dpkt==1.9.8",
+      "fonttools==4.67.0",
+      "joblib==1.6.0",
+      "kiwisolver==1.5.1",
+      "matplotlib==3.11.2",
+      "narwhals==2.27.1",
+      "numpy==2.5.3",
+      "packaging==26.3",
+      "pandas==3.0.6",
+      "pillow==12.3.0",
+      "pyarrow==26.0.0",
+      "pyparsing==3.3.3",
+      "python-dateutil==2.9.0.post0",
+      "scikit-learn==1.9.1",
+      "scipy==1.18.1",
+      "six==1.17.0",
+      "threadpoolctl==3.7.0",
+      "tzdata==2026.5"
+    ]
+  },
+  "code": {
+    "version_control": "no git repository; the code version is identified by the snapshot id below",
+    "snapshot_id": "90e07320679e80d07cf6a5a4d12b239156003c667f4bebb23a5224305558c24d",
+    "snapshot_id_definition": "SHA-256 of the newline-joined, sorted list of per-file SHA-256 hex digests",
+    "files": {
+      "check_sources.py": "6a78826d424cb71af0370d6d60e8781a480d493cd791242f705e5fd99e4e9f7a",
+      "make_report.py": "d13c15e64dc31174ef00d25ec78726d6ea8450c89ac8c85e6c15fc75778909db",
+      "pipeline/__init__.py": "f2a8bbfdccc9341a1119396628a41c4367dc3abd4a3acbaef09867f266689609",
+      "pipeline/config.py": "4e91c06efe80a1bd6bd6aa1963c5a3e34aba07546b5d2ec24f64faf9431ec7ad",
+      "pipeline/correlate.py": "6ce513898290770b681fdc31d713c784ce71cf3444a95ccb39b5b63e8386d83f",
+      "pipeline/detect.py": "1b3e8e0ea830205ad774f3952b63909c56d59759429026270ed1dedb8a48eef2",
+      "pipeline/evaluate.py": "584b033a2c09d8b92b08b5bf4ee4c7e7293280a843984bac9a658db5042a44a8",
+      "pipeline/ingest.py": "1036bce5a40023e6aeb0e027e3dacef26d3e9746a27dadf4ea612483a73210eb",
+      "pipeline/io_utils.py": "dade744bd5ed57f217fe04d1148098e942b69779e76ce9c557c6cda603fca441",
+      "pipeline/preprocess.py": "b5ce52840a0f15b25ccd44faf0e8bb2c421e3fc6e7b622e86e2d89364b15142e",
+      "pipeline/reporting.py": "f1e8ada8bb5cbaee9b097128043c4311289dc56f05422344be7f346546b3c4cb",
+      "probe_botiot.py": "ba07e2533c2d67a547c27658e3128cdb4f457325e8a178d47debdf66ce112b01",
+      "record_run_info.py": "e843a06fa47f5ede66e950cbd2d6b433d95ed3574a2457df4088a8d01d80582c",
+      "requirements.txt": "6b554551f013134029ab01d58cc9fd53d5abcf46fb74a54022a0437c18c2c0e9",
+      "run_all.ps1": "51f05bbea1c5bd1ca10858873bdeff88a4397ec80ae1e75433f12b3216852efe",
+      "run_all.sh": "d1ea6a0881ef6d93ed0bc44f208c0024bfe243d3ad8a9f30a5501aa04af66a45",
+      "run_pipeline.py": "12d2ac932c8b1c279a1a2d1787124606b7eaf7529240cb303993910c4338ca00",
+      "stage1_collect.py": "9548e7edc3ec893062631b235b54bdde779d1ee6184128ed649c8032e3bc81ae"
+    }
+  },
+  "datasets": {
+    "root": "raw_combined",
+    "files": [
+      {
+        "path": "raw_combined/CTU-Honeypot-Capture-4-1/bro/conn.log.labeled",
+        "bytes": 61653,
+        "sha256": "aebe40ea0e03b120265a5c7bc140dd9b0d3fe2fce65559e84776b7dd5360e71e",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-Honeypot-Capture-4-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-Honeypot-Capture-4-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-Honeypot-Capture-5-1/bro/conn.log.labeled",
+        "bytes": 182147,
+        "sha256": "f36db06e7d6ba7364e932a5b003f75835e004b320d70019e8a2f0ba8685d9262",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-Honeypot-Capture-5-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-Honeypot-Capture-5-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-IoT-Malware-Capture-1-1/bro/conn.log.labeled",
+        "bytes": 148305428,
+        "sha256": "953e8c27a9b2fcfc2776aa136baf9249e6dde4cf752b9192ac7ca0e63b86e232",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-IoT-Malware-Capture-1-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-1-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-IoT-Malware-Capture-20-1/bro/conn.log.labeled",
+        "bytes": 419604,
+        "sha256": "ef48ad72f65efd13d517223e61e4d877ba53a082ddb8159324b18d3f310d0711",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-IoT-Malware-Capture-20-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-20-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-IoT-Malware-Capture-21-1/bro/conn.log.labeled",
+        "bytes": 428943,
+        "sha256": "b63db259aead078f50fc150aa97ace4d1f69576e1245334962759d978ce437eb",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-IoT-Malware-Capture-21-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-21-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-IoT-Malware-Capture-3-1/bro/conn.log.labeled",
+        "bytes": 24383537,
+        "sha256": "9851009bbca03e15089fa1a356dd4b5eee4a98161a51703626058a0b507f50d0",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-IoT-Malware-Capture-3-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-3-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-IoT-Malware-Capture-34-1/bro/conn.log.labeled",
+        "bytes": 2926718,
+        "sha256": "d69e49b2aae8c1bd33286936531658202dec47d989f0439bad3f8be180467a6e",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-IoT-Malware-Capture-34-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-34-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-IoT-Malware-Capture-42-1/bro/conn.log.labeled",
+        "bytes": 585829,
+        "sha256": "269fa1b22d9a37e159cf41b81a213a0032d21306f5d39b4c20cb0d211b04e8aa",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-IoT-Malware-Capture-42-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-42-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-IoT-Malware-Capture-44-1/bro/conn.log.labeled",
+        "bytes": 31179,
+        "sha256": "12cd99bcda78140dd5f31cf3d786642f150e42e0ebc3599190f35314e406f71f",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-IoT-Malware-Capture-44-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-44-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/CTU-IoT-Malware-Capture-8-1/bro/conn.log.labeled",
+        "bytes": 1431000,
+        "sha256": "4877ca8f0f01902fbd18d28b7d06cb3d0be082355b7f2c8862c9deef1782eb8a",
+        "provenance": {
+          "dataset": "IoT-23",
+          "capture": "CTU-IoT-Malware-Capture-8-1",
+          "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-8-1/bro/conn.log.labeled"
+        }
+      },
+      {
+        "path": "raw_combined/data_1.csv",
+        "bytes": 218326470,
+        "sha256": "119b2b2f92db5ea5537663579e8f080ede15537958ced198c24c8c04dd860570",
+        "provenance": {
+          "dataset": "Bot-IoT",
+          "file": "data_1.csv",
+          "source": "Kaggle dataset vigneshvenkateswaran/bot-iot"
+        }
+      },
+      {
+        "path": "raw_combined/data_10.csv",
+        "bytes": 203190430,
+        "sha256": "0c852ecc50cf038aa30273e7426ae06b9721494c92245e4f4185eb649a2cf9cb",
+        "provenance": {
+          "dataset": "Bot-IoT",
+          "file": "data_10.csv",
+          "source": "Kaggle dataset vigneshvenkateswaran/bot-iot"
+        }
+      },
+      {
+        "path": "raw_combined/data_36.csv",
+        "bytes": 208600538,
+        "sha256": "e3e215bce9f247a72c44f1674afbec566b7d220a313af0fb15dcc206a06de1aa",
+        "provenance": {
+          "dataset": "Bot-IoT",
+          "file": "data_36.csv",
+          "source": "Kaggle dataset vigneshvenkateswaran/bot-iot"
+        }
+      }
+    ],
+    "note": "raw files are read-only evidence; hashes taken before Stage 1"
+  },
+  "config": {
+    "pipeline.config": {
+      "ROOT": "C:\\Users\\user\\Desktop\\Thesis_Part2_Report\\Thesis_Part1_Reoprt\\submission\\code",
+      "DATA_RAW": "C:\\Users\\user\\Desktop\\Thesis_Part2_Report\\Thesis_Part1_Reoprt\\submission\\code\\data\\raw",
+      "DATA_INT": "C:\\Users\\user\\Desktop\\Thesis_Part2_Report\\Thesis_Part1_Reoprt\\submission\\code\\data\\interim",
+      "DATA_OUT": "C:\\Users\\user\\Desktop\\Thesis_Part2_Report\\Thesis_Part1_Reoprt\\submission\\code\\data\\processed",
+      "RESULTS": "C:\\Users\\user\\Desktop\\Thesis_Part2_Report\\Thesis_Part1_Reoprt\\submission\\code\\results",
+      "MODELS": "C:\\Users\\user\\Desktop\\Thesis_Part2_Report\\Thesis_Part1_Reoprt\\submission\\code\\models",
+      "IOT23_DEFAULT_LABELS": {
+        "mirai": "malware",
+        "torii": "malware",
+        "hakai": "malware",
+        "okiru": "malware",
+        "mozi": "malware",
+        "censys": "recon",
+        "scan": "recon",
+        "brute": "bruteforce",
+        "dns": "c2",
+        "c2": "c2",
+        "http": "benign",
+        "benign": "benign",
+        "ssh": "benign",
+        "telnet": "benign",
+        "iot23": "benign"
+      },
+      "BOTIOT_SCENARIOS": [
+        "DDoS",
+        "DoS",
+        "Recon"
+      ],
+      "CLASSES": [
+        "benign",
+        "c2",
+        "malware",
+        "botnet",
+        "dos",
+        "recon",
+        "bruteforce",
+        "theft"
+      ],
+      "LABEL_COLUMN_CANDIDATES": [
+        "label",
+        "Label",
+        "category",
+        "Category",
+        "subcategory",
+        "Subcategory",
+        "attack_type",
+        "attack",
+        "Attack",
+        "class"
+      ],
+      "ID_COLUMNS": [
+        "src_ip",
+        "dst_ip",
+        "label",
+        "source",
+        "ts",
+        "capture",
+        "ts_first",
+        "ts_last",
+        "split"
+      ],
+      "LEAKAGE_COLUMNS": [
+        "ts_first",
+        "ts_last",
+        "ts_end",
+        "attack",
+        "Attack",
+        "pkSeqID",
+        "seq",
+        "smac",
+        "dmac",
+        "soui",
+        "doui",
+        "sco",
+        "dco",
+        "Label",
+        "category",
+        "Category",
+        "subcategory",
+        "Subcategory",
+        "attack_type",
+        "class",
+        "detailed-label",
+        "detailed_label",
+        "det_label"
+      ],
+      "DROP_COLUMNS": [
+        "Flow ID",
+        "Timestamp",
+        "Src IP",
+        "Dst IP",
+        "Src Port",
+        "Dst Port",
+        "Flow Duration",
+        "Total Length of Fwd Packets",
+        "Total Length of Bwd Packets",
+        "Fwd Header Length",
+        "Bwd Header Length",
+        "Flow Bytes/s",
+        "Flow Packets/s"
+      ],
+      "MIN_CORR_WITH_LABEL": 0.05,
+      "VARIANCE_FLOOR": 1e-09,
+      "FEATURE_SELECTION": "redundancy",
+      "REDUNDANCY_THRESHOLD": 0.95,
+      "LOW_VARIANCE_THRESHOLD": 0.0,
+      "MISSING_SENTINEL": -1.0,
+      "TEST_FRACTION": 0.25,
+      "CORRELATION_WINDOW_S": 300,
+      "CORRELATION_RULES": [
+        "R1_pair_proto",
+        "R2_src_proto",
+        "R3_dst_proto"
+      ],
+      "SINGLETON_RULE": "R0_singleton",
+      "CORRELATION_SCOPE": "source",
+      "RANDOM_STATE": 42,
+      "N_SPLITS": 5,
+      "MAX_TREE_DEPTH": 24,
+      "N_ESTIMATORS": 300,
+      "METRICS": [
+        "accuracy",
+        "precision_macro",
+        "recall_macro",
+        "f1_macro",
+        "fpr",
+        "alert_reduction",
+        "processing_time_s"
+      ]
+    },
+    "BUDGET": {
+      "csv_chunksize": 250000,
+      "max_active_flows": 120000,
+      "flush_rows": 200000,
+      "train_budget_per_class": 60000,
+      "eval_budget_per_class": 25000,
+      "n_jobs": 15
+    },
+    "detect.model_config": {
+      "n_estimators": 300,
+      "max_depth": 24,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced_subsample",
+      "bootstrap": true,
+      "random_state": 42,
+      "train_budget_per_class": 60000,
+      "cv_folds": 5
+    }
+  }
+}

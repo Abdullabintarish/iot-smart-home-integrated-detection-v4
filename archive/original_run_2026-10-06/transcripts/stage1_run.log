@@ -1,0 +1,18 @@
+found 13 source file(s) under data/raw_combined
+
+  CTU-Honeypot-Capture-4-1                       zeek        452 rows label=unknown      0.1s
+  CTU-Honeypot-Capture-5-1                       zeek      1,374 rows label=unknown      0.1s
+  CTU-IoT-Malware-Capture-1-1                    zeek  1,008,748 rows label=unknown     26.4s
+  CTU-IoT-Malware-Capture-20-1                   zeek      3,209 rows label=unknown      0.2s
+  CTU-IoT-Malware-Capture-21-1                   zeek      3,286 rows label=unknown      0.2s
+  CTU-IoT-Malware-Capture-3-1                    zeek    156,103 rows label=unknown      4.0s
+  CTU-IoT-Malware-Capture-34-1                   zeek     23,145 rows label=unknown      0.6s
+  CTU-IoT-Malware-Capture-42-1                   zeek      4,426 rows label=unknown      0.2s
+  CTU-IoT-Malware-Capture-44-1                   zeek        237 rows label=unknown      0.0s
+  CTU-IoT-Malware-Capture-8-1                    zeek     10,403 rows label=unknown      0.3s
+  data_1                                         csv   1,000,000 rows label=unknown     12.1s
+  data_10                                        csv   1,000,000 rows label=unknown     11.2s
+  data_36                                        csv   1,000,000 rows label=unknown     12.4s
+
+total 4,211,383 rows staged in 26 shard(s)
+peak RSS 607 MB

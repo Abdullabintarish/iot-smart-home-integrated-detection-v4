@@ -1,0 +1,76 @@
+ARCHIVE NOTE - original run of 2026-10-06 (SUPERSEDED, DO NOT CITE)
+=====================================================================
+
+What this folder is
+-------------------
+This folder holds the submission bundle exactly as it stood before the
+2026-10 code review: README.txt, report\ (REPORT.md and 7 figures),
+metrics\ (stage5_report.json, stage5_summary.txt,
+baseline_vs_integrated.csv), predictions\ (integrated_event_predictions.csv)
+and transcripts\ (2 logs). The files were moved here unchanged on
+2026-10-16. Nothing in this folder was edited.
+
+It is kept for traceability only, so that a reader can see what was
+reported before and why it was replaced.
+
+Status
+------
+The results in this folder are INVALID. They were produced by the original
+pipeline code, which had the defects listed below. None of its numbers (for
+example the macro F1 of 0.9991 for the baseline and 0.8110 for the integrated
+condition, the "FPR 0.0444", or the 704,187 incidents) may be cited as
+results of the thesis experiment.
+
+The verified replacement results are in:
+    submission\metrics\        (copied from submission\code\results\)
+    submission\report\
+    submission\README.txt
+
+Confirmed defects of the original code
+---------------------------------------
+Line references are to the original code, kept unchanged in
+backups\code_before_phase1\pipeline\.
+
+1. label_entropy leakage: Stage 3 computed the entropy of the ground-truth
+   labels inside each incident (correlate.py:88, 115) and it was not
+   excluded from the model inputs (detect.py:36, 82), so the integrated
+   model could see label information.
+2. Bot-IoT category / subcategory leakage: the Bot-IoT attack-description
+   columns category and subcategory were not in the leakage list
+   (config.py:93-95) and were not removed before training, so they reached
+   the models as features. (The binary "attack" column WAS dropped:
+   config.py:93, preprocess.py:55.)
+3. Wrong false-positive-rate formula: both parts were wrong. The numerator
+   fp[benign_idx] (detect.py:114-116) is the column sum of the "benign"
+   prediction minus its diagonal, i.e. the number of ATTACK events
+   predicted as benign (false negatives), not benign events predicted as an
+   attack. The denominator was the number of all test samples
+   (detect.py:117, 126) instead of the number of benign samples. The
+   correct definition is FPR = FP / (FP + TN) over benign events.
+4. Timestamp used as a feature: the raw flow timestamp "ts" was carried
+   through preprocessing (preprocess.py:164-166) and was not in the list of
+   columns excluded from the model inputs (detect.py:36), so it was a model
+   input. This lets a model separate captures and attack phases by
+   recording time rather than by traffic behaviour.
+5. Conditions scored on different test sets: each condition drew its own
+   train/test split (detect.py:149 and detect.py:282) - the fragmented
+   baseline on events, the integrated model on incidents - so the two sets
+   of numbers were not comparable.
+6. Ungrouped train/test splits: the same calls (detect.py:149, 282) split
+   rows at random, stratified by class only, so events of the same incident
+   could fall in both the training and the test data.
+7. Per-chunk normalisation: MinMax scaling used the minimum and maximum of
+   each processing chunk (preprocess.py:153-156) instead of one fitted
+   range, and the categorical vocabulary was taken from the first chunk
+   containing the column (preprocess.py:109-112). Both were fitted on all
+   rows, including test rows.
+8. Broken feature selection: the class label was integer-coded
+   (preprocess.py:74-75) and features were kept by their correlation with
+   these codes (preprocess.py:129-131), which has no meaning for a nominal
+   label; the thesis describes removal of redundant or low-variance
+   features instead.
+
+These defects were corrected in Phases 2 to 5 of the review; code backups of
+each phase are kept, untouched, in
+    C:\Users\user\Desktop\final_thesis_2\Thesis_Part1_Reoprt\backups\
+(code_before_phase1 ... code_phase5_start, results_before_phase5).

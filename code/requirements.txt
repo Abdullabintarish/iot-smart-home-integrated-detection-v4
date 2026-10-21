@@ -1,0 +1,26 @@
+# Runtime dependencies for the pipeline.
+#
+# Verified platform for the reported results (see results/run_manifest.json):
+#   Windows 11 Pro (build 26200), Python 3.15.0 (64-bit, python.org build),
+#   with exactly the versions pinned below (numpy 2.5.3, pandas 3.0.6,
+#   pyarrow 26.0.0, scikit-learn 1.9.1, matplotlib 3.11.2, joblib 1.6.0,
+#   dpkt 1.9.8). The full resolved environment (pip freeze) is recorded in
+#   results/run_manifest.json.
+#
+# Windows (PowerShell), from this folder:
+#   py -3.15 -m venv .venv
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+# Linux/macOS (not re-tested in this revision):
+#   python3 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt
+#
+# pyarrow 26.0.0 is required on Python 3.15 / Windows: pyarrow 25.0.1 has no
+# Windows wheel for Python 3.15. Older pandas (<2.0) does not work with this
+# code.
+
+numpy==2.5.3
+pandas==3.0.6
+pyarrow==26.0.0     # 25.0.1 has no Windows wheel for Python 3.15
+scikit-learn==1.9.1
+matplotlib==3.11.2
+joblib==1.6.0
+dpkt==1.9.8

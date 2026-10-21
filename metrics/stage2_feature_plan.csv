@@ -1,0 +1,41 @@
+feature,role,n_present,missing_frac,global_min,global_max,scaled_variance,abs_corr_with_label,redundant_with,redundancy_r,decision,reason
+sport,numeric,2518641,0.00016275970593693234,0.0,65535.0,0.06407696343290498,0.16391219507226412,,,kept,not redundant
+dport,numeric,2518640,0.000163156680829446,0.0,65535.0,0.0923692834311445,0.10986612015720973,,,kept,not redundant
+proto,categorical,2519051,0.0,,,,,,,kept,5 categories
+app,categorical,912866,0.6376151177566473,,,,,,,kept,7 categories
+duration,numeric,1841667,0.2689044406008453,0.0,93280.030966,1.5075118574177906e-06,0.1061725908516348,,,kept,not redundant
+fwd_bytes,numeric,1841667,0.2689044406008453,0.0,1744830458.0,5.557613237974544e-07,0.005548570232317828,bytes,0.9942960278659109,dropped,redundant: |r| >= 0.95
+bwd_bytes,numeric,1841667,0.2689044406008453,0.0,36958758.0,1.4771459732800178e-05,0.020418693951819174,bwd_pkts,0.9962934359119573,dropped,redundant: |r| >= 0.95
+conn_state,categorical,912866,0.6376151177566473,,,,,,,kept,13 categories
+missed_bytes,numeric,912866,0.6376151177566473,0.0,20272.0,4.486233932432609e-06,0.0019703542586872553,,,kept,not redundant
+history,categorical,912866,0.6376151177566473,,,,,,,kept,200 categories
+fwd_pkts,numeric,2519051,0.0,0.0,1305034.0,4.165722942908386e-07,0.0035235095974625948,bytes,0.9945818836807205,dropped,redundant: |r| >= 0.95
+fwd_ip_bytes,numeric,912866,0.6376151177566473,0.0,1781371410.0,1.0954592739631198e-06,0.00019171326870673697,bytes,0.9999971710943933,dropped,redundant: |r| >= 0.95
+bwd_pkts,numeric,2519051,0.0,0.0,36350.0,1.1195497587012167e-05,0.007429891218453402,,,kept,not redundant
+bwd_ip_bytes,numeric,912866,0.6376151177566473,0.0,3835697.0,1.5837240560616494e-06,0.0004325433802508734,,,kept,not redundant
+pkts,numeric,2519051,0.0,0.0,1305034.0,4.425716352172723e-07,0.00445931340587838,bytes,0.9948969476977885,dropped,redundant: |r| >= 0.95
+bytes,numeric,2519051,0.0,0.0,1744830458.0,4.208612101419927e-07,0.0031235854534850975,,,kept,not redundant
+flgs,categorical,1606185,0.36238488224335275,,,,,,,kept,11 categories
+state,categorical,1606185,0.36238488224335275,,,,,,,kept,10 categories
+mean,numeric,1606185,0.36238488224335275,0.0,4.968881,0.03166068466090654,0.3307889074387836,max,0.9772728796344294,dropped,redundant: |r| >= 0.95
+stddev,numeric,1606185,0.36238488224335275,0.0,2.499505,0.020809299487909164,0.2530009429551186,,,kept,not redundant
+sum,numeric,1606185,0.36238488224335275,0.0,1913.193604,5.021886175058708e-05,0.10340955995109699,,,kept,not redundant
+min,numeric,1606185,0.36238488224335275,0.0,4.953419,0.02171308315503826,0.23015150338947643,,,kept,not redundant
+max,numeric,1606185,0.36238488224335275,0.0,4.999999,0.045409824503825524,0.3445259745612972,,,kept,not redundant
+rate,numeric,1606185,0.36238488224335275,0.0,1250000.0,0.0004047582327431543,0.12966161495476541,,,kept,not redundant
+srate,numeric,1606185,0.36238488224335275,0.0,1000000.0,5.293656773237434e-06,0.03877312892114734,,,kept,not redundant
+drate,numeric,1606185,0.36238488224335275,0.0,500000.0,1.0942732550469503e-05,0.06412513381874314,,,kept,not redundant
+ts_first,excluded,,,,,,,,,excluded,leakage column
+ts_last,excluded,,,,,,,,,excluded,leakage column
+pkSeqID,excluded,,,,,,,,,excluded,leakage column
+ts_end,excluded,,,,,,,,,excluded,leakage column
+seq,excluded,,,,,,,,,excluded,leakage column
+smac,excluded,,,,,,,,,excluded,leakage column
+dmac,excluded,,,,,,,,,excluded,leakage column
+soui,excluded,,,,,,,,,excluded,leakage column
+doui,excluded,,,,,,,,,excluded,leakage column
+sco,excluded,,,,,,,,,excluded,leakage column
+dco,excluded,,,,,,,,,excluded,leakage column
+attack,excluded,,,,,,,,,excluded,leakage column
+category,excluded,,,,,,,,,excluded,leakage column
+subcategory,excluded,,,,,,,,,excluded,leakage column

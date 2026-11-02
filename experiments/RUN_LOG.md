@@ -451,6 +451,12 @@ the baseline: **30,615 files, 0 differences** (`_integrity/diff.txt` empty).
 Run B, Run C, Run T, `code/` (incl. `data/processed`, `results`, `models`),
 `metrics`, `predictions`, `report` and all thesis documents are unchanged.
 `git status`: only `?? experiments/`.
+Final check after the bug fix, robustness analyses and report
+(2026-11-02T23:20–23:24 UTC): cross-log 14 tests OK, ablation 6 OK, thesis 94
+OK; combined app pages 6 and 7 render without exceptions (each in a fresh
+process, after a path fix in `lab/supp.py`); integrity 30,615 files,
+0 differences. Disk: `experiments/` about 15 GB, WSL image 4.8 GB.
+
 Repeated after the Bro 2.6.4 follow-up (§4.6) at 2026-11-02T19:30:00Z and
 after building and test-rendering the combined app (§10) at
 2026-11-02T20:26:01Z: 30,615 files, 0 differences both times.

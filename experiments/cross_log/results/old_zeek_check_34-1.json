@@ -1,0 +1,80 @@
+{
+  "capture": "CTU-IoT-Malware-Capture-34-1",
+  "iot23_labelled_rows": 23145,
+  "results": [
+    {
+      "sensor": "zeek-9.0.1",
+      "conn_records": 8990,
+      "match_rate_new": 0.999778,
+      "labelled_covered": 0.388334,
+      "per_class": {
+        "dos": {
+          "labelled": 14394,
+          "matched": 237,
+          "coverage": 0.0165
+        },
+        "c2": {
+          "labelled": 6706,
+          "matched": 6706,
+          "coverage": 1.0
+        },
+        "benign": {
+          "labelled": 1923,
+          "matched": 1923,
+          "coverage": 1.0
+        },
+        "recon": {
+          "labelled": 122,
+          "matched": 122,
+          "coverage": 1.0
+        }
+      },
+      "rows_identical_to_iot23": 8874,
+      "conn_state_counts": {
+        "S0": 6395,
+        "S3": 1584,
+        "SF": 849,
+        "OTH": 105,
+        "RSTR": 53,
+        "S1": 4
+      }
+    },
+    {
+      "sensor": "bro-2.6.4",
+      "conn_records": 8990,
+      "match_rate_new": 0.999778,
+      "labelled_covered": 0.388334,
+      "per_class": {
+        "dos": {
+          "labelled": 14394,
+          "matched": 237,
+          "coverage": 0.0165
+        },
+        "c2": {
+          "labelled": 6706,
+          "matched": 6706,
+          "coverage": 1.0
+        },
+        "benign": {
+          "labelled": 1923,
+          "matched": 1923,
+          "coverage": 1.0
+        },
+        "recon": {
+          "labelled": 122,
+          "matched": 122,
+          "coverage": 1.0
+        }
+      },
+      "rows_identical_to_iot23": 8874,
+      "conn_state_counts": {
+        "S0": 6395,
+        "S3": 1584,
+        "SF": 849,
+        "OTH": 105,
+        "RSTR": 53,
+        "S1": 4
+      }
+    }
+  ]
+}

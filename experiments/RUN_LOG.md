@@ -3,8 +3,10 @@
 All new results here are **Additional analysis, pending supervisor approval.**
 
 All times UTC. Working copy: `submission/` (Git repo), branch
-`cross-log-experiment` created from `main` at `74cb51c`. Nothing committed,
-pushed or merged. Commands run from `submission/` unless stated otherwise.
+`cross-log-experiment` created from `main` at `74cb51c`. The original
+instructions said not to push or merge; on 2026-11-02 the user asked for the
+branch to be pushed and then merged (§10). Commands run from `submission/`
+unless stated otherwise.
 
 ## 0. Environment
 
@@ -361,8 +363,21 @@ the baseline: **30,615 files, 0 differences** (`_integrity/diff.txt` empty).
 Run B, Run C, Run T, `code/` (incl. `data/processed`, `results`, `models`),
 `metrics`, `predictions`, `report` and all thesis documents are unchanged.
 `git status`: only `?? experiments/`.
-Repeated after the Bro 2.6.4 follow-up (§4.6) at 2026-11-02T19:30:00Z:
-30,615 files, 0 differences.
+Repeated after the Bro 2.6.4 follow-up (§4.6) at 2026-11-02T19:30:00Z and
+after building and test-rendering the combined app (§10) at
+2026-11-02T20:26:01Z: 30,615 files, 0 differences both times.
+
+## 10. Presentation, push and merge (user requests after the runs)
+
+| Step | What was done |
+|---|---|
+| Results page | `report/index.html` (standalone copy); also published as a private claude.ai page |
+| Combined app | `lab/app.py`: loads the five original demo pages unchanged from `code/demo/pages/` and adds `lab/pages/6_ablation.py` and `7_cross_log.py`, which read only files under `experiments/`. Run with `code/demo/.venv` (Streamlit 1.66.0), `-B`, headless, `localhost:8501`. All 7 pages rendered without exceptions in Streamlit's `AppTest` |
+| Original demo | Started once unchanged on `localhost:8501` (cache check `build_cache.py --check` → ok; the launcher's `verify_live_inference.py` step was skipped because it rewrites a file in `code/demo/cache`) and then replaced by the combined app |
+| `.gitignore` | `experiments/.gitignore` excludes pcaps, IoT-23 logs, raw sensor output, the ET Open ruleset, the Bro source tarball and the large per-capture parquet tables (sources and hashes in §4.2, §4.6, §6) |
+| Commit | `d5aad70` "Add supplementary ablation and cross-log experiments" (61 files) on `cross-log-experiment` |
+| Push | `git push -u origin cross-log-experiment` to the private repo `Abdullabintarish/iot-smart-home-integrated-detection` |
+| Merge | Pull request #1 into `main`, merged 2026-11-02T20:42:30Z, merge commit `9a37a62`, at the user's request **before** supervisor sign-off (stated in the PR description). The merge only adds `experiments/`; no existing file changed |
 
 Disk: `experiments/` 1.4 GB; WSL disk image 2.5 GB
 (`%LOCALAPPDATA%\wsl\{110a38be-...}\ext4.vhdx`). Total ≈ 3.9 GB.

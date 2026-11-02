@@ -5,7 +5,8 @@ fixed here **before any training**. They must not be changed after results are
 seen; any later change is logged in `RUN_LOG.md` with its reason.
 
 All new work is under `experiments/` on Git branch `cross-log-experiment`
-(not pushed, not merged).
+(later pushed and merged into `main` at the user's request; see
+`RUN_LOG.md` §10).
 
 ## 1. Project understanding (Stage 1)
 

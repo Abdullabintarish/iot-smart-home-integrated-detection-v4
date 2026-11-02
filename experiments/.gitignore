@@ -1,0 +1,19 @@
+# Third-party downloads (public; URLs and SHA-256 in RUN_LOG.md)
+cross_log/pcaps/
+cross_log/old_zeek/*.tar.gz
+cross_log/old_zeek/*.tar.gz.asc
+cross_log/ruleset/*
+!cross_log/ruleset/RULESET.txt
+!cross_log/ruleset/suricata.yaml.sha256
+
+# Raw sensor output (regenerate with cross_log/tools/run_sensors.sh)
+cross_log/sensor_out/
+cross_log/sensor_out_bro26/
+
+# Large per-capture intermediate tables (regenerate with src/run_stage3.py)
+cross_log/results/conn_labelled_*.parquet
+cross_log/results/records_linked_*.parquet
+
+_tools/
+__pycache__/
+*.pyc

@@ -1,0 +1,763 @@
+{
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "conditions": {
+    "A": {
+      "numeric": [
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "missed_bytes",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "id.resp_p"
+      ],
+      "categorical": [
+        "proto",
+        "service",
+        "conn_state"
+      ],
+      "by_seed": {
+        "42": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.24610436081830042,
+          "fpr": 0.0027114967462039045,
+          "fnr": 0.9989543167113261,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9972885032537961
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.0005354035604336768
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.02459016393442623
+            }
+          },
+          "fpr_unseen_benign": 0.010183299389002037,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 32
+        },
+        "1": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.24598295714686796,
+          "fpr": 0.0025759219088937095,
+          "fnr": 0.9990850271224103,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9974240780911063
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.00040155267032525766
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.02459016393442623
+            }
+          },
+          "fpr_unseen_benign": 0.009674134419551934,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 31
+        },
+        "2": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.24617765470099348,
+          "fpr": 0.0027114967462039045,
+          "fnr": 0.998888961505784,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9972885032537961
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.0008031053406505153
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.0
+            }
+          },
+          "fpr_unseen_benign": 0.010183299389002037,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 32
+        },
+        "3": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.2469354270628485,
+          "fpr": 0.0025759219088937095,
+          "fnr": 0.9982354094503627,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9974240780911063
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.001204658010975773
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.009674134419551934,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 32
+        },
+        "4": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.6875651281317771,
+          "fpr": 0.0031182212581344904,
+          "fnr": 0.4608195542774982,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9968817787418656
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.5515325926917414
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.011710794297352342,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 32
+        }
+      },
+      "macro_f1_mean": 0.3345531055721575,
+      "macro_f1_sd": 0.1973400729808104
+    },
+    "B": {
+      "numeric": [
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "missed_bytes",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "id.resp_p",
+        "dns_query_count",
+        "dns_unique_domains",
+        "dns_nxdomain_count",
+        "dns_mean_query_len"
+      ],
+      "categorical": [
+        "proto",
+        "service",
+        "conn_state"
+      ],
+      "by_seed": {
+        "42": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.3545840648568986,
+          "fpr": 0.0027114967462039045,
+          "fnr": 0.8940592118162212,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9972885032537961
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.1080176683174943
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.01639344262295082
+            }
+          },
+          "fpr_unseen_benign": 0.010183299389002037,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 36
+        },
+        "1": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.34915753007375966,
+          "fpr": 0.0031182212581344904,
+          "fnr": 0.8996144042873014,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9968817787418656
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.10219515459777807
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.011710794297352342,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 35
+        },
+        "2": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.5867764313902271,
+          "fpr": 0.005016268980477224,
+          "fnr": 0.6078687667472714,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9949837310195228
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.4007495649846071
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.05063291139240506
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.0
+            }
+          },
+          "fpr_unseen_benign": 0.01883910386965377,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 36
+        },
+        "3": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.46927793292006637,
+          "fpr": 0.002982646420824295,
+          "fnr": 0.7637409319652311,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9970173535791758
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.24133315486547985
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.01120162932790224,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 36
+        },
+        "4": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.7482590419821074,
+          "fpr": 0.007863340563991324,
+          "fnr": 0.3651395333638324,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9921366594360087
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.6495114442511043
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.029531568228105907,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 36
+        }
+      },
+      "macro_f1_mean": 0.5016110002446117,
+      "macro_f1_sd": 0.16881410981787864
+    },
+    "C": {
+      "numeric": [
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "missed_bytes",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "id.resp_p",
+        "alert_count",
+        "alert_max_severity",
+        "alert_cat_0",
+        "alert_cat_1",
+        "alert_cat_2",
+        "alert_cat_3",
+        "alert_cat_4",
+        "alert_cat_5",
+        "alert_cat_6",
+        "alert_cat_other"
+      ],
+      "categorical": [
+        "proto",
+        "service",
+        "conn_state"
+      ],
+      "by_seed": {
+        "42": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.24625094063568645,
+          "fpr": 0.0027114967462039045,
+          "fnr": 0.9988236063002418,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9972885032537961
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.0006023290054878865
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.010183299389002037,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 42
+        },
+        "1": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.24669048943186056,
+          "fpr": 0.0027114967462039045,
+          "fnr": 0.998431475066989,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9972885032537961
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.0010038816758131442
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.010183299389002037,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 41
+        },
+        "2": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.2463470100937788,
+          "fpr": 0.002982646420824295,
+          "fnr": 0.9986928958891576,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9970173535791758
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.0010038816758131442
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.0
+            }
+          },
+          "fpr_unseen_benign": 0.010183299389002037,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 42
+        },
+        "3": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.24664250234624152,
+          "fpr": 0.0025759219088937095,
+          "fnr": 0.9984968302725312,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9974240780911063
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.0010038816758131442
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.02459016393442623
+            }
+          },
+          "fpr_unseen_benign": 0.009674134419551934,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 42
+        },
+        "4": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.5961011164544109,
+          "fpr": 0.002982646420824295,
+          "fnr": 0.5955819881053526,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9970173535791758
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.4135323249899612
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.01120162932790224,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 42
+        }
+      },
+      "macro_f1_mean": 0.31640641179239565,
+      "macro_f1_sd": 0.1563542057376066
+    },
+    "D": {
+      "numeric": [
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "missed_bytes",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "id.resp_p",
+        "dns_query_count",
+        "dns_unique_domains",
+        "dns_nxdomain_count",
+        "dns_mean_query_len",
+        "alert_count",
+        "alert_max_severity",
+        "alert_cat_0",
+        "alert_cat_1",
+        "alert_cat_2",
+        "alert_cat_3",
+        "alert_cat_4",
+        "alert_cat_5",
+        "alert_cat_6",
+        "alert_cat_other"
+      ],
+      "categorical": [
+        "proto",
+        "service",
+        "conn_state"
+      ],
+      "by_seed": {
+        "42": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.5892837116112157,
+          "fpr": 0.005151843817787419,
+          "fnr": 0.6042742304424548,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9948481561822126
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.40416276268237183
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.05063291139240506
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.019348268839103868,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 46
+        },
+        "1": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.5849947233333586,
+          "fpr": 0.0031182212581344904,
+          "fnr": 0.6112018822299197,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9968817787418656
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.3975371436220051
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.011710794297352342,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 45
+        },
+        "2": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.4852017924029587,
+          "fpr": 0.0035249457700650758,
+          "fnr": 0.743807594274884,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9964750542299349
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.2615446392718512
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.05063291139240506
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.0
+            }
+          },
+          "fpr_unseen_benign": 0.012219959266802444,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 46
+        },
+        "3": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.5859206614715654,
+          "fpr": 0.002982646420824295,
+          "fnr": 0.6099601333246193,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9970173535791758
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.3983402489626556
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.05063291139240506
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.01120162932790224,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 46
+        },
+        "4": {
+          "n": 22677,
+          "n_benign": 7376,
+          "n_attack": 15301,
+          "macro_f1": 0.8479877847762864,
+          "fpr": 0.008134490238611713,
+          "fnr": 0.21148944513430495,
+          "per_class_detection_rate": {
+            "benign": {
+              "n": 7376,
+              "rate": 0.9918655097613883
+            },
+            "c2": {
+              "n": 14942,
+              "rate": 0.806853165573551
+            },
+            "dos": {
+              "n": 237,
+              "rate": 0.02109704641350211
+            },
+            "recon": {
+              "n": 122,
+              "rate": 0.03278688524590164
+            }
+          },
+          "fpr_unseen_benign": 0.029531568228105907,
+          "n_unseen_benign": 1964,
+          "n_train": 120000,
+          "n_features": 46
+        }
+      },
+      "macro_f1_mean": 0.6186777347190769,
+      "macro_f1_sd": 0.13552721676164756
+    }
+  },
+  "split": {
+    "train": [
+      "CTU-IoT-Malware-Capture-1-1",
+      "CTU-IoT-Malware-Capture-3-1",
+      "CTU-IoT-Malware-Capture-20-1",
+      "CTU-IoT-Malware-Capture-42-1"
+    ],
+    "test": [
+      "CTU-IoT-Malware-Capture-8-1",
+      "CTU-IoT-Malware-Capture-21-1",
+      "CTU-IoT-Malware-Capture-34-1"
+    ],
+    "train_rows": 1172486,
+    "test_rows": 22677,
+    "train_class_counts": {
+      "recon": 685062,
+      "benign": 481424,
+      "malware": 5965,
+      "c2": 35
+    },
+    "test_class_counts": {
+      "c2": 14942,
+      "benign": 7376,
+      "dos": 237,
+      "recon": 122
+    }
+  },
+  "alert_categories_from_train": [
+    "Attempted Information Leak",
+    "Misc activity",
+    "Potentially Bad Traffic",
+    "Misc Attack",
+    "Malware Command and Control Activity Detected",
+    "Potential Corporate Privacy Violation",
+    "A client was using an unusual port"
+  ]
+}

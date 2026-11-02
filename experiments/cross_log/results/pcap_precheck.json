@@ -1,0 +1,149 @@
+[
+  {
+    "capture": "CTU-IoT-Malware-Capture-1-1",
+    "pcap": "2018-05-09-192.168.100.103.pcap",
+    "pcap_bytes": 145928231,
+    "packets": 1686291,
+    "ip_packets": 1653042,
+    "ts_first": 1525879831.015073,
+    "ts_last": 1526282683.030512,
+    "linktype": 1,
+    "distinct_flow_cids": 620598,
+    "labeled_rows": 1008748,
+    "labels": {
+      "malicious": 539473,
+      "benign": 469275
+    },
+    "labeled_ts_first": 1525879831.015073,
+    "labeled_ts_last": 1526282683.030512,
+    "rows_cid_in_pcap": 1008748,
+    "rows_cid_and_time_in_pcap": 1008748,
+    "share_cid_and_time_in_pcap": 1.0
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-20-1",
+    "pcap": "2018-10-02-13-12-30-192.168.100.103.pcap",
+    "pcap_bytes": 4057401,
+    "packets": 50156,
+    "ip_packets": 41207,
+    "ts_first": 1538478769.600293,
+    "ts_last": 1538565147.243622,
+    "linktype": 1,
+    "distinct_flow_cids": 630,
+    "labeled_rows": 3209,
+    "labels": {
+      "benign": 3193,
+      "malicious": 16
+    },
+    "labeled_ts_first": 1538478769.600293,
+    "labeled_ts_last": 1538565109.550107,
+    "rows_cid_in_pcap": 3209,
+    "rows_cid_and_time_in_pcap": 3209,
+    "share_cid_and_time_in_pcap": 1.0
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-21-1",
+    "pcap": "2018-10-03-15-22-32-192.168.100.113.pcap",
+    "pcap_bytes": 4063997,
+    "packets": 50277,
+    "ip_packets": 41131,
+    "ts_first": 1538572953.710599,
+    "ts_last": 1538659350.216987,
+    "linktype": 1,
+    "distinct_flow_cids": 1930,
+    "labeled_rows": 3286,
+    "labels": {
+      "benign": 3272,
+      "malicious": 14
+    },
+    "labeled_ts_first": 1538572953.710599,
+    "labeled_ts_last": 1538659000.666495,
+    "rows_cid_in_pcap": 3286,
+    "rows_cid_and_time_in_pcap": 3286,
+    "share_cid_and_time_in_pcap": 1.0
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-3-1",
+    "pcap": "2018-05-21_capture.pcap",
+    "pcap_bytes": 57919772,
+    "packets": 496959,
+    "ip_packets": 491301,
+    "ts_first": 1526756239.958006,
+    "ts_last": 1526886287.960915,
+    "linktype": 1,
+    "distinct_flow_cids": 81407,
+    "labeled_rows": 156103,
+    "labels": {
+      "malicious": 151567,
+      "benign": 4536
+    },
+    "labeled_ts_first": 1526756239.958006,
+    "labeled_ts_last": 1526886286.965803,
+    "rows_cid_in_pcap": 156103,
+    "rows_cid_and_time_in_pcap": 156103,
+    "share_cid_and_time_in_pcap": 1.0
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-34-1",
+    "pcap": "2018-12-21-15-50-14-192.168.1.195.pcap",
+    "pcap_bytes": 126317980,
+    "packets": 233865,
+    "ip_packets": 228469,
+    "ts_first": 1545403816.8709,
+    "ts_last": 1545490213.942227,
+    "linktype": 1,
+    "distinct_flow_cids": 4664,
+    "labeled_rows": 23145,
+    "labels": {
+      "benign": 1923,
+      "malicious": 21222
+    },
+    "labeled_ts_first": 1545403816.8709,
+    "labeled_ts_last": 1545490213.942227,
+    "rows_cid_in_pcap": 23145,
+    "rows_cid_and_time_in_pcap": 23145,
+    "share_cid_and_time_in_pcap": 1.0
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-42-1",
+    "pcap": "2019-01-10-14-34-38-192.168.1.197.pcap",
+    "pcap_bytes": 2908160,
+    "packets": 24485,
+    "ip_packets": 22749,
+    "ts_first": 1547127281.032585,
+    "ts_last": 1547157358.547251,
+    "linktype": 1,
+    "distinct_flow_cids": 3173,
+    "labeled_rows": 4426,
+    "labels": {
+      "malicious": 6,
+      "benign": 4420
+    },
+    "labeled_ts_first": 1547127282.523476,
+    "labeled_ts_last": 1547157330.030005,
+    "rows_cid_in_pcap": 4426,
+    "rows_cid_and_time_in_pcap": 4426,
+    "share_cid_and_time_in_pcap": 1.0
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-8-1",
+    "pcap": "2018-07-31-15-15-09-192.168.100.113.pcap",
+    "pcap_bytes": 2098362,
+    "packets": 23623,
+    "ip_packets": 16677,
+    "ts_first": 1533042911.474174,
+    "ts_last": 1533129306.734905,
+    "linktype": 1,
+    "distinct_flow_cids": 2064,
+    "labeled_rows": 10403,
+    "labels": {
+      "benign": 2181,
+      "malicious": 8222
+    },
+    "labeled_ts_first": 1533042911.474174,
+    "labeled_ts_last": 1533129306.734905,
+    "rows_cid_in_pcap": 10403,
+    "rows_cid_and_time_in_pcap": 10403,
+    "share_cid_and_time_in_pcap": 1.0
+  }
+]

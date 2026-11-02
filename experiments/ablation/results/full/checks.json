@@ -1,0 +1,43 @@
+{
+  "n_events": 4211383,
+  "n_test": 1692332,
+  "n_novel": 1463143,
+  "event_features": [
+    "sport",
+    "dport",
+    "proto",
+    "app",
+    "duration",
+    "conn_state",
+    "missed_bytes",
+    "history",
+    "bwd_pkts",
+    "bwd_ip_bytes",
+    "bytes",
+    "flgs",
+    "state",
+    "stddev",
+    "sum",
+    "min",
+    "max",
+    "rate",
+    "srate",
+    "drate"
+  ],
+  "shared_features": [
+    "sport",
+    "dport",
+    "proto",
+    "app",
+    "duration",
+    "conn_state",
+    "history",
+    "bwd_pkts",
+    "bytes",
+    "flgs",
+    "state"
+  ],
+  "groups_at_300s": 704090,
+  "run_b_incidents": 704090,
+  "minutes": 26.7
+}

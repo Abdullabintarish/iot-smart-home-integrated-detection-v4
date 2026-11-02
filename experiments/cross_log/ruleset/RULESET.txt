@@ -1,0 +1,5 @@
+url=https://rules.emergingthreats.net/open/suricata-7.0.3/emerging.rules.tar.gz
+downloaded_utc=2026-11-02T18:25:23Z
+sha256=d5330ebe76cb36cfad3621f2d9c66d0d5894d55a8778dba1f6c21c99a777b035
+rules_version=unknown
+all_rules_sha256=84530843118cbed2b534d1c361ac20400146c4e64afd5c9c5112d15e6d7d0aef

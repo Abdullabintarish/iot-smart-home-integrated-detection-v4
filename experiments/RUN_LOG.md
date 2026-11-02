@@ -1,6 +1,12 @@
 # Run log — ablation and cross-log experiment
 
-All new results here are **Additional analysis, pending supervisor approval.**
+All new results here are supplementary analyses to the thesis (the user
+dropped the "pending supervisor approval" label on 2026-11-03).
+
+**Correction (2026-11-03):** the first cross-log run had an alert-timestamp
+bug (§5.1). All cross-log numbers below are from the corrected rerun; the
+superseded outputs are in
+`cross_log/results/superseded_2026-11-03_alert_timestamp_bug/`.
 
 All times UTC. Working copy: `submission/` (Git repo), branch
 `cross-log-experiment` created from `main` at `74cb51c`. The original
@@ -187,13 +193,17 @@ byte-identical to the thesis copies in `code/data/raw_combined/`.
 |---|---|---|---|---|---|---|---|---|---|
 | 8-1 | 10,403 | 10,403 | 1.0000 | 1.0000 | 0 | 0 | 278 | 0 | **fail** |
 | 20-1 | 3,209 | 3,209 | 1.0000 | 1.0000 | 808 | 0 | 24 | 23 | pass |
-| 42-1 | 4,426 | 4,426 | 1.0000 | 1.0000 | 1,841 | 2,019 | 37 | 35 | pass |
+| 42-1 | 4,426 | 4,426 | 1.0000 | 1.0000 | 1,841 | 2,019 | 41 | 39 | pass |
 | 21-1 | 3,286 | 3,286 | 1.0000 | 1.0000 | 2,578 | 0 | 58 | 56 | pass |
-| 3-1 | 156,103 | 156,103 | 1.0000 | 1.0000 | 12 | 50,529 | 429 | 2 | pass |
-| 34-1 | 8,990 | 8,988 | 0.9998 | **0.3883** | 348 | 7,877 | 165 | 15 | pass |
-| 1-1 | 1,008,748 | 1,008,748 | 1.0000 | 1.0000 | 19 | 41 | 1,352 | 21 | pass |
+| 3-1 | 156,103 | 156,103 | 1.0000 | 1.0000 | 12 | 50,529 | 428 | 235 | pass |
+| 34-1 | 8,990 | 8,988 | 0.9998 | **0.3883** | 348 | 7,877 | 165 | 159 | pass |
+| 1-1 | 1,008,748 | 1,008,748 | 1.0000 | 1.0000 | 19 | 41 | 1,350 | 59 | pass |
 
-Only one incident (42-1) contains all three record types.
+Corrected rerun 2026-11-03 (§5.1). Incidents with all three record types:
+42-1 29, 34-1 13, others 0. In total 571 of 2,344 incidents combine at least
+two record types. (Superseded first run: 3-1 2, 34-1 15, 1-1 21, 42-1 35, and
+1 incident with all three types; alerts were placed at wrong times.)
+Match rates, DNS and alert counts did not change.
 
 **34-1 coverage.** The IoT-23 log has 23,145 rows; Zeek 9.0.1 writes 8,990.
 14,159 of the 14,394 labelled DDoS rows share one Community ID (TCP
@@ -251,7 +261,26 @@ Alert categories: 3-1 mostly "Attempted Information Leak" (50,470 of 50,529);
 
 ## 5. Stage 4 — cross-log experiment
 
-Command (18:44:15–18:45:40, exit 0):
+### 5.1 Alert-timestamp bug (found 2026-11-03) and corrected rerun
+
+During the robustness analyses (§5.3) every alert feature turned out to be
+zero in every capture, including 3-1 with 50,529 alerts. Cause:
+`src/zeek_io.py read_eve()` converted Suricata timestamps with
+`astype("int64") / 1e9`, which assumes nanosecond datetimes; pandas 3.0.6
+parses them as `datetime64[us, UTC]`, so every alert time was 1,000× too small
+(e.g. 1.547e6 instead of 1.547e9 s). Effects: conditions C and D had no alert
+information, and Stage 3 placed flow groups containing alerts in wrong time
+buckets. Not affected: label matching, DNS features, the ablation, Runs B/C/T.
+
+Fix: epoch seconds computed as `(t − 1970-01-01 UTC) / 1 s`, independent of
+the resolution; regression test `tests/test_zeek_io.py`. The superseded outputs
+(Stage 3 JSON, Stage 4 results and predictions, robustness R0–R5) were moved to
+`results/superseded_2026-11-03_alert_timestamp_bug/` with a README. Stage 3,
+Stage 4 and all robustness analyses were rerun (2026-11-02T20:58–21:05 UTC)
+with the unchanged pre-registered design. Log: `results/rerun_after_fix.log`.
+
+### 5.2 Primary results (corrected)
+
 ```
 cd experiments/cross_log
 PYTHONDONTWRITEBYTECODE=1 ../../code/.venv/Scripts/python.exe -B src/run_stage4.py
@@ -268,41 +297,100 @@ Alert categories fixed from training alerts (7 categories). Test incidents: 501.
 |---|---|---|---|---|
 | A conn | 0.3346 ± 0.1973 | 0.0027 | 0.8912 | 0.0103 |
 | B conn + DNS | 0.5016 ± 0.1688 | 0.0043 | 0.7061 | 0.0163 |
-| C conn + alerts | 0.3164 ± 0.1564 | 0.0028 | 0.9180 | 0.0103 |
-| D all | 0.6187 ± 0.1355 | 0.0046 | 0.5561 | 0.0168 |
+| C conn + alerts | 0.4161 ± 0.1627 | 0.0019 | 0.8110 | 0.0039 |
+| D all | 0.5865 ± 0.1533 | 0.0092 | 0.5976 | 0.0172 |
 
-FPR, FNR and unseen-benign FPR are means over the 5 seeds.
+FPR, FNR and unseen-benign FPR are means over the 5 seeds. A and B are
+unchanged by the fix (they use no alert features).
 
 Per-seed macro F1 (seeds 42, 1, 2, 3, 4):
 A 0.2461, 0.2460, 0.2462, 0.2469, 0.6876;
 B 0.3546, 0.3492, 0.5868, 0.4693, 0.7483;
-C 0.2463, 0.2467, 0.2463, 0.2466, 0.5961;
-D 0.5893, 0.5850, 0.4852, 0.5859, 0.8480.
+C 0.3824, 0.2463, 0.3821, 0.3822, 0.6874;
+D 0.5837, 0.4791, 0.5180, 0.4999, 0.8517.
 
 Paired per-seed differences in macro F1:
-B − A +0.1085, +0.1032, +0.3406, +0.2223, +0.0607 (all positive);
-C − A +0.0001, +0.0007, +0.0002, −0.0003, −0.0915;
-D − A +0.3432, +0.3390, +0.2390, +0.3390, +0.1604 (all positive).
+B − A +0.1085, +0.1032, +0.3406, +0.2223, +0.0607;
+C − A +0.1363, +0.0003, +0.1359, +0.1353, −0.0001;
+D − A +0.3376, +0.2331, +0.2719, +0.2529, +0.1641.
 
 Incident-clustered bootstrap (seed-42 models only, 501 clusters, 1,000
-replicates): A [0.1511, 0.3231], B [0.2023, 0.4731], C [0.1511, 0.3231],
-D [0.4743, 0.6676]; B − A [+0.0070, +0.2278]; C − A [−0.0000, +0.0003];
-D − A [+0.2831, +0.4127]. These intervals do not include seed variance, which
-is large (seed 4 differs strongly from the others).
+replicates): A [0.1586, 0.3170], B [0.2622, 0.4280], C [0.2892, 0.4513],
+D [0.4890, 0.6492]; B − A [+0.0909, +0.1263]; C − A [+0.1227, +0.1472];
+D − A [+0.3183, +0.3551]. These intervals do not include seed variance (see R2).
 
 Per-class detection rate (mean ± SD over seeds; benign = share kept benign):
 
 | Class (n) | A | B | C | D |
 |---|---|---|---|---|
-| benign (7,376) | 0.9973 ± 0.0002 | 0.9957 ± 0.0022 | 0.9972 ± 0.0002 | 0.9954 ± 0.0022 |
-| c2 (14,942) | 0.1109 ± 0.2463 | 0.3004 ± 0.2301 | 0.0834 ± 0.1845 | 0.4537 ± 0.2063 |
-| dos (237) | 0.0211 ± 0.0000 | 0.0270 ± 0.0132 | 0.0211 ± 0.0000 | 0.0388 ± 0.0162 |
-| recon (122) | 0.0230 ± 0.0135 | 0.0230 ± 0.0147 | 0.0246 ± 0.0142 | 0.0262 ± 0.0147 |
+| benign (7,376) | 0.9973 ± 0.0002 | 0.9957 ± 0.0022 | 0.9981 ± 0.0006 | 0.9908 ± 0.0011 |
+| c2 (14,942) | 0.1109 ± 0.2463 | 0.3004 ± 0.2301 | 0.1934 ± 0.2085 | 0.4115 ± 0.2307 |
+| dos (237) | 0.0211 ± 0.0000 | 0.0270 ± 0.0132 | 0.0008 ± 0.0019 | 0.0253 ± 0.0213 |
+| recon (122) | 0.0230 ± 0.0135 | 0.0230 ± 0.0147 | 0.0164 ± 0.0000 | 0.0230 ± 0.0090 |
 
-Reading: on unseen captures every condition misses most attacks (training
-attacks are mostly recon; test attacks are mostly c2). DNS context helps in
-every seed; alert context alone does not; all three together give the largest
-gain. Absolute performance is low and seed-dependent.
+Superseded first-run values (bug): C 0.3164 ± 0.1564, D 0.6187 ± 0.1355.
+
+### 5.3 Robustness analyses (PLAN.md §4b; `results/robustness/`)
+
+Code `src/build_feature_cache.py` (per-capture cache, `results/robust_cache/`)
+and `src/robustness.py`. All after the fix.
+
+| ID | Result |
+|---|---|
+| R0 | Primary seed-42 run rebuilt from the cache: identical predictions for all 22,677 rows and conditions A–D, identical novel-vector flags |
+| R1 (20 seeds) | Macro F1 A 0.2684 ± 0.0987, B 0.4914 ± 0.1071, C 0.3782 ± 0.0884, D 0.5360 ± 0.0908. B > A in 20/20 seeds, C > A in 18/20, D > A in 20/20; Wilcoxon p = 1.9e-6 (B, D), 1.9e-5 (C) |
+| R2 (seeds × incidents, 2,000 reps) | B − A [+0.063, +0.350] (100% > 0); C − A [−0.001, +0.150] (88.5% > 0); D − A [+0.150, +0.367] (100% > 0) |
+| R4 (windows at connection end) | D − A +0.237 (5/5 seeds), B − A +0.243 (5/5), C − A +0.054 (3/5) |
+| R5 60 s | D − A +0.316 (5/5), B − A +0.289 (5/5), C − A +0.152 (5/5) |
+| R5 900 s | D − A +0.226 (5/5), B − A +0.164 (5/5), C − A +0.054 (2/5) |
+| R3 | see §5.4 |
+
+### 5.4 Added captures and leave-one-capture-out (R3)
+
+- Downloaded 2026-11-02 20:47–20:59 UTC: 48-1 pcap SHA-256
+  538cd72e9583bf7be30501f6d9de6694498118e9300f7835e63c7f6ce693ad3c, labelled log
+  9f69946243df93c199876c0783cb4b5fb188e6d2325c593858f2db8fb5fa847f; 49-1 pcap
+  327331a744810dc21eaf74736d7250acc0b6270781af18495566a1774c65956c, labelled log
+  12e12cd6d01cb0f2b5330c217069ab4de103aa2044a97dd60d8af5f0d3cfa54f.
+- Both pcaps end in a truncated packet; trimmed copies (24 and 70 bytes
+  dropped): 48-1 f26db54967e4ecde1f33646cdd6b3248c5db5aef6f06156414919baf44caabf8,
+  49-1 8a6dd699f47c22d153cae162a944ea49f263da6b7089a0b973934c9e933618fe.
+- Sensors 21:00–22:38 UTC (`results/sensors_48_49.log`); Stage 3 22:39–22:55.
+
+| Capture | Conn | Matched | Match rate | DNS | Alerts | Incidents | ≥ 2 types | Gate |
+|---|---|---|---|---|---|---|---|---|
+| 48-1 | 3,394,338 | 3,394,338 | 1.0000 | 24 | 28 | 121 | 8 | pass |
+| 49-1 | 6,022,729 | 5,410,561 | 0.8984 | 44 | 1,394 | 100 | 98 | **fail** |
+
+49-1: every labelled row (5,410,561) is matched, but Zeek writes 612,168 more
+conn records than the labelled log has, so the new-record match rate is just
+below the 90% gate. As fixed in PLAN.md §4b, 49-1 is excluded from R3.
+
+First R3 run (all 9 cached captures) crashed while pooling (missing
+`fpr_unseen_benign` key); nothing was saved. Fixed (pooled unseen-benign FPR,
+per-fold checkpoint), gate filter added, rerun 23:10–23:17 UTC
+(`results/robustness/run_R3.log`, `R3_leave_one_capture_out.json`).
+
+| Held-out capture | A | D | D − A | B − A | C − A |
+|---|---|---|---|---|---|
+| 1-1 | 0.890 | 0.946 | +0.056 | −0.023 | +0.056 |
+| 20-1 | 0.543 | 0.719 | +0.176 | +0.110 | +0.149 |
+| 21-1 | 0.605 | 0.898 | +0.293 | +0.167 | +0.149 |
+| 3-1 | 0.517 | 0.519 | +0.001 | +0.001 | +0.004 |
+| 34-1 | 0.175 | 0.330 | +0.155 | +0.308 | +0.012 |
+| 42-1 | 0.398 | 0.358 | −0.040 | −0.041 | −0.039 |
+| 48-1 | 0.997 | 0.976 | −0.021 | −0.001 | −0.145 |
+| 8-1 | 0.173 | 0.360 | +0.187 | +0.187 | +0.140 |
+
+Macro F1 mean over 5 seeds. D > A in 6 of 8 folds, B > A in 5, C > A in 6.
+Pooled over folds: A 0.9173, B 0.9083, C 0.9405, D 0.9461 (dominated by 1-1
+and 48-1). The cross-log gain holds in most but not all unseen captures.
+
+Reading: on unseen captures every condition misses many attacks (training
+attacks are mostly recon; test attacks mostly c2). DNS context and the
+combination of all three log types improve macro F1 robustly (every seed and
+every variant). Alert context alone helps on average but less consistently.
+D raises FPR from 0.27% to 0.92%.
 
 ## 6. Hashes of downloaded data (`cross_log/pcaps/`)
 

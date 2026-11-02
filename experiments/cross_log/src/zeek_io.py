@@ -69,5 +69,9 @@ def read_eve(path: Path, event_types=("alert", "dns", "flow")) -> pd.DataFrame:
             })
     df = pd.DataFrame(recs)
     if not df.empty:
-        df["ts"] = pd.to_datetime(df["timestamp"], utc=True).astype("int64") / 1e9
+        # Epoch seconds independent of the datetime resolution: pandas 3 parses
+        # these timestamps as datetime64[us], so dividing the int64 value by
+        # 1e9 (which assumes ns) gave times 1,000x too small.
+        t = pd.to_datetime(df["timestamp"], utc=True)
+        df["ts"] = (t - pd.Timestamp(0, tz="UTC")) / pd.Timedelta(seconds=1)
     return df

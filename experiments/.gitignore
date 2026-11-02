@@ -13,7 +13,13 @@ cross_log/sensor_out_bro26/
 # Large per-capture intermediate tables (regenerate with src/run_stage3.py)
 cross_log/results/conn_labelled_*.parquet
 cross_log/results/records_linked_*.parquet
+cross_log/results/robust_cache/*.parquet
+cross_log/results/robustness/R3_*_predictions.parquet
 
 _tools/
 __pycache__/
 *.pyc
+
+# Report build by-products
+thesis_report/pages/
+thesis_report/.mpl/

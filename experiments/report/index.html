@@ -82,7 +82,7 @@ footer { font-size: 13px; color: var(--muted); display: flex; flex-direction: co
     <div class="eyebrow">IoT smart-home threat detection · supplementary work · 2 Nov 2026</div>
     <h1>Thesis Supplementary Analyses</h1>
     <p class="lede">Two extra analyses on top of the verified Run B results: a controlled feature ablation, and a test of correlating connection logs, DNS logs and IDS alerts on unseen captures.</p>
-    <div class="flag">Additional analysis, pending supervisor approval</div>
+    <div class="flag">Corrected 3 Nov 2026: cross-log results after fixing an alert-timestamp bug</div>
   </header>
 
   <section>
@@ -90,7 +90,7 @@ footer { font-size: 13px; color: var(--muted); display: flex; flex-direction: co
     <div class="status">
       <div class="stage"><span class="pill ok">done</span><b>Ablation</b><span>Data check matched Run B. 85 model fits, 5 seeds, 5 windows.</span></div>
       <div class="stage"><span class="pill ok">done</span><b>Cross-log pilot</b><span>Zeek + Suricata on 7 captures. 8-1 failed the gate; 20-1 passed.</span></div>
-      <div class="stage"><span class="pill ok">done</span><b>Conditions A–D</b><span>Capture-held-out test, 5 seeds, clustered bootstrap.</span></div>
+      <div class="stage"><span class="pill ok">done</span><b>Conditions A–D</b><span>Capture-held-out test, plus 20 seeds, seed-aware bootstrap, leave-one-capture-out and window checks.</span></div>
       <div class="stage"><span class="pill ok">unchanged</span><b>Existing work</b><span>All 30,615 existing files byte-identical before and after.</span></div>
     </div>
   </section>
@@ -145,12 +145,12 @@ footer { font-size: 13px; color: var(--muted); display: flex; flex-direction: co
       <thead><tr><th>Capture</th><th class="n">Conn records</th><th class="n">Label match</th><th class="n">DNS</th><th class="n">Alerts</th><th class="n">Cross-source incidents</th><th>Gate</th></tr></thead>
       <tbody>
         <tr><td>8-1 (pilot)</td><td class="n">10,403</td><td class="n">100.00%</td><td class="n">0</td><td class="n">0</td><td class="n">0 / 278</td><td><span class="pill no">fail</span></td></tr>
-        <tr><td>42-1</td><td class="n">4,426</td><td class="n">100.00%</td><td class="n">1,841</td><td class="n">2,019</td><td class="n">35 / 37</td><td><span class="pill ok">pass</span></td></tr>
+        <tr><td>42-1</td><td class="n">4,426</td><td class="n">100.00%</td><td class="n">1,841</td><td class="n">2,019</td><td class="n">39 / 41</td><td><span class="pill ok">pass</span></td></tr>
         <tr><td>20-1</td><td class="n">3,209</td><td class="n">100.00%</td><td class="n">808</td><td class="n">0</td><td class="n">23 / 24</td><td><span class="pill ok">pass</span></td></tr>
         <tr><td>21-1</td><td class="n">3,286</td><td class="n">100.00%</td><td class="n">2,578</td><td class="n">0</td><td class="n">56 / 58</td><td><span class="pill ok">pass</span></td></tr>
-        <tr><td>3-1</td><td class="n">156,103</td><td class="n">100.00%</td><td class="n">12</td><td class="n">50,529</td><td class="n">2 / 429</td><td><span class="pill ok">pass</span></td></tr>
-        <tr><td>34-1</td><td class="n">8,990</td><td class="n">99.98%</td><td class="n">348</td><td class="n">7,877</td><td class="n">15 / 165</td><td><span class="pill ok">pass</span></td></tr>
-        <tr><td>1-1</td><td class="n">1,008,748</td><td class="n">100.00%</td><td class="n">19</td><td class="n">41</td><td class="n">21 / 1,352</td><td><span class="pill ok">pass</span></td></tr>
+        <tr><td>3-1</td><td class="n">156,103</td><td class="n">100.00%</td><td class="n">12</td><td class="n">50,529</td><td class="n">235 / 428</td><td><span class="pill ok">pass</span></td></tr>
+        <tr><td>34-1</td><td class="n">8,990</td><td class="n">99.98%</td><td class="n">348</td><td class="n">7,877</td><td class="n">159 / 165</td><td><span class="pill ok">pass</span></td></tr>
+        <tr><td>1-1</td><td class="n">1,008,748</td><td class="n">100.00%</td><td class="n">19</td><td class="n">41</td><td class="n">59 / 1,350</td><td><span class="pill ok">pass</span></td></tr>
       </tbody>
     </table></div>
     <p class="src">experiments/cross_log/results/stage3_&lt;capture&gt;.json</p>
@@ -161,27 +161,27 @@ footer { font-size: 13px; color: var(--muted); display: flex; flex-direction: co
       <tbody>
         <tr><td>A · connection</td><td class="n">0.335 ± 0.197</td><td class="n">89.1%</td><td class="n">0.27%</td><td class="n">1.03%</td></tr>
         <tr><td>B · + DNS</td><td class="n">0.502 ± 0.169</td><td class="n">70.6%</td><td class="n">0.43%</td><td class="n">1.63%</td></tr>
-        <tr><td>C · + alerts</td><td class="n">0.316 ± 0.156</td><td class="n">91.8%</td><td class="n">0.28%</td><td class="n">1.03%</td></tr>
-        <tr class="hi"><td>D · + DNS + alerts</td><td class="n">0.619 ± 0.136</td><td class="n">55.6%</td><td class="n">0.46%</td><td class="n">1.68%</td></tr>
+        <tr><td>C · + alerts</td><td class="n">0.416 ± 0.163</td><td class="n">81.1%</td><td class="n">0.19%</td><td class="n">0.39%</td></tr>
+        <tr class="hi"><td>D · + DNS + alerts</td><td class="n">0.586 ± 0.153</td><td class="n">59.8%</td><td class="n">0.92%</td><td class="n">1.72%</td></tr>
       </tbody>
     </table></div>
     <p class="src">Test set: 22,677 connections (14,942 c2, 7,376 benign, 237 dos, 122 recon) · mean over 5 seeds · cross_log/results/stage4_results.json</p>
 
     <div class="tbl"><table>
-      <thead><tr><th>Versus A</th><th>Per-seed difference (42, 1, 2, 3, 4)</th><th class="n">Bootstrap, seed 42</th></tr></thead>
+      <thead><tr><th>Versus A</th><th>Seeds better than A (of 20)</th><th class="n">Bootstrap over seeds and incidents</th><th class="n">Held-out captures better (of 8)</th></tr></thead>
       <tbody>
-        <tr><td>B − A</td><td>+0.109, +0.103, +0.341, +0.222, +0.061</td><td class="n">[+0.007, +0.228]</td></tr>
-        <tr><td>C − A</td><td>+0.000, +0.001, +0.000, −0.000, −0.092</td><td class="n">[−0.000, +0.000]</td></tr>
-        <tr class="hi"><td>D − A</td><td>+0.343, +0.339, +0.239, +0.339, +0.160</td><td class="n">[+0.283, +0.413]</td></tr>
+        <tr><td>B − A (+ DNS)</td><td>20</td><td class="n">[+0.063, +0.350]</td><td class="n">5</td></tr>
+        <tr><td>C − A (+ alerts)</td><td>18</td><td class="n">[−0.001, +0.150]</td><td class="n">6</td></tr>
+        <tr class="hi"><td>D − A (all three)</td><td>20</td><td class="n">[+0.150, +0.367]</td><td class="n">6</td></tr>
       </tbody>
     </table></div>
-    <p class="src">cross_log/results/stage4_results.json, stage4_bootstrap.json (501 test incidents, 1,000 replicates)</p>
+    <p class="src">cross_log/results/robustness/R1_20_seeds.json, R2_two_level_bootstrap.json, R3_leave_one_capture_out.json</p>
 
     <div class="key">
       <h3>What it shows</h3>
-      <p>On captures the model never saw, every condition misses most attacks. Training attacks are mostly port scans, while test attacks are mostly command-and-control.</p>
-      <p>Within that hard setting, DNS context helps in every seed, and DNS plus alerts gives the largest gain in every seed. Alerts alone add nothing. The gain comes from catching more c2 connections (detection 11% → 45%).</p>
-      <p>Results vary strongly by seed, and the bootstrap covers only seed 42. The direction is consistent; the size is uncertain.</p>
+      <p>On captures the model never saw, every condition misses many attacks. Training attacks are mostly port scans, while test attacks are mostly command-and-control.</p>
+      <p>Within that hard setting, DNS context and alert context each help, and combining all three log types helps most: better than connection logs alone in all 20 seeds and on 6 of 8 held-out captures. The gain comes mainly from catching more c2 connections (detection 11% → 41%), at the cost of more false alarms (0.27% → 0.92%).</p>
+      <p>The gain is not universal: it was slightly negative on two held-out captures, and its size varies strongly by network and seed.</p>
     </div>
   </section>
 
@@ -196,22 +196,22 @@ footer { font-size: 13px; color: var(--muted); display: flex; flex-direction: co
       <li>The 2026 ruleset postdates the 2018–2019 captures.</li>
       <li>The target is binary. DDoS appears only in test capture 34-1, and training has only 35 c2 rows.</li>
       <li>Seven captures from one lab, each with one infected device.</li>
-      <li>The ablation settings used the package defaults and were not agreed with Dr. Shah in advance.</li>
+      <li>A first cross-log run had an alert-timestamp bug (alert times 1,000× too small). It was fixed, covered by a test, and every cross-log result was regenerated; the old outputs are kept and marked superseded.</li>
     </ol>
   </section>
 
   <section>
-    <h2>Still to do</h2>
+    <h2>Full report</h2>
     <ul>
-      <li>Review with Dr. Shah before anything goes into the thesis.</li>
+      <li>The full write-up for the thesis is <code>experiments/thesis_report/Thesis_Experiments_Report.docx</code> (and .pdf).</li>
       <li>Cite IoT-23 (CC BY 4.0): Garcia, Parmisano &amp; Erquiaga (2020), Zenodo, doi 10.5281/zenodo.4743746.</li>
-      <li>Full commands, tool versions, hashes and decisions are in <code>experiments/RUN_LOG.md</code>. Proposed thesis text is in <code>experiments/THESIS_ADDITIONS.md</code>.</li>
+      <li>Full commands, tool versions, hashes and decisions are in <code>experiments/RUN_LOG.md</code>.</li>
     </ul>
   </section>
 
   <footer>
     <hr>
-    <span>Run B is the cited result and was not retrained or changed. The work is in the private GitHub repository, merged into main (pull request #1), still pending supervisor approval.</span>
+    <span>Run B is the cited result and was not retrained or changed. The work is in the private GitHub repository, on the main branch.</span>
   </footer>
 </div>
 

@@ -38,7 +38,7 @@ PAGES = {
         st.Page(DEMO / "pages" / "5_evidence.py", title="Research Evidence Explorer",
                 url_path="evidence"),
     ],
-    "Supplementary analyses (pending approval)": [
+    "Supplementary analyses": [
         st.Page(HERE / "pages" / "6_ablation.py", title="Controlled Ablation",
                 url_path="ablation"),
         st.Page(HERE / "pages" / "7_cross_log.py", title="Cross-Log Correlation",
@@ -49,6 +49,6 @@ PAGES = {
 nav = st.navigation(PAGES)
 ui.sidebar()
 with st.sidebar:
-    st.caption("Supplementary pages: additional analysis, pending supervisor "
-               "approval. They read only files under experiments/.")
+    st.caption("Supplementary pages: ablation and cross-log experiments. "
+               "They read only files under experiments/.")
 nav.run()

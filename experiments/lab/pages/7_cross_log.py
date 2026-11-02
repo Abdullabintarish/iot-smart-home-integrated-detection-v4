@@ -107,9 +107,10 @@ supp.src(XL / "stage4_results.json")
 st.subheader("Reading")
 ui.note("On unseen captures every condition misses most attacks: training attacks "
         "are mostly port scans, test attacks mostly command-and-control. Within "
-        "that, DNS context helps in every seed, and DNS plus alerts gives the "
-        "largest gain in every seed. Alerts alone add nothing. Results vary strongly "
-        "by seed, and the bootstrap covers seed 42 only.")
+        "that, DNS context and the combination of all three log types improve "
+        "macro F1 in every seed (20 of 20 in the 20-seed check). Alert context "
+        "alone helps on average (18 of 20 seeds) but less consistently. Results "
+        "vary strongly by seed; see the full report for the robustness checks.")
 
 # ---- 34-1 follow-up --------------------------------------------------------
 st.subheader("Follow-up: the 34-1 DDoS gap")

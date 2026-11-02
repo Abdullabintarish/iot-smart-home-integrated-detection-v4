@@ -117,6 +117,37 @@ B − A, C − A and D − A.
   not changed after results were seen. Deviations in the data (34-1 DDoS
   coverage) are reported in `RUN_LOG.md` §4.5, not corrected.
 
+## 4b. Robustness analyses (added 2026-11-03)
+
+Written after the primary Stage 4 results were seen and **before** any of the
+analyses below were run. The primary analysis (§4) and its results are not
+changed; these test whether its findings hold. Code: `cross_log/src/robustness.py`.
+
+| ID | Question | Design |
+|---|---|---|
+| R0 | Is the feature cache correct? | Rebuild the primary seed-42 run from the cache; predictions must be identical |
+| R1 | Is the A–D ordering a seed artefact? | Primary split, 20 seeds (42, 1–19); per-seed paired differences, sign counts, Wilcoxon signed-rank test |
+| R2 | How wide is the uncertainty when seed variance is included? | Two-level bootstrap on R1: each replicate draws one of the 20 seeds and resamples test incidents; 2,000 replicates |
+| R3 | Does it depend on the one train/test split? | Leave-one-capture-out over all captures with Stage 3 output (7, plus 48-1 and 49-1 if they pass the Stage 3 gate), 5 seeds; per-fold and pooled results |
+| R4 | Is the "connection start" rule too strict? | DNS / alert windows anchored at connection end (ts + duration), when Zeek writes the record; primary split, 5 seeds |
+| R5 | Does the 300 s window matter? | Windows of 60 s and 900 s; primary split, 5 seeds |
+
+Everything else (features, model, sampling, preprocessing, metrics) is as in
+§4. Alert categories are the top 10 of each analysis's own training captures.
+All results are reported, whichever way they go.
+
+Additional captures for R3: CTU-IoT-Malware-Capture-48-1 (1.1 GB pcap) and
+49-1 (1.3 GB pcap), the two smallest remaining IoT-23 malware captures with
+pcaps under 1.5 GB. Larger captures (3.5–21 GB pcaps) were not added.
+
+## 4c. Addendum after the robustness runs (2026-11-03)
+
+- An alert-timestamp bug was found while running R0–R5 (`RUN_LOG.md` §5.1).
+  After the fix, Stage 3, the primary Stage 4 analysis (§4, unchanged design)
+  and R0–R5 were rerun; the earlier outputs are kept as superseded.
+- 48-1 passed the Stage 3 gate and was added to R3. 49-1 failed the gate
+  (new-record match rate 89.84% < 90%) and was excluded, as fixed in §4b.
+
 ## 5. Outputs
 
 - `RUN_LOG.md` — commands, versions, hashes, decisions, failures.

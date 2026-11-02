@@ -1,0 +1,11 @@
+{
+  "rows_primary": 22677,
+  "rows_cache": 22677,
+  "identical_predictions": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+  },
+  "identical_novel_flags": true
+}

@@ -1,0 +1,10 @@
+2026-11-02T20:59:46Z
+{'pcap': 'CTU-IoT-Malware-Capture-48-1\\2019-02-28-19-15-13-192.168.1.200.pcap', 'size': 1222967296, 'complete_records': 13565552, 'trailing_bytes_dropped': 24, 'trimmed_copy': '2019-02-28-19-15-13-192.168.1.200.trimmed.pcap', 'trimmed_sha256': 'f26db54967e4ecde1f33646cdd6b3248c5db5aef6f06156414919baf44caabf8'}
+{'pcap': 'CTU-IoT-Malware-Capture-49-1\\2019-02-28-20-50-15-192.168.1.193.pcap', 'size': 1381228544, 'complete_records': 18111839, 'trailing_bytes_dropped': 70, 'trimmed_copy': '2019-02-28-20-50-15-192.168.1.193.trimmed.pcap', 'trimmed_sha256': '8a6dd699f47c22d153cae162a944ea49f263da6b7089a0b973934c9e933618fe'}
+2026-11-02T21:00:06Z
+done CTU-IoT-Malware-Capture-48-1
+2026-11-02T21:30:19Z
+done CTU-IoT-Malware-Capture-49-1
+2026-11-02T22:38:38Z
+48-1 conn=3394338 dns=24 alerts=28
+49-1 conn=6022729 dns=44 alerts=1394

@@ -1,0 +1,89 @@
+2026-11-02T22:39:11Z
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": true, "pass": true} 1.0 8
+2026-11-02T22:41:15Z
+{"benign_and_attack_present": true, "match_rate_ge_0_90": false, "cross_source_incidents_exist": true, "pass": false} 0.898357 98
+2026-11-02T22:45:05Z
+CTU-IoT-Malware-Capture-1-1 1008748 72
+CTU-IoT-Malware-Capture-20-1 3209 72
+CTU-IoT-Malware-Capture-21-1 3286 72
+CTU-IoT-Malware-Capture-3-1 156103 72
+CTU-IoT-Malware-Capture-34-1 8988 72
+CTU-IoT-Malware-Capture-42-1 4426 72
+CTU-IoT-Malware-Capture-48-1 3394338 72
+CTU-IoT-Malware-Capture-49-1 5410561 72
+CTU-IoT-Malware-Capture-8-1 10403 72
+2026-11-02T22:54:58Z
+[02:55:00] R0 reproduce primary seed 42 from cache
+[02:55:08]    seed 42: A=0.2461 B=0.3546 C=0.3824 D=0.5837
+[02:55:08] R0 {'rows_primary': 22677, 'rows_cache': 22677, 'identical_predictions': {'A': True, 'B': True, 'C': True, 'D': True}, 'identical_novel_flags': True}
+[02:55:08] R3 leave-one-capture-out over 9 captures, 5 seeds
+[02:55:09]   fold CTU-IoT-Malware-Capture-1-1: train 8,991,314, test 1,008,748
+[02:55:35]    seed 42: A=0.8898 B=0.8890 C=0.9444 D=0.9444
+[02:55:48]    seed 1: A=0.8897 B=0.8884 C=0.9443 D=0.9443
+[02:56:01]    seed 2: A=0.8897 B=0.8890 C=0.9443 D=0.9443
+[02:56:14]    seed 3: A=0.8897 B=0.8895 C=0.9443 D=0.9443
+[02:56:27]    seed 4: A=0.8897 B=0.8890 C=0.9443 D=0.9444
+[02:56:29]   fold CTU-IoT-Malware-Capture-20-1: train 9,996,853, test 3,209
+[02:56:48]    seed 42: A=0.7372 B=0.6100 C=0.8036 D=0.7372
+[02:56:54]    seed 1: A=0.4988 B=0.6100 C=0.8327 D=0.6100
+[02:57:00]    seed 2: A=0.5577 B=0.6100 C=0.8327 D=0.6569
+[02:57:07]    seed 3: A=0.4988 B=0.6100 C=0.8327 D=0.6100
+[02:57:13]    seed 4: A=0.5577 B=0.6100 C=0.8327 D=0.7372
+[02:57:15]   fold CTU-IoT-Malware-Capture-21-1: train 9,996,776, test 3,286
+[02:57:34]    seed 42: A=0.5657 B=0.7215 C=0.8473 D=0.7492
+[02:57:40]    seed 1: A=0.4989 B=0.7215 C=0.7850 D=0.7097
+[02:57:46]    seed 2: A=0.5657 B=0.6756 C=0.8176 D=0.7215
+[02:57:53]    seed 3: A=0.4989 B=0.7215 C=0.8328 D=0.7994
+[02:57:59]    seed 4: A=0.6756 B=0.6756 C=0.8176 D=0.7097
+[02:58:01]   fold CTU-IoT-Malware-Capture-3-1: train 9,843,959, test 156,103
+[02:58:20]    seed 42: A=0.5201 B=0.5198 C=0.1757 D=0.5202
+[02:58:27]    seed 1: A=0.5178 B=0.5198 C=0.5205 D=0.5201
+[02:58:34]    seed 2: A=0.5198 B=0.5207 C=0.5234 D=0.5218
+[02:58:41]    seed 3: A=0.5201 B=0.5198 C=0.5218 D=0.5209
+[02:58:47]    seed 4: A=0.5188 B=0.5198 C=0.5611 D=0.5187
+[02:58:49]   fold CTU-IoT-Malware-Capture-34-1: train 9,991,074, test 8,988
+[02:59:08]    seed 42: A=0.1775 B=0.4765 C=0.1758 D=0.3282
+[02:59:14]    seed 1: A=0.1786 B=0.1766 C=0.1838 D=0.2912
+[02:59:20]    seed 2: A=0.1775 B=0.4768 C=0.1801 D=0.2938
+[02:59:27]    seed 3: A=0.1778 B=0.4732 C=0.1760 D=0.2930
+[02:59:33]    seed 4: A=0.1779 B=0.1910 C=0.1801 D=0.2940
+[02:59:35]   fold CTU-IoT-Malware-Capture-42-1: train 9,995,636, test 4,426
+[02:59:53]    seed 42: A=0.3988 B=0.3577 C=0.3594 D=0.3577
+[02:59:59]    seed 1: A=0.3986 B=0.3578 C=0.3606 D=0.3594
+[03:00:05]    seed 2: A=0.3986 B=0.3578 C=0.3577 D=0.3577
+[03:00:11]    seed 3: A=0.3966 B=0.3945 C=0.3594 D=0.3599
+[03:00:18]    seed 4: A=0.3949 B=0.3544 C=0.3568 D=0.3565
+[03:00:20]   fold CTU-IoT-Malware-Capture-48-1: train 6,605,724, test 3,394,338
+[03:01:07]    seed 42: A=0.8388 B=0.8404 C=0.9909 D=0.9894
+[03:01:42]    seed 1: A=0.8403 B=0.8393 C=0.9864 D=0.9850
+[03:02:18]    seed 2: A=0.8385 B=0.8392 C=0.9346 D=0.9827
+[03:02:54]    seed 3: A=0.8375 B=0.8397 C=0.8963 D=0.8979
+[03:03:28]    seed 4: A=0.8384 B=0.8384 C=0.9813 D=0.9959
+[03:03:30]   fold CTU-IoT-Malware-Capture-49-1: train 4,589,501, test 5,410,561
+[03:04:36]    seed 42: A=0.8314 B=0.8307 C=0.8316 D=0.8338
+[03:05:31]    seed 1: A=0.8298 B=0.8300 C=0.8314 D=0.8308
+[03:06:25]    seed 2: A=0.8314 B=0.8312 C=0.8313 D=0.8293
+[03:07:20]    seed 3: A=0.8315 B=0.8316 C=0.8401 D=0.8320
+[03:08:14]    seed 4: A=0.8314 B=0.8313 C=0.8393 D=0.8331
+[03:08:16]   fold CTU-IoT-Malware-Capture-8-1: train 9,989,659, test 10,403
+[03:08:34]    seed 42: A=0.1733 B=0.4072 C=0.4072 D=0.4072
+[03:08:40]    seed 1: A=0.1839 B=0.4072 C=0.4072 D=0.4072
+[03:08:47]    seed 2: A=0.1733 B=0.4072 C=0.4072 D=0.4072
+[03:08:53]    seed 3: A=0.1733 B=0.4072 C=0.4072 D=0.4072
+[03:08:59]    seed 4: A=0.1733 B=0.4072 C=0.4072 D=0.4072
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\experiments\cross_log\src\robustness.py", line 284, in <module>
+    STEPS[k]()
+    ~~~~~~~~^^
+  File "C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\experiments\cross_log\src\robustness.py", line 258, in r3
+    "pooled_summary": summarise(pooled_res, SEEDS5),
+                      ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\experiments\cross_log\src\robustness.py", line 154, in summarise
+    "fpr_unseen_benign_mean": float(np.mean(g("fpr_unseen_benign"))) if g("fpr_unseen_benign") else None}
+                                                                        ~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\experiments\cross_log\src\robustness.py", line 149, in <lambda>
+    g = lambda k: [res[c][str(s)][k] for s in seeds if res[c][str(s)][k] is not None]  # noqa: E731
+                                                       ~~~~~~~~~~~~~~^^^
+KeyError: 'fpr_unseen_benign'
+R3 exit=1
+2026-11-02T23:09:28Z

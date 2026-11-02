@@ -3,15 +3,21 @@ from __future__ import annotations
 
 import html
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
 EXP = Path(__file__).resolve().parents[1]
+# The pages import the demo's ui module; make it importable even when a page
+# runs without app.py having set the path first.
+_DEMO = str(EXP.parent / "code" / "demo")
+if _DEMO not in sys.path:
+    sys.path.insert(0, _DEMO)
 ABL = EXP / "ablation" / "results"
 XL = EXP / "cross_log" / "results"
-PENDING = "Additional analysis, pending supervisor approval."
+PENDING = "Supplementary analysis to the thesis experiment."
 CAPTURES = ["8-1", "42-1", "20-1", "21-1", "3-1", "34-1", "1-1"]
 TRAIN = ["1-1", "3-1", "20-1", "42-1"]
 SEEDS = ["42", "1", "2", "3", "4"]

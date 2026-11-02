@@ -1,0 +1,69 @@
+2026-11-02T20:58:22Z
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": false, "pass": false} 1.0 0
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": true, "pass": true} 1.0 39
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": true, "pass": true} 1.0 23
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": true, "pass": true} 1.0 56
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": true, "pass": true} 1.0 235
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": true, "pass": true} 0.999778 159
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": true, "pass": true} 1.0 59
+2026-11-02T20:59:08Z
+stage4 exit=0
+A 0.3346 0.1973
+B 0.5016 0.1688
+C 0.4161 0.1627
+D 0.5865 0.1533
+2026-11-02T21:00:17Z
+CTU-IoT-Malware-Capture-1-1 1008748 72
+CTU-IoT-Malware-Capture-20-1 3209 72
+CTU-IoT-Malware-Capture-21-1 3286 72
+CTU-IoT-Malware-Capture-3-1 156103 72
+CTU-IoT-Malware-Capture-34-1 8988 72
+CTU-IoT-Malware-Capture-42-1 4426 72
+CTU-IoT-Malware-Capture-8-1 10403 72
+[01:01:31] R0 reproduce primary seed 42 from cache
+[01:01:39]    seed 42: A=0.2461 B=0.3546 C=0.3824 D=0.5837
+[01:01:39] R0 {'rows_primary': 22677, 'rows_cache': 22677, 'identical_predictions': {'A': True, 'B': True, 'C': True, 'D': True}, 'identical_novel_flags': True}
+[01:01:39] R1 primary split, 20 seeds
+[01:01:47]    seed 42: A=0.2461 B=0.3546 C=0.3824 D=0.5837
+[01:01:52]    seed 1: A=0.2460 B=0.3492 C=0.2463 D=0.4791
+[01:01:58]    seed 2: A=0.2462 B=0.5868 C=0.3821 D=0.5180
+[01:02:04]    seed 3: A=0.2469 B=0.4693 C=0.3822 D=0.4999
+[01:02:10]    seed 4: A=0.6876 B=0.7483 C=0.6874 D=0.8517
+[01:02:15]    seed 5: A=0.2465 B=0.3504 C=0.3820 D=0.5843
+[01:02:21]    seed 6: A=0.2464 B=0.5827 C=0.3821 D=0.5080
+[01:02:27]    seed 7: A=0.2459 B=0.4678 C=0.3848 D=0.5114
+[01:02:33]    seed 8: A=0.2464 B=0.4845 C=0.2466 D=0.4017
+[01:02:38]    seed 9: A=0.2465 B=0.5869 C=0.3826 D=0.6157
+[01:02:44]    seed 10: A=0.2468 B=0.5843 C=0.3822 D=0.4498
+[01:02:50]    seed 11: A=0.2463 B=0.5827 C=0.3831 D=0.5074
+[01:02:55]    seed 12: A=0.2465 B=0.4677 C=0.3822 D=0.5070
+[01:03:01]    seed 13: A=0.2462 B=0.4885 C=0.3884 D=0.5613
+[01:03:07]    seed 14: A=0.2464 B=0.3585 C=0.3885 D=0.4878
+[01:03:13]    seed 15: A=0.2463 B=0.5860 C=0.3830 D=0.5102
+[01:03:19]    seed 16: A=0.2461 B=0.4833 C=0.3875 D=0.5843
+[01:03:25]    seed 17: A=0.2460 B=0.3489 C=0.3822 D=0.4804
+[01:03:30]    seed 18: A=0.2460 B=0.4592 C=0.3825 D=0.4970
+[01:03:36]    seed 19: A=0.2464 B=0.4890 C=0.2455 D=0.5821
+[01:03:37] R2 two-level bootstrap (seeds x incidents)
+[01:03:53] R2 D-A [0.1502743999426355, 0.3674458987138965]  B-A [0.06312107196278269, 0.3499364305074058]  C-A [-0.0010298542764245737, 0.14947350998359585]
+[01:03:53] R4 features anchored at connection end
+[01:04:01]    seed 42: A=0.2461 B=0.4880 C=0.3828 D=0.5081
+[01:04:07]    seed 1: A=0.2460 B=0.4827 C=0.2461 D=0.4943
+[01:04:13]    seed 2: A=0.2462 B=0.4857 C=0.2459 D=0.5158
+[01:04:19]    seed 3: A=0.2469 B=0.5851 C=0.3823 D=0.5030
+[01:04:25]    seed 4: A=0.6876 B=0.8480 C=0.6873 D=0.8385
+[01:04:25] R5 window variant start_60
+[01:04:32]    seed 42: A=0.2461 B=0.4914 C=0.4186 D=0.5906
+[01:04:38]    seed 1: A=0.2460 B=0.5915 C=0.4891 D=0.6144
+[01:04:44]    seed 2: A=0.2462 B=0.5892 C=0.4187 D=0.5717
+[01:04:50]    seed 3: A=0.2469 B=0.5915 C=0.3919 D=0.5905
+[01:04:56]    seed 4: A=0.6876 B=0.8538 C=0.7139 D=0.8856
+[01:04:56] R5 window variant start_900
+[01:05:03]    seed 42: A=0.2461 B=0.3596 C=0.3822 D=0.4988
+[01:05:09]    seed 1: A=0.2460 B=0.3424 C=0.2456 D=0.4554
+[01:05:15]    seed 2: A=0.2462 B=0.4732 C=0.2458 D=0.5670
+[01:05:21]    seed 3: A=0.2469 B=0.5755 C=0.3824 D=0.4479
+[01:05:27]    seed 4: A=0.6876 B=0.7437 C=0.6875 D=0.8331
+[01:05:27] done
+robustness exit=0
+2026-11-02T21:05:27Z

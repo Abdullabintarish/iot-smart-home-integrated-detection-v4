@@ -1,0 +1,172 @@
+{
+  "w60:event_plus_incident_minus_event_plus_permuted_incident": {
+    "window_s": 60,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": 0.0014517240698087575,
+    "fpr_point": 0.001995000285000041,
+    "f1_macro_diff": [
+      0.00011817450712704458,
+      0.0027551982461323002
+    ],
+    "fpr_diff": [
+      0.0014605145641117246,
+      0.0025131834362637703
+    ],
+    "n_boot": 1000
+  },
+  "w60:event_plus_permuted_incident_minus_event_only": {
+    "window_s": 60,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": -0.00015226062833928466,
+    "fpr_point": 0.005537143648163378,
+    "f1_macro_diff": [
+      -0.0023153778948518415,
+      0.0022566064389420155
+    ],
+    "fpr_diff": [
+      0.004709982959579665,
+      0.0063505777544660795
+    ],
+    "n_boot": 1000
+  },
+  "w150:event_plus_incident_minus_event_plus_permuted_incident": {
+    "window_s": 150,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": 0.003212512295504455,
+    "fpr_point": 0.0007165715309387904,
+    "f1_macro_diff": [
+      0.001491568617735606,
+      0.004991170923800796
+    ],
+    "fpr_diff": [
+      8.99332888217501e-05,
+      0.0012854813654545598
+    ],
+    "n_boot": 1000
+  },
+  "w150:event_plus_permuted_incident_minus_event_only": {
+    "window_s": 150,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": -0.0015837545844723522,
+    "fpr_point": 0.006204858029265432,
+    "f1_macro_diff": [
+      -0.003659042477918531,
+      0.0007739321252256486
+    ],
+    "fpr_diff": [
+      0.0053280807816247335,
+      0.007050899486367298
+    ],
+    "n_boot": 1000
+  },
+  "w300:event_plus_incident_minus_event_plus_permuted_incident": {
+    "window_s": 300,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": 0.003990891627833171,
+    "fpr_point": 0.0023940003420000484,
+    "f1_macro_diff": [
+      0.0021714939989258943,
+      0.005992228188787786
+    ],
+    "fpr_diff": [
+      0.0018340325380786652,
+      0.0029645657211762903
+    ],
+    "n_boot": 1000
+  },
+  "w300:event_plus_permuted_incident_minus_event_only": {
+    "window_s": 300,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": -0.002435439088865121,
+    "fpr_point": 0.004682143526020504,
+    "f1_macro_diff": [
+      -0.004515938714344711,
+      -0.00022252118052948664
+    ],
+    "fpr_diff": [
+      0.003876814127216446,
+      0.005428227806183884
+    ],
+    "n_boot": 1000
+  },
+  "w600:event_plus_incident_minus_event_plus_permuted_incident": {
+    "window_s": 600,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": 0.003158958445397375,
+    "fpr_point": 0.0013842859120408446,
+    "f1_macro_diff": [
+      -4.421696635573675e-05,
+      0.00596066749269228
+    ],
+    "fpr_diff": [
+      0.0006438902424982761,
+      0.002248376638281134
+    ],
+    "n_boot": 1000
+  },
+  "w600:event_plus_permuted_incident_minus_event_only": {
+    "window_s": 600,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": -0.0030725935136522997,
+    "fpr_point": 0.006204858029265432,
+    "f1_macro_diff": [
+      -0.005089107208440977,
+      -0.000915090654441023
+    ],
+    "fpr_diff": [
+      0.005383335298772373,
+      0.0069985183272470615
+    ],
+    "n_boot": 1000
+  },
+  "w900:event_plus_incident_minus_event_plus_permuted_incident": {
+    "window_s": 900,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": 0.0034364612249675464,
+    "fpr_point": 0.0014738573534081936,
+    "f1_macro_diff": [
+      0.0002487746244011991,
+      0.006341875286969482
+    ],
+    "fpr_diff": [
+      0.0006924633079831747,
+      0.00232803441076963
+    ],
+    "n_boot": 1000
+  },
+  "w900:event_plus_permuted_incident_minus_event_only": {
+    "window_s": 900,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": -0.0036555018577851817,
+    "fpr_point": 0.006115286587898083,
+    "f1_macro_diff": [
+      -0.0055300043400563215,
+      -0.0014421324607839486
+    ],
+    "fpr_diff": [
+      0.005328011617420836,
+      0.006873699325392449
+    ],
+    "n_boot": 1000
+  }
+}

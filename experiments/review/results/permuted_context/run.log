@@ -1,0 +1,91 @@
+﻿start 2026-11-15 16:36:06Z
+[20:36:07] loading events (20 event features)
+[20:36:08] 4,211,383 events: 2,519,051 train, 1,692,332 test
+[20:36:43]   event_only                     w=0    seed=42  f1=0.9949 (23.5s)
+[20:36:43] window 300s: building incident context
+[20:37:13]   event_plus_incident            w=300  seed=42  f1=0.9964 (20.8s)
+[20:37:13] reproduction check passed: event_only and event_plus_incident (seed 42, 300 s) match the saved ablation in every subset and metric
+[20:37:32]   event_only                     w=0    seed=1   f1=0.9943 (18.6s)
+[20:37:51]   event_only                     w=0    seed=2   f1=0.9948 (19.2s)
+[20:38:13]   event_only                     w=0    seed=3   f1=0.9973 (21.7s)
+[20:38:34]   event_only                     w=0    seed=4   f1=0.9946 (21.0s)
+[20:38:34] window 60s: building incident context
+[20:39:01]   event_plus_incident            w=60   seed=42  f1=0.9962 (18.8s)
+[20:39:20]   event_plus_permuted_incident   w=60   seed=42  f1=0.9947 (17.2s)
+[20:39:37]   event_plus_incident            w=60   seed=1   f1=0.9966 (17.0s)
+[20:39:57]   event_plus_permuted_incident   w=60   seed=1   f1=0.9933 (17.9s)
+[20:40:14]   event_plus_incident            w=60   seed=2   f1=0.9961 (17.0s)
+[20:40:34]   event_plus_permuted_incident   w=60   seed=2   f1=0.9933 (18.2s)
+[20:40:52]   event_plus_incident            w=60   seed=3   f1=0.9964 (17.9s)
+[20:41:11]   event_plus_permuted_incident   w=60   seed=3   f1=0.9934 (17.4s)
+[20:41:29]   event_plus_incident            w=60   seed=4   f1=0.9969 (17.5s)
+[20:41:49]   event_plus_permuted_incident   w=60   seed=4   f1=0.9949 (18.2s)
+[20:41:49] window 150s: building incident context
+[20:42:14]   event_plus_incident            w=150  seed=42  f1=0.9965 (17.7s)
+[20:42:33]   event_plus_permuted_incident   w=150  seed=42  f1=0.9933 (17.5s)
+[20:42:51]   event_plus_incident            w=150  seed=1   f1=0.9964 (17.6s)
+[20:43:11]   event_plus_permuted_incident   w=150  seed=1   f1=0.9904 (18.0s)
+[20:43:29]   event_plus_incident            w=150  seed=2   f1=0.9965 (18.2s)
+[20:43:48]   event_plus_permuted_incident   w=150  seed=2   f1=0.9918 (17.2s)
+[20:44:05]   event_plus_incident            w=150  seed=3   f1=0.9970 (17.1s)
+[20:44:24]   event_plus_permuted_incident   w=150  seed=3   f1=0.9909 (17.3s)
+[20:44:41]   event_plus_incident            w=150  seed=4   f1=0.9967 (17.0s)
+[20:45:01]   event_plus_permuted_incident   w=150  seed=4   f1=0.9938 (17.9s)
+[20:45:01] window 300s: building incident context
+[20:45:27]   event_plus_permuted_incident   w=300  seed=42  f1=0.9924 (17.2s)
+[20:45:43]   event_plus_incident            w=300  seed=1   f1=0.9963 (16.4s)
+[20:46:02]   event_plus_permuted_incident   w=300  seed=1   f1=0.9912 (16.9s)
+[20:46:18]   event_plus_incident            w=300  seed=2   f1=0.9959 (16.3s)
+[20:46:37]   event_plus_permuted_incident   w=300  seed=2   f1=0.9906 (16.9s)
+[20:46:53]   event_plus_incident            w=300  seed=3   f1=0.9967 (16.3s)
+[20:47:12]   event_plus_permuted_incident   w=300  seed=3   f1=0.9900 (16.6s)
+[20:47:28]   event_plus_incident            w=300  seed=4   f1=0.9966 (16.4s)
+[20:47:48]   event_plus_permuted_incident   w=300  seed=4   f1=0.9921 (17.8s)
+[20:47:48] window 600s: building incident context
+[20:48:12]   event_plus_incident            w=600  seed=42  f1=0.9950 (17.0s)
+[20:48:31]   event_plus_permuted_incident   w=600  seed=42  f1=0.9918 (17.4s)
+[20:48:48]   event_plus_incident            w=600  seed=1   f1=0.9950 (17.2s)
+[20:49:07]   event_plus_permuted_incident   w=600  seed=1   f1=0.9899 (17.2s)
+[20:49:24]   event_plus_incident            w=600  seed=2   f1=0.9948 (16.6s)
+[20:49:43]   event_plus_permuted_incident   w=600  seed=2   f1=0.9908 (17.1s)
+[20:50:00]   event_plus_incident            w=600  seed=3   f1=0.9950 (17.2s)
+[20:50:20]   event_plus_permuted_incident   w=600  seed=3   f1=0.9899 (17.5s)
+[20:50:37]   event_plus_incident            w=600  seed=4   f1=0.9952 (16.9s)
+[20:50:55]   event_plus_permuted_incident   w=600  seed=4   f1=0.9910 (17.0s)
+[20:50:55] window 900s: building incident context
+[20:51:19]   event_plus_incident            w=900  seed=42  f1=0.9947 (17.0s)
+[20:51:38]   event_plus_permuted_incident   w=900  seed=42  f1=0.9912 (16.8s)
+[20:51:54]   event_plus_incident            w=900  seed=1   f1=0.9949 (16.5s)
+[20:52:13]   event_plus_permuted_incident   w=900  seed=1   f1=0.9896 (16.7s)
+[20:52:29]   event_plus_incident            w=900  seed=2   f1=0.9944 (16.5s)
+[20:52:49]   event_plus_permuted_incident   w=900  seed=2   f1=0.9903 (17.3s)
+[20:53:06]   event_plus_incident            w=900  seed=3   f1=0.9952 (17.3s)
+[20:53:25]   event_plus_permuted_incident   w=900  seed=3   f1=0.9888 (17.1s)
+[20:53:42]   event_plus_incident            w=900  seed=4   f1=0.9954 (17.2s)
+[20:54:02]   event_plus_permuted_incident   w=900  seed=4   f1=0.9911 (17.9s)
+[20:54:02] bootstrap w=60 event_plus_incident minus event_plus_permuted_incident
+[20:54:31] bootstrap w=60 event_plus_permuted_incident minus event_only
+[20:54:59] bootstrap w=150 event_plus_incident minus event_plus_permuted_incident
+[20:55:28] bootstrap w=150 event_plus_permuted_incident minus event_only
+[20:55:56] bootstrap w=300 event_plus_incident minus event_plus_permuted_incident
+[20:56:24] bootstrap w=300 event_plus_permuted_incident minus event_only
+[20:56:53] bootstrap w=600 event_plus_incident minus event_plus_permuted_incident
+[20:57:22] bootstrap w=600 event_plus_permuted_incident minus event_only
+[20:57:50] bootstrap w=900 event_plus_incident minus event_plus_permuted_incident
+[20:58:19] bootstrap w=900 event_plus_permuted_incident minus event_only
+| Window (s) | Feature set | Runs | Macro F1 (mean ± SD) | FPR (mean ± SD) | Cut |
+|---|---|---|---|---|---|
+| n/a | event_only | 5 | 0.9952 ± 0.0012 | 0.38% ± 0.05% | no |
+| 60 | event_plus_incident | 5 | 0.9965 ± 0.0003 | 1.18% ± 0.02% | no |
+| 60 | event_plus_permuted_incident | 5 | 0.9939 ± 0.0008 | 0.95% ± 0.07% | no |
+| 150 | event_plus_incident | 5 | 0.9966 ± 0.0003 | 1.13% ± 0.01% | no |
+| 150 | event_plus_permuted_incident | 5 | 0.9920 ± 0.0015 | 1.04% ± 0.03% | no |
+| 300 | event_plus_incident | 5 | 0.9964 ± 0.0003 | 1.14% ± 0.02% | no |
+| 300 | event_plus_permuted_incident | 5 | 0.9913 ± 0.0010 | 0.99% ± 0.06% | no |
+| 600 | event_plus_incident | 5 | 0.9950 ± 0.0001 | 1.18% ± 0.01% | yes |
+| 600 | event_plus_permuted_incident | 5 | 0.9907 ± 0.0008 | 1.05% ± 0.05% | yes |
+| 900 | event_plus_incident | 5 | 0.9949 ± 0.0004 | 1.18% ± 0.01% | yes |
+| 900 | event_plus_permuted_incident | 5 | 0.9902 ± 0.0010 | 1.04% ± 0.02% | yes |
+
+[20:58:48] finished; results in C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\experiments\review\results\permuted_context
+exit 0 end 2026-11-15 16:58:48Z

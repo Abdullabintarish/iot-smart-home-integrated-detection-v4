@@ -1,0 +1,25 @@
+{
+  "run_t_dir": "C:\\Users\\user\\Desktop\\Thesis_Part2_Report\\Thesis_Part1_Reoprt\\thesis_final_validation\\supplementary_temporal\\code",
+  "n_events": 4211383,
+  "n_test": 1052847,
+  "run_t_incidents": 704151,
+  "split_free_groups_plus_singletons": 704090,
+  "groups_with_split_side_plus_singletons": 704151,
+  "cut_groups": 61,
+  "fragmented_rows": 1052847,
+  "fragmented_join": {
+    "source": true,
+    "incident_id": true,
+    "split": true,
+    "label": true
+  },
+  "fragmented_all_matches_stage5_report": true,
+  "integrated_rows": 1052847,
+  "integrated_join": {
+    "source": true,
+    "incident_id": true,
+    "split": true,
+    "label": true
+  },
+  "integrated_all_matches_stage5_report": true
+}

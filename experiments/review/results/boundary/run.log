@@ -1,0 +1,22 @@
+﻿[20:37:44] loading Run T events from C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\thesis_final_validation\supplementary_temporal\code\data\processed\stage3_events
+[20:37:45] 4,211,383 events, 1,052,847 test
+[20:38:10] reading fragmented_event_predictions.csv
+[20:38:27] reading integrated_event_predictions.csv
+ condition                                 subset       n  accuracy  precision_macro  recall_macro  f1_macro      fpr      fnr  n_benign  n_attack  n_false_positive  n_false_negative
+fragmented                                    all 1052847  0.999291         0.999431      0.998883  0.999157 0.004440 0.000204    125218    927629               556               189
+fragmented              excluding_boundary_groups  548990  0.998650         0.999431      0.996696  0.998057 0.004443 0.000434    125148    423842               556               184
+fragmented                   boundary_groups_only  503857  0.999990         0.983333      0.999997  0.991378 0.000000 0.000010        70    503787                 0                 5
+fragmented secondary_excluding_flows_spanning_cut  283844  0.997548         0.799085      0.798915  0.798998 0.004646 0.000852    119448    164396               555               140
+integrated                                    all 1052847  0.715543         0.804538      0.806666  0.771054 0.096528 0.003958    125218    927629             12087              3672
+integrated              excluding_boundary_groups  548990  0.948025         0.682405      0.719863  0.699374 0.096174 0.008633    125148    423842             12036              3659
+integrated                   boundary_groups_only  503857  0.462236         0.327498      0.343711  0.215170 0.728571 0.000026        70    503787                51                13
+integrated secondary_excluding_flows_spanning_cut  283844  0.948954         0.577842      0.545598  0.560286 0.090173 0.020621    119448    164396             10771              3390
+{
+  "boundary_test_events": 503857,
+  "boundary_test_incidents": 61,
+  "test_incidents": 178120,
+  "boundary_train_events": 1761353,
+  "secondary_flow_test_events": 769003,
+  "secondary_flow_test_incidents": 3446
+}
+[20:38:42] finished; results in C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\experiments\review\results\boundary

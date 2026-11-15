@@ -1,0 +1,624 @@
+[
+  {
+    "condition": "fragmented",
+    "subset": "all",
+    "per_class": {
+      "benign": {
+        "precision": 0.9984861955450898,
+        "recall": 0.9955597438068009,
+        "f1": 0.9970208222530581,
+        "support": 125218
+      },
+      "c2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4270
+      },
+      "dos": {
+        "precision": 1.0,
+        "recall": 0.9997218939025239,
+        "f1": 0.9998609276128225,
+        "support": 503405
+      },
+      "malware": {
+        "precision": 1.0,
+        "recall": 0.9992503748125937,
+        "f1": 0.9996250468691413,
+        "support": 1334
+      },
+      "recon": {
+        "precision": 0.9986710503712469,
+        "recall": 0.9998829487363241,
+        "f1": 0.9992766321137144,
+        "support": 418620
+      }
+    },
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "confusion_matrix": [
+      [
+        124662,
+        0,
+        0,
+        0,
+        556
+      ],
+      [
+        0,
+        4270,
+        0,
+        0,
+        0
+      ],
+      [
+        139,
+        0,
+        503265,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1333,
+        0
+      ],
+      [
+        49,
+        0,
+        0,
+        0,
+        418571
+      ]
+    ]
+  },
+  {
+    "condition": "fragmented",
+    "subset": "excluding_boundary_groups",
+    "per_class": {
+      "benign": {
+        "precision": 0.9985253574405334,
+        "recall": 0.9955572602039185,
+        "f1": 0.9970390998863654,
+        "support": 125148
+      },
+      "c2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4251
+      },
+      "dos": {
+        "precision": 1.0,
+        "recall": 0.9887938905951689,
+        "f1": 0.9943653741808923,
+        "support": 12047
+      },
+      "malware": {
+        "precision": 1.0,
+        "recall": 0.9992503748125937,
+        "f1": 0.9996250468691413,
+        "support": 1334
+      },
+      "recon": {
+        "precision": 0.9986305007400705,
+        "recall": 0.9998793727382388,
+        "f1": 0.9992545465281059,
+        "support": 406210
+      }
+    },
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "confusion_matrix": [
+      [
+        124592,
+        0,
+        0,
+        0,
+        556
+      ],
+      [
+        0,
+        4251,
+        0,
+        0,
+        0
+      ],
+      [
+        134,
+        0,
+        11912,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1333,
+        0
+      ],
+      [
+        49,
+        0,
+        0,
+        0,
+        406161
+      ]
+    ]
+  },
+  {
+    "condition": "fragmented",
+    "subset": "boundary_groups_only",
+    "per_class": {
+      "benign": {
+        "precision": 0.9333333333333333,
+        "recall": 1.0,
+        "f1": 0.9655172413793104,
+        "support": 70
+      },
+      "c2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "dos": {
+        "precision": 1.0,
+        "recall": 0.9999898241200916,
+        "f1": 0.9999949120341586,
+        "support": 491358
+      },
+      "recon": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 12410
+      }
+    },
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "recon"
+    ],
+    "confusion_matrix": [
+      [
+        70,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        19,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        491353,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        12410
+      ]
+    ]
+  },
+  {
+    "condition": "fragmented",
+    "subset": "secondary_excluding_flows_spanning_cut",
+    "per_class": {
+      "benign": {
+        "precision": 0.998823855569464,
+        "recall": 0.9953536266827406,
+        "f1": 0.9970857217136795,
+        "support": 119448
+      },
+      "c2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "dos": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 135
+      },
+      "malware": {
+        "precision": 1.0,
+        "recall": 0.9992503748125937,
+        "f1": 0.9996250468691413,
+        "support": 1334
+      },
+      "recon": {
+        "precision": 0.9965989099384012,
+        "recall": 0.9999693112210452,
+        "f1": 0.9982812657971893,
+        "support": 162926
+      }
+    },
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "confusion_matrix": [
+      [
+        118893,
+        0,
+        0,
+        0,
+        555
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        134,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1333,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        0,
+        162921
+      ]
+    ]
+  },
+  {
+    "condition": "integrated",
+    "subset": "all",
+    "per_class": {
+      "benign": {
+        "precision": 0.9685624513069013,
+        "recall": 0.90347234423166,
+        "f1": 0.9348858156936795,
+        "support": 125218
+      },
+      "c2": {
+        "precision": 0.7831453500744839,
+        "recall": 0.8618266978922716,
+        "f1": 0.8206043037127885,
+        "support": 4270
+      },
+      "dos": {
+        "precision": 0.999809553175474,
+        "recall": 0.43800121174799617,
+        "f1": 0.6091452456629634,
+        "support": 503405
+      },
+      "malware": {
+        "precision": 0.6860821581851625,
+        "recall": 0.8388305847076462,
+        "f1": 0.7548060708263069,
+        "support": 1334
+      },
+      "recon": {
+        "precision": 0.5850912321272456,
+        "recall": 0.9911972672113134,
+        "f1": 0.7358308210675651,
+        "support": 418620
+      }
+    },
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "confusion_matrix": [
+      [
+        113131,
+        777,
+        23,
+        314,
+        10973
+      ],
+      [
+        65,
+        3680,
+        2,
+        155,
+        368
+      ],
+      [
+        13,
+        0,
+        220492,
+        0,
+        282900
+      ],
+      [
+        25,
+        186,
+        0,
+        1119,
+        4
+      ],
+      [
+        3569,
+        56,
+        17,
+        43,
+        414935
+      ]
+    ]
+  },
+  {
+    "condition": "integrated",
+    "subset": "excluding_boundary_groups",
+    "per_class": {
+      "benign": {
+        "precision": 0.9686651651523066,
+        "recall": 0.903825870169719,
+        "f1": 0.9351229130411419,
+        "support": 125148
+      },
+      "c2": {
+        "precision": 0.787334189131365,
+        "recall": 0.8656786638438014,
+        "f1": 0.8246498599439775,
+        "support": 4251
+      },
+      "dos": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12047
+      },
+      "malware": {
+        "precision": 0.7109275730622617,
+        "recall": 0.8388305847076462,
+        "f1": 0.7696011004126547,
+        "support": 1334
+      },
+      "recon": {
+        "precision": 0.9450988310258283,
+        "recall": 0.9909775731764359,
+        "f1": 0.9674946132797525,
+        "support": 406210
+      }
+    },
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "confusion_matrix": [
+      [
+        113112,
+        752,
+        23,
+        292,
+        10969
+      ],
+      [
+        65,
+        3680,
+        2,
+        138,
+        366
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        12045
+      ],
+      [
+        25,
+        186,
+        0,
+        1119,
+        4
+      ],
+      [
+        3567,
+        56,
+        17,
+        25,
+        402545
+      ]
+    ]
+  },
+  {
+    "condition": "integrated",
+    "subset": "boundary_groups_only",
+    "per_class": {
+      "benign": {
+        "precision": 0.59375,
+        "recall": 0.2714285714285714,
+        "f1": 0.37254901960784315,
+        "support": 70
+      },
+      "c2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 19
+      },
+      "dos": {
+        "precision": 1.0,
+        "recall": 0.4487400225497499,
+        "f1": 0.6194900611083796,
+        "support": 491358
+      },
+      "malware": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "recon": {
+        "precision": 0.04374212271095248,
+        "recall": 0.9983883964544722,
+        "f1": 0.0838122038415618,
+        "support": 12410
+      }
+    },
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "confusion_matrix": [
+      [
+        19,
+        25,
+        0,
+        22,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        17,
+        2
+      ],
+      [
+        11,
+        0,
+        220492,
+        0,
+        270855
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        18,
+        12390
+      ]
+    ]
+  },
+  {
+    "condition": "integrated",
+    "subset": "secondary_excluding_flows_spanning_cut",
+    "per_class": {
+      "benign": {
+        "precision": 0.969750238696494,
+        "recall": 0.9098268702699083,
+        "f1": 0.9388333369328121,
+        "support": 119448
+      },
+      "c2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "dos": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 135
+      },
+      "malware": {
+        "precision": 0.9833040421792618,
+        "recall": 0.8388305847076462,
+        "f1": 0.9053398058252428,
+        "support": 1334
+      },
+      "recon": {
+        "precision": 0.9361538596933836,
+        "recall": 0.9793341762517953,
+        "f1": 0.9572573170109819,
+        "support": 162926
+      }
+    },
+    "classes": [
+      "benign",
+      "c2",
+      "dos",
+      "malware",
+      "recon"
+    ],
+    "confusion_matrix": [
+      [
+        108677,
+        4,
+        8,
+        14,
+        10745
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        133
+      ],
+      [
+        25,
+        186,
+        0,
+        1119,
+        4
+      ],
+      [
+        3362,
+        0,
+        0,
+        5,
+        159559
+      ]
+    ]
+  }
+]

@@ -1,0 +1,154 @@
+{
+  "boundary_test_events": 503857,
+  "boundary_test_incidents": 61,
+  "test_incidents": 178120,
+  "boundary_train_events": 1761353,
+  "secondary_flow_test_events": 769003,
+  "secondary_flow_test_incidents": 3446,
+  "boundary_test_events_by_source_label": [
+    {
+      "source": "CTU-Honeypot-Capture-4-1",
+      "label": "benign",
+      "events": 3
+    },
+    {
+      "source": "CTU-Honeypot-Capture-5-1",
+      "label": "benign",
+      "events": 3
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-1-1",
+      "label": "benign",
+      "events": 4
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-1-1",
+      "label": "recon",
+      "events": 5
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-21-1",
+      "label": "benign",
+      "events": 22
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-3-1",
+      "label": "recon",
+      "events": 1
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-34-1",
+      "label": "c2",
+      "events": 17
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-34-1",
+      "label": "dos",
+      "events": 3286
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-42-1",
+      "label": "benign",
+      "events": 22
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-44-1",
+      "label": "benign",
+      "events": 1
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-8-1",
+      "label": "c2",
+      "events": 2
+    },
+    {
+      "source": "data_1",
+      "label": "recon",
+      "events": 12404
+    },
+    {
+      "source": "data_10",
+      "label": "benign",
+      "events": 8
+    },
+    {
+      "source": "data_10",
+      "label": "dos",
+      "events": 238079
+    },
+    {
+      "source": "data_36",
+      "label": "benign",
+      "events": 7
+    },
+    {
+      "source": "data_36",
+      "label": "dos",
+      "events": 249993
+    }
+  ],
+  "boundary_test_incidents_by_source": [
+    {
+      "source": "CTU-Honeypot-Capture-4-1",
+      "incidents": 1
+    },
+    {
+      "source": "CTU-Honeypot-Capture-5-1",
+      "incidents": 2
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-1-1",
+      "incidents": 5
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-21-1",
+      "incidents": 1
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-3-1",
+      "incidents": 1
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-34-1",
+      "incidents": 2
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-42-1",
+      "incidents": 2
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-44-1",
+      "incidents": 1
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-8-1",
+      "incidents": 1
+    },
+    {
+      "source": "data_1",
+      "incidents": 4
+    },
+    {
+      "source": "data_10",
+      "incidents": 20
+    },
+    {
+      "source": "data_36",
+      "incidents": 21
+    }
+  ],
+  "test_events_by_label_all": {
+    "benign": 125218,
+    "c2": 4270,
+    "dos": 503405,
+    "malware": 1334,
+    "recon": 418620
+  },
+  "test_events_by_label_excluding": {
+    "benign": 125148,
+    "c2": 4251,
+    "dos": 12047,
+    "malware": 1334,
+    "recon": 406210
+  }
+}

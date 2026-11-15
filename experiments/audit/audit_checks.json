@@ -1,0 +1,299 @@
+{
+  "run_metrics_recomputed": {
+    "run_B": {
+      "fragmented": {
+        "n": 1692332,
+        "f1_macro": {
+          "recomputed": 0.995451,
+          "reported": 0.995451,
+          "equal": true
+        },
+        "fpr": {
+          "recomputed": 0.004609,
+          "reported": 0.004609,
+          "equal": true
+        },
+        "fnr": {
+          "recomputed": 0.000147,
+          "reported": 0.000147,
+          "equal": true
+        },
+        "confusion_matrix_equal": true
+      },
+      "integrated": {
+        "n": 1692332,
+        "f1_macro": {
+          "recomputed": 0.8341,
+          "reported": 0.8341,
+          "equal": true
+        },
+        "fpr": {
+          "recomputed": 0.102111,
+          "reported": 0.102111,
+          "equal": true
+        },
+        "fnr": {
+          "recomputed": 0.003444,
+          "reported": 0.003444,
+          "equal": true
+        },
+        "confusion_matrix_equal": true
+      }
+    },
+    "run_T": {
+      "fragmented": {
+        "n": 1052847,
+        "f1_macro": {
+          "recomputed": 0.999157,
+          "reported": 0.999157,
+          "equal": true
+        },
+        "fpr": {
+          "recomputed": 0.00444,
+          "reported": 0.00444,
+          "equal": true
+        },
+        "fnr": {
+          "recomputed": 0.000204,
+          "reported": 0.000204,
+          "equal": true
+        },
+        "confusion_matrix_equal": true
+      },
+      "integrated": {
+        "n": 1052847,
+        "f1_macro": {
+          "recomputed": 0.771054,
+          "reported": 0.771054,
+          "equal": true
+        },
+        "fpr": {
+          "recomputed": 0.096528,
+          "reported": 0.096528,
+          "equal": true
+        },
+        "fnr": {
+          "recomputed": 0.003958,
+          "reported": 0.003958,
+          "equal": true
+        },
+        "confusion_matrix_equal": true
+      }
+    }
+  },
+  "crosslog_metrics_recomputed": {
+    "all_equal": true,
+    "n_checked": 20
+  },
+  "crosslog_train_sample": {
+    "train_rows_by_class": {
+      "recon": 685062,
+      "benign": 481424,
+      "malware": 5965,
+      "c2": 35
+    },
+    "sample_by_seed": {
+      "42": {
+        "benign": 60000,
+        "recon": 59516,
+        "malware": 482,
+        "c2": 2
+      },
+      "1": {
+        "benign": 60000,
+        "recon": 59473,
+        "malware": 526,
+        "c2": 1
+      },
+      "2": {
+        "benign": 60000,
+        "recon": 59493,
+        "malware": 506,
+        "c2": 1
+      },
+      "3": {
+        "benign": 60000,
+        "recon": 59483,
+        "malware": 512,
+        "c2": 5
+      },
+      "4": {
+        "benign": 60000,
+        "recon": 59502,
+        "malware": 495,
+        "c2": 3
+      },
+      "5": {
+        "benign": 60000,
+        "recon": 59461,
+        "malware": 535,
+        "c2": 4
+      },
+      "6": {
+        "benign": 60000,
+        "recon": 59486,
+        "malware": 511,
+        "c2": 3
+      },
+      "7": {
+        "benign": 60000,
+        "recon": 59458,
+        "malware": 540,
+        "c2": 2
+      },
+      "8": {
+        "benign": 60000,
+        "recon": 59459,
+        "malware": 537,
+        "c2": 4
+      },
+      "9": {
+        "benign": 60000,
+        "recon": 59494,
+        "malware": 505,
+        "c2": 1
+      },
+      "10": {
+        "benign": 60000,
+        "recon": 59479,
+        "malware": 518,
+        "c2": 3
+      },
+      "11": {
+        "benign": 60000,
+        "recon": 59431,
+        "malware": 567,
+        "c2": 2
+      },
+      "12": {
+        "benign": 60000,
+        "recon": 59478,
+        "malware": 520,
+        "c2": 2
+      },
+      "13": {
+        "benign": 60000,
+        "recon": 59475,
+        "malware": 523,
+        "c2": 2
+      },
+      "14": {
+        "benign": 60000,
+        "recon": 59423,
+        "malware": 572,
+        "c2": 5
+      },
+      "15": {
+        "benign": 60000,
+        "recon": 59443,
+        "malware": 555,
+        "c2": 2
+      },
+      "16": {
+        "benign": 60000,
+        "recon": 59474,
+        "malware": 523,
+        "c2": 3
+      },
+      "17": {
+        "benign": 60000,
+        "recon": 59498,
+        "malware": 499,
+        "c2": 3
+      },
+      "18": {
+        "benign": 60000,
+        "recon": 59427,
+        "malware": 570,
+        "c2": 3
+      },
+      "19": {
+        "benign": 60000,
+        "recon": 59488,
+        "malware": 509,
+        "c2": 3
+      }
+    }
+  },
+  "runB_sport_importance": {
+    "top4_per_source": {
+      "CTU-Honeypot-Capture-4-1": {},
+      "CTU-Honeypot-Capture-5-1": {},
+      "CTU-IoT-Malware-Capture-1-1": {
+        "dport": 0.493,
+        "history": 0.189,
+        "proto": 0.181,
+        "sport": 0.085
+      },
+      "CTU-IoT-Malware-Capture-20-1": {
+        "proto": 0.258,
+        "dport": 0.245,
+        "history": 0.203,
+        "sport": 0.126
+      },
+      "CTU-IoT-Malware-Capture-21-1": {
+        "dport": 0.29,
+        "proto": 0.253,
+        "history": 0.218,
+        "sport": 0.094
+      },
+      "CTU-IoT-Malware-Capture-3-1": {
+        "conn_state": 0.173,
+        "dport": 0.141,
+        "bwd_pkts": 0.127,
+        "app": 0.123
+      },
+      "CTU-IoT-Malware-Capture-34-1": {
+        "dport": 0.216,
+        "history": 0.162,
+        "sport": 0.152,
+        "conn_state": 0.138
+      },
+      "CTU-IoT-Malware-Capture-42-1": {
+        "bytes": 0.187,
+        "bwd_ip_bytes": 0.177,
+        "bwd_pkts": 0.165,
+        "sport": 0.118
+      },
+      "CTU-IoT-Malware-Capture-44-1": {
+        "sport": 0.211,
+        "history": 0.199,
+        "dport": 0.159,
+        "proto": 0.157
+      },
+      "CTU-IoT-Malware-Capture-8-1": {
+        "proto": 0.192,
+        "sport": 0.191,
+        "dport": 0.166,
+        "history": 0.149
+      },
+      "data_1": {
+        "state": 0.337,
+        "dport": 0.22,
+        "proto": 0.145,
+        "duration": 0.065
+      },
+      "data_10": {
+        "srate": 0.222,
+        "rate": 0.203,
+        "state": 0.171,
+        "flgs": 0.125
+      },
+      "data_36": {
+        "bytes": 0.221,
+        "state": 0.204,
+        "sum": 0.127,
+        "max": 0.107
+      }
+    },
+    "sources_with_sport_in_top4": [
+      "CTU-IoT-Malware-Capture-1-1",
+      "CTU-IoT-Malware-Capture-20-1",
+      "CTU-IoT-Malware-Capture-21-1",
+      "CTU-IoT-Malware-Capture-34-1",
+      "CTU-IoT-Malware-Capture-42-1",
+      "CTU-IoT-Malware-Capture-44-1",
+      "CTU-IoT-Malware-Capture-8-1"
+    ]
+  }
+}

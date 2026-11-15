@@ -1,0 +1,222 @@
+{
+  "run_id": "crosslog_v2_primary",
+  "created_utc": "2026-11-03T14:08:16Z",
+  "git_commit": "44c8e79aa19e23522728c9df4e34d7850080cf55",
+  "git_dirty": true,
+  "python": "3.15.0",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  },
+  "command": "experiments/v2/cross_log_v2.py primary loco",
+  "inputs": {
+    "CTU-IoT-Malware-Capture-1-1.parquet": "716865c458614de5b6ce599e30d6d63af64e361eee938c9371f1da8eced21794",
+    "CTU-IoT-Malware-Capture-3-1.parquet": "855cead294317c14d84f7e5796267c14c37674c03a0337fb1c8131ff9f03f4f9",
+    "CTU-IoT-Malware-Capture-20-1.parquet": "0ef6917b155b3465df68fa56ddc7e05ac8e44694a039f82dd38676650e866ef4",
+    "CTU-IoT-Malware-Capture-42-1.parquet": "9b19135fb223065184948746b7b77ecfe69ffa1ada9a267b7b88a7d43bcca7bc",
+    "CTU-IoT-Malware-Capture-8-1.parquet": "8ee0feb325916ed8b3bcda6c85bb8063533f00fa391dbf30697bb87c80fd8683",
+    "CTU-IoT-Malware-Capture-21-1.parquet": "64aa2abbebb7e9dd73d8850a4755e201b7ebe313aa47a238e9be9a5c059a7495",
+    "CTU-IoT-Malware-Capture-34-1.parquet": "9cc4a83b4968ef08449708951af61946f22a2c61a024b860c61664e098335402",
+    "alert_categories.json": "69032806b1fbf9904efe7d3af3ce80d02f570a1bc945eafaf4feef84298f9e89"
+  },
+  "outputs": {
+    "primary.json": "e8aba8b3708d8ef793116c7d92f97960ab928743c1c63daa1a0146b5891c5838",
+    "primary_predictions.parquet": "4cec4fc1d8346b9a9e705747327878f638aa231c3b5a401140b80493a581aa1b"
+  },
+  "config": {
+    "rf_params": {
+      "n_estimators": 300,
+      "max_depth": 24,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced_subsample",
+      "n_jobs": -1
+    },
+    "budget_per_class": 60000,
+    "conditions": {
+      "A": [
+        [
+          "duration",
+          "orig_bytes",
+          "resp_bytes",
+          "missed_bytes",
+          "orig_pkts",
+          "orig_ip_bytes",
+          "resp_pkts",
+          "resp_ip_bytes",
+          "id.resp_p"
+        ],
+        [
+          "proto",
+          "service",
+          "conn_state"
+        ]
+      ],
+      "B": [
+        [
+          "duration",
+          "orig_bytes",
+          "resp_bytes",
+          "missed_bytes",
+          "orig_pkts",
+          "orig_ip_bytes",
+          "resp_pkts",
+          "resp_ip_bytes",
+          "id.resp_p",
+          "dns_query_count",
+          "dns_unique_domains",
+          "dns_nxdomain_count",
+          "dns_mean_query_len"
+        ],
+        [
+          "proto",
+          "service",
+          "conn_state"
+        ]
+      ],
+      "C": [
+        [
+          "duration",
+          "orig_bytes",
+          "resp_bytes",
+          "missed_bytes",
+          "orig_pkts",
+          "orig_ip_bytes",
+          "resp_pkts",
+          "resp_ip_bytes",
+          "id.resp_p",
+          "alert_count",
+          "alert_max_severity",
+          "alert_cat_0",
+          "alert_cat_1",
+          "alert_cat_2",
+          "alert_cat_3",
+          "alert_cat_4",
+          "alert_cat_5",
+          "alert_cat_6",
+          "alert_cat_other"
+        ],
+        [
+          "proto",
+          "service",
+          "conn_state"
+        ]
+      ],
+      "D": [
+        [
+          "duration",
+          "orig_bytes",
+          "resp_bytes",
+          "missed_bytes",
+          "orig_pkts",
+          "orig_ip_bytes",
+          "resp_pkts",
+          "resp_ip_bytes",
+          "id.resp_p",
+          "dns_query_count",
+          "dns_unique_domains",
+          "dns_nxdomain_count",
+          "dns_mean_query_len",
+          "alert_count",
+          "alert_max_severity",
+          "alert_cat_0",
+          "alert_cat_1",
+          "alert_cat_2",
+          "alert_cat_3",
+          "alert_cat_4",
+          "alert_cat_5",
+          "alert_cat_6",
+          "alert_cat_other"
+        ],
+        [
+          "proto",
+          "service",
+          "conn_state"
+        ]
+      ],
+      "Z": [
+        [
+          "duration",
+          "orig_bytes",
+          "resp_bytes",
+          "missed_bytes",
+          "orig_pkts",
+          "orig_ip_bytes",
+          "resp_pkts",
+          "resp_ip_bytes",
+          "id.resp_p",
+          "z_dns_query_count",
+          "z_dns_unique_domains",
+          "z_dns_nxdomain_count",
+          "z_dns_mean_query_len",
+          "z_alert_count",
+          "z_alert_max_severity",
+          "z_alert_cat_0",
+          "z_alert_cat_1",
+          "z_alert_cat_2",
+          "z_alert_cat_3",
+          "z_alert_cat_4",
+          "z_alert_cat_5",
+          "z_alert_cat_6",
+          "z_alert_cat_other"
+        ],
+        [
+          "proto",
+          "service",
+          "conn_state"
+        ]
+      ],
+      "P": [
+        [
+          "duration",
+          "orig_bytes",
+          "resp_bytes",
+          "missed_bytes",
+          "orig_pkts",
+          "orig_ip_bytes",
+          "resp_pkts",
+          "resp_ip_bytes",
+          "id.resp_p",
+          "p_dns_query_count",
+          "p_dns_unique_domains",
+          "p_dns_nxdomain_count",
+          "p_dns_mean_query_len",
+          "p_alert_count",
+          "p_alert_max_severity",
+          "p_alert_cat_0",
+          "p_alert_cat_1",
+          "p_alert_cat_2",
+          "p_alert_cat_3",
+          "p_alert_cat_4",
+          "p_alert_cat_5",
+          "p_alert_cat_6",
+          "p_alert_cat_other"
+        ],
+        [
+          "proto",
+          "service",
+          "conn_state"
+        ]
+      ]
+    },
+    "train": [
+      "CTU-IoT-Malware-Capture-1-1",
+      "CTU-IoT-Malware-Capture-3-1",
+      "CTU-IoT-Malware-Capture-20-1",
+      "CTU-IoT-Malware-Capture-42-1"
+    ],
+    "test": [
+      "CTU-IoT-Malware-Capture-8-1",
+      "CTU-IoT-Malware-Capture-21-1",
+      "CTU-IoT-Malware-Capture-34-1"
+    ],
+    "variant": "start_300"
+  },
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ]
+}

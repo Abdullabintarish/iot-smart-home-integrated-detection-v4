@@ -475,3 +475,143 @@ after building and test-rendering the combined app (§10) at
 
 Disk: `experiments/` 1.4 GB; WSL disk image 2.5 GB
 (`%LOCALAPPDATA%\wsl\{110a38be-...}\ext4.vhdx`). Total ≈ 3.9 GB.
+
+## 11. Technical audit and v2 corrections (2026-11-03)
+
+**Read-only audit.**
+
+- The audit is in `audit/TECHNICAL_AUDIT.md`, with its checks in `audit/audit_checks.py` → `audit_checks.json`.
+- Corrections P1–P5 were started after the user asked why they had not started (taken as approval).
+- All new code and results are in `v2/`. No earlier file was changed or rerun.
+- Environment: project venv `code/.venv` (Python 3.15, pandas 3.0.6, scikit-learn 1.9.1), run with `-B` and `PYTHONDONTWRITEBYTECODE=1`. Git HEAD `44c8e79`; `v2/` untracked.
+
+| Step | Command (from `submission/`) | Finished (UTC) | Outputs |
+|---|---|---|---|
+| P1 cross-log v2 | `code/.venv/Scripts/python.exe -B experiments/v2/cross_log_v2.py primary loco` | 14:08:16 (primary), 14:22:55 (leave-one-capture-out) | `v2/results/cross_log/` |
+| P2 + P4 ablation v2 | `code/.venv/Scripts/python.exe -B experiments/v2/ablation_v2.py runB loso` | 14:30:47 (Run B split), 14:47:56 (leave-one-source-out) | `v2/results/ablation/` |
+| P3 tests | `code/.venv/Scripts/python.exe -B -m unittest discover -s experiments/v2/tests` | — | 15 / 15 OK |
+| P5 verification | `code/.venv/Scripts/python.exe -B experiments/v2/verify_v2.py` | — | `v2/results/verification.json` |
+
+**Seeds:**
+
+- Cross-log: 42, 1, 2, 3, 4. Each seed controls the sample, the forest and the training-side permutation; the test-side permutation uses seed + 10,000.
+- Ablation: 42, 1, 2, 3, 4 on the Run B split; 42, 1, 2 for leave-one-source-out.
+
+Each run's manifest (`manifest_*.json`) records SHA-256 hashes of its inputs and outputs, its configuration, seeds and package versions.
+
+**Verification:** `all_ok = true`.
+
+- 40 + 320 cross-log values and 25 + 195 ablation runs (macro F1, FPR and confusion matrices) recompute exactly from the saved predictions.
+- All manifest output hashes match the files on disk.
+- The 15 overlapping runs reproduce the historical ablation (`ablation/results/full`) exactly: `event_only`, `event_plus_incident` and `incident_only` at 300 s, 5 seeds.
+
+**Tests rerun afterwards:** thesis 94 OK, cross-log 14 OK, ablation 6 OK, v2 15 OK.
+
+**Integrity re-hash at about 2026-11-03T15:00Z:** 30,624 files, compared with `_integrity/baseline_sha256.txt`.
+
+- All 30,615 baseline files are unchanged.
+- The 9 additional files are the new, uncommitted `thesis_writing_package/`.
+
+**Disk:** `v2/` is 43 MB.
+
+**Results:** `v2/RESULTS_V2.md`.
+
+- **Unfavourable for the cross-log claim.** With correct sampling, context helps on 1 of 8 unseen captures (34-1) and not consistently overall. Alert context shows no reliable benefit. On the primary split, condition A is below a stratified random baseline.
+- **Unfavourable for generalisation.** Event-level macro F1 falls from 0.995 within captures to 0.375 (mean) on unseen sources.
+- **Resolved concerns.** The column-count confound (D2) is absent, and the 8-1 gain was a sampling artefact. The FPR increase from incident context is not caused by look-ahead.
+
+## 12. v3: fair transfer study and cross-log expansion (2026-11-03 to 2026-11-04)
+
+**Request:** the user asked for steps 2–6 of the reliability plan and skipped step 1 (thesis writing).
+
+- The plan `v3/PLAN_V3.md` was written before any v3 result existed.
+- All code and results are in `v3/`; no earlier file was changed or rerun.
+- Environment: `code/.venv` (Python 3.15.0, numpy 2.5.3, pandas 3.0.6, scikit-learn 1.9.1, scipy 1.18.1, pyarrow 26.0.0), run with `-B` and `PYTHONDONTWRITEBYTECODE=1`.
+- Sensors ran in WSL Ubuntu-24.04: Zeek 9.0.1 (`/opt/zeek/bin`) and Suricata 7.0.3, with the copied ET Open ruleset (`all.rules` sha256 84530843…, verified identical).
+- Seeds: 42, 1, 2, 3, 4 everywhere.
+
+| Step | Command (from `submission/`, unless noted) | Finished (UTC) | Outputs |
+|---|---|---|---|
+| Transfer `runB` and `loso`, then statistics | `code/.venv/Scripts/python.exe -B experiments/v3/transfer_v3.py runB loso`, then `… experiments/v3/stats_v3.py` | 2026-11-03 20:41 | `v3/results/transfer/` |
+| Download 36-1, 7-1 | streamed from the IoT-23 mirror (`v3/cross_log/download.log`) | 2026-11-03 17:46 | `v3/cross_log/pcaps/` |
+| Sensors | `wsl -u root -- bash …/v3/cross_log/tools/run_v3_sensors.sh` (loops over the unchanged `run_sensors.sh`, sha256 65a897…) | 36-1: 20:37:20; 7-1: 2026-11-04 12:27:48 | `v3/cross_log/sensor_out/` |
+| Lean reader check | `… -B experiments/v3/lean_io.py` | 2026-11-04 ~07:00 | `v3/results/lean_io_check.json` (26/26 identical) |
+| Stage 3 | `… -B experiments/v3/xl_v3.py stage3 <capture>` | 36-1: ~07:28; 7-1: ~13:35 | `v3/cross_log/results/stage3_*.json` |
+| Shrink eve.json | `… -B experiments/v3/cross_log/tools/shrink_eve.py <suricata dir>` | 13:33 (36-1), 13:40 (7-1) | `shrink_eve.json` per capture |
+| Cache, cache check, primary, leave-one-capture-out | `… -B experiments/v3/xl_v3.py cache`, `cachecheck`, `primary`, `loco` (log `v3/results/cross_log_chain.log`) | 18:01:18 | `v3/cross_log/robust_cache/`, `v3/results/cross_log/` |
+| Tables | `… -B experiments/v3/report_v3.py > experiments/v3/results/tables.md` | — | `v3/results/tables.md` |
+| Verification | `… -B experiments/v3/verify_v3.py` | see below | `v3/results/verification.json` |
+
+**Step 6 candidate selection.** Free disk was 104 GB and the project used about 19 GB. Label counts were streamed into `v3/candidate_check/counts_*.txt`.
+
+| Capture | C&C records | Other labels | pcap | Decision |
+|---|---|---|---|---|
+| 36-1 | 15,688 HeartBeat | 13.6 M Okiru, 2,663 benign | 1.0 GB | **selected** |
+| 7-1 | 5,778 HeartBeat | 11.3 M Okiru, 39,584 DDoS, 75,955 benign | 0.94 GB | **selected** |
+| 35-1 | 93 | 8.26 M benign, 2.19 M DDoS | 3.5 GB | excluded: too little C&C for its size |
+| 60-1 | 95 | 3.58 M DDoS | 21 GB | excluded: disk budget |
+| 52-1 | 20 | 19.8 M port scan | — | excluded: too little C&C |
+| 9-1 | 0 | 6.36 M port scan | — | excluded: no C&C |
+| 43-1 | — | no labelled log | — | excluded |
+| 17-1, 33-1, 39-1 | not counted | — | 11–15 GB each | excluded: disk budget |
+
+**Hashes:**
+
+| File | SHA-256 |
+|---|---|
+| 36-1 pcap | f58eeae6db19b8e4d8c5c0cb624f44ae23fd94e62fc16a86b26dd0d63fb87ed9 |
+| 36-1 labels | cec2d4d3736a025694b0b272498ca9b672fd8d37d76e290b93c810e4df73dc63 |
+| 7-1 pcap | 722944176f45d7634e9b482141c02d3ebc0e6d0438c03979e0b3d00c9bbca212 |
+| 7-1 labels | 3d603dc7c5a78f59b65aee892c8ccdca6023c8517ce1322eda6ecf2d903bfd73 |
+
+Both pcaps are complete (`pcap_trim.json`: no truncated tail).
+
+**Decisions and incidents:**
+
+1. **WSL quoting failure (sensors, first attempt).**
+   - PowerShell expanded `$PATH`, and the `wsl` launcher expanded the loop variable `$c` early, so `run_sensors.sh` received an empty path and exited at once without output.
+   - Fixed by a separate script `tools/run_v3_sensors.sh`. No output from the failed attempt was used.
+2. **Memory: lean Zeek reader.**
+   - The original `zeek_io.read_zeek_tsv` builds Python lists of strings, which would need well over 17 GB for a 13.6 M-row log on a 31 GB machine.
+   - `v3/lean_io.py` reads the same files with the pandas C parser, applying the same post-processing.
+   - Before use, it was checked to give frames identical to the original reader on all 26 conn, DNS and labelled logs of the 9 old captures, including 49-1 with 6 M rows. Two synthetic tests were added.
+   - `xl_v3.stage3` swaps in only this reader; matching, linking and the gate are the original code.
+   - Peak Python memory for Stage 3 on 36-1 was 9.6 GB.
+3. **Sleep pauses.** The PC slept several times: overnight 2026-11-03/04, and 14:47–17:31 UTC on 2026-11-04. These pauses explain the long wall times (Stage 3 on 36-1 took 9.7 h wall time; on 7-1, 8 min). No process failed.
+4. **Disk budget: shrinking `eve.json`.** The two full Suricata `eve.json` files (8.3 GB and 7.0 GB) were replaced by alert-only files, and the full files were kept as lossless gzips (816 MB and 689 MB).
+   - The pipeline reads only `event_type == "alert"`.
+   - Before deleting, `shrink_eve.py` checked that the gzip round trip is byte-identical (same SHA-256) and that `read_eve` returns an identical frame from the alert-only file.
+   - Full `eve.json` SHA-256: 36-1 40519d71…; 7-1 b5576243… (full values in `shrink_eve.json`).
+   - The project total was about 47 GB before the shrink and is about 36 GB after it (`experiments/` 29 GB, rest of `submission/` 2.7 GB, WSL image about 4.5 GB).
+5. **WSL shut down** (`wsl --shutdown`) after the sensors finished, to free memory for the cache build.
+6. **Gate.** Both new captures pass: match rate 1.0; 38 and 36 cross-source incidents. As in v2, the leave-one-capture-out set excludes 49-1 and 8-1. 8-1 remains a pre-registered test capture of the primary split.
+7. **Cache check.** The rebuilt cache of the 9 old captures equals `cross_log/results/robust_cache` on every shared column (`v3/results/cross_log/cachecheck.json`, all true).
+8. **Table script fix.** `report_v3.py` first read the wrong summary keys and printed blanks; this was fixed before the tables were used.
+
+**Verification (2026-11-04, after all runs):** `all_ok = true`.
+
+- Transfer: 550 values on the Run B split and 7,865 leave-one-source-out values recomputed with scikit-learn; 0 mismatches; 0 p-value mismatches.
+- Cross-log: 120 primary and 1,080 leave-one-capture-out values recomputed; 0 mismatches.
+- All manifest hashes are OK.
+- 15/15 runs reproduce the historical ablation exactly.
+
+**Tests (2026-11-04, after all runs):** v3 12 OK, v2 15 OK, cross-log 14 OK, ablation 6 OK, thesis 94 OK.
+
+**Integrity at 2026-11-04T17:02:37Z:** `sha256sum -c` of `_integrity/baseline_sha256.txt` (output in `_integrity/v3_check.txt`, empty).
+
+- All 30,615 baseline files are unchanged.
+- `git status` lists only `experiments/` (RUN_LOG, `audit/`, `v2/`, `v3/`, `_integrity` check files) and `thesis_writing_package/`.
+
+**Results:** `v3/RESULTS_V3.md`.
+
+## 13. Figures booklet (2026-11-04)
+
+Separate Word + PDF document with every figure listed in `thesis_writing_package/Thesis_Figures_and_Tables_Index.md` plus five new v3 figures. Nothing retrained; existing images are only read.
+
+```
+code/.venv/Scripts/python.exe -B experiments/figures_book/make_v3_figures.py      # v3 figures from saved v3 JSON
+wsl: NODE_PATH=/opt/docbuild/node_modules node build_figures_docx.js             # -> Thesis_Figures.docx
+wsl: soffice --headless --convert-to pdf Thesis_Figures.docx                     # -> Thesis_Figures.pdf (20 pages)
+```
+
+Outputs in `experiments/figures_book/`. Caption values were checked against `report/FIGURES.md` and the v3 result JSON files. All 20 pages were rendered and checked visually.

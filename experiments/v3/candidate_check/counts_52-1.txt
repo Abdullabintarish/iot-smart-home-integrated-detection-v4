@@ -1,0 +1,6 @@
+2	Malicious C&C-Mirai
+6	Malicious C&C
+1794	Benign -
+12	Malicious C&C-FileDownload
+19779564	Malicious PartOfAHorizontalPortScan
+TS_RANGE	1552047872.736899	1552100931.193613

@@ -1,0 +1,32 @@
+{
+  "skipped": [],
+  "checks": {
+    "CTU-IoT-Malware-Capture-1-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-1-1/dns.log": true,
+    "CTU-IoT-Malware-Capture-1-1/conn.log.labeled.server": true,
+    "CTU-IoT-Malware-Capture-20-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-20-1/dns.log": true,
+    "CTU-IoT-Malware-Capture-20-1/conn.log.labeled.server": true,
+    "CTU-IoT-Malware-Capture-21-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-21-1/dns.log": true,
+    "CTU-IoT-Malware-Capture-21-1/conn.log.labeled.server": true,
+    "CTU-IoT-Malware-Capture-3-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-3-1/dns.log": true,
+    "CTU-IoT-Malware-Capture-3-1/conn.log.labeled.server": true,
+    "CTU-IoT-Malware-Capture-34-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-34-1/dns.log": true,
+    "CTU-IoT-Malware-Capture-34-1/conn.log.labeled.server": true,
+    "CTU-IoT-Malware-Capture-42-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-42-1/dns.log": true,
+    "CTU-IoT-Malware-Capture-42-1/conn.log.labeled.server": true,
+    "CTU-IoT-Malware-Capture-48-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-48-1/dns.log": true,
+    "CTU-IoT-Malware-Capture-48-1/conn.log.labeled.server": true,
+    "CTU-IoT-Malware-Capture-49-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-49-1/dns.log": true,
+    "CTU-IoT-Malware-Capture-49-1/conn.log.labeled.server": true,
+    "CTU-IoT-Malware-Capture-8-1/conn.log": true,
+    "CTU-IoT-Malware-Capture-8-1/conn.log.labeled.server": true
+  },
+  "all_equal": true
+}

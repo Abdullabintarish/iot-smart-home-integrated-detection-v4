@@ -1,0 +1,1510 @@
+{
+ "runB": {
+  "unit": "seed (n=5; smallest two-sided p = 0.0625)",
+  "comparisons": {
+   "f1_macro": [
+    {
+     "x": "frag",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": 0.000306175424253019,
+     "per_seed": [
+      0.000634,
+      0.001201,
+      0.000623,
+      -0.001747,
+      0.00082
+     ],
+     "seeds_positive": 4,
+     "seeds_negative": 1,
+     "p_sign_flip": 0.5625,
+     "p_sign_flip_holm": 0.5625
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "frag",
+     "n": 5,
+     "mean_diff": -0.13884352559987775,
+     "per_seed": [
+      -0.138097,
+      -0.142173,
+      -0.141252,
+      -0.139579,
+      -0.133116
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": -0.13853735017562474,
+     "per_seed": [
+      -0.137463,
+      -0.140972,
+      -0.140629,
+      -0.141326,
+      -0.132296
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_event_plus_incident",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": 0.001213268293172165,
+     "per_seed": [
+      0.001555,
+      0.001962,
+      0.001057,
+      -0.000542,
+      0.002034
+     ],
+     "seeds_positive": 4,
+     "seeds_negative": 1,
+     "p_sign_flip": 0.125,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "hgb_incident_only",
+     "y": "hgb_event_only",
+     "n": 5,
+     "mean_diff": -0.23198335971677211,
+     "per_seed": [
+      -0.554433,
+      -0.159479,
+      -0.149606,
+      -0.149477,
+      -0.146921
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "hgb_event_plus_incident",
+     "y": "hgb_event_only",
+     "n": 5,
+     "mean_diff": 0.0013902625444555782,
+     "per_seed": [
+      0.00152,
+      0.001196,
+      0.001608,
+      0.000754,
+      0.001873
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "lr_incident_only",
+     "y": "lr_event_only",
+     "n": 5,
+     "mean_diff": -0.026677384247948542,
+     "per_seed": [
+      -0.027594,
+      -0.028668,
+      -0.028302,
+      -0.023216,
+      -0.025608
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "lr_event_plus_incident",
+     "y": "lr_event_only",
+     "n": 5,
+     "mean_diff": 0.2931267795092882,
+     "per_seed": [
+      0.307351,
+      0.282372,
+      0.288368,
+      0.294643,
+      0.2929
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    }
+   ],
+   "f1_macro_present": [
+    {
+     "x": "frag",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": 0.000306175424253019,
+     "per_seed": [
+      0.000634,
+      0.001201,
+      0.000623,
+      -0.001747,
+      0.00082
+     ],
+     "seeds_positive": 4,
+     "seeds_negative": 1,
+     "p_sign_flip": 0.5625,
+     "p_sign_flip_holm": 0.5625
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "frag",
+     "n": 5,
+     "mean_diff": -0.13884352559987775,
+     "per_seed": [
+      -0.138097,
+      -0.142173,
+      -0.141252,
+      -0.139579,
+      -0.133116
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": -0.13853735017562474,
+     "per_seed": [
+      -0.137463,
+      -0.140972,
+      -0.140629,
+      -0.141326,
+      -0.132296
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_event_plus_incident",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": 0.001213268293172165,
+     "per_seed": [
+      0.001555,
+      0.001962,
+      0.001057,
+      -0.000542,
+      0.002034
+     ],
+     "seeds_positive": 4,
+     "seeds_negative": 1,
+     "p_sign_flip": 0.125,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "hgb_incident_only",
+     "y": "hgb_event_only",
+     "n": 5,
+     "mean_diff": -0.23198335971677211,
+     "per_seed": [
+      -0.554433,
+      -0.159479,
+      -0.149606,
+      -0.149477,
+      -0.146921
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "hgb_event_plus_incident",
+     "y": "hgb_event_only",
+     "n": 5,
+     "mean_diff": 0.0013902625444555782,
+     "per_seed": [
+      0.00152,
+      0.001196,
+      0.001608,
+      0.000754,
+      0.001873
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "lr_incident_only",
+     "y": "lr_event_only",
+     "n": 5,
+     "mean_diff": -0.026677384247948542,
+     "per_seed": [
+      -0.027594,
+      -0.028668,
+      -0.028302,
+      -0.023216,
+      -0.025608
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "lr_event_plus_incident",
+     "y": "lr_event_only",
+     "n": 5,
+     "mean_diff": 0.2931267795092882,
+     "per_seed": [
+      0.307351,
+      0.282372,
+      0.288368,
+      0.294643,
+      0.2929
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    }
+   ],
+   "pr_auc_binary": [
+    {
+     "x": "frag",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": -9.658058595318764e-07,
+     "per_seed": [
+      -1e-06,
+      -1e-06,
+      -1e-06,
+      -2e-06,
+      -0.0
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "frag",
+     "n": 5,
+     "mean_diff": -0.0005746860902427597,
+     "per_seed": [
+      -0.000562,
+      -0.00058,
+      -0.000617,
+      -0.000557,
+      -0.000558
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": -0.0005756518961022916,
+     "per_seed": [
+      -0.000563,
+      -0.000581,
+      -0.000617,
+      -0.000559,
+      -0.000559
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_event_plus_incident",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": 7.251557001319853e-07,
+     "per_seed": [
+      1e-06,
+      1e-06,
+      1e-06,
+      0.0,
+      1e-06
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "hgb_incident_only",
+     "y": "hgb_event_only",
+     "n": 5,
+     "mean_diff": -0.0026156989854718704,
+     "per_seed": [
+      -0.010585,
+      -0.000629,
+      -0.000632,
+      -0.000602,
+      -0.00063
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "hgb_event_plus_incident",
+     "y": "hgb_event_only",
+     "n": 5,
+     "mean_diff": 7.433621541075297e-06,
+     "per_seed": [
+      5e-06,
+      9e-06,
+      6e-06,
+      7e-06,
+      1e-05
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "lr_incident_only",
+     "y": "lr_event_only",
+     "n": 5,
+     "mean_diff": -0.0010821972926922773,
+     "per_seed": [
+      -0.001052,
+      -0.001065,
+      -0.001105,
+      -0.00106,
+      -0.001129
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "lr_event_plus_incident",
+     "y": "lr_event_only",
+     "n": 5,
+     "mean_diff": 1.2671757724058707e-05,
+     "per_seed": [
+      1.3e-05,
+      1.1e-05,
+      1.4e-05,
+      1.3e-05,
+      1.3e-05
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    }
+   ],
+   "fpr": [
+    {
+     "x": "frag",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": 0.0007833429690489956,
+     "per_seed": [
+      -4.1e-05,
+      0.000741,
+      0.000285,
+      0.001523,
+      0.001409
+     ],
+     "seeds_positive": 4,
+     "seeds_negative": 1,
+     "p_sign_flip": 0.125,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "frag",
+     "n": 5,
+     "mean_diff": 0.08703086957583851,
+     "per_seed": [
+      0.087226,
+      0.087169,
+      0.086998,
+      0.087251,
+      0.08651
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": 0.0878142125448875,
+     "per_seed": [
+      0.087186,
+      0.08791,
+      0.087283,
+      0.088773,
+      0.087918
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "rf_event_plus_incident",
+     "y": "rf_event_only",
+     "n": 5,
+     "mean_diff": 0.007594029656289951,
+     "per_seed": [
+      0.007076,
+      0.007353,
+      0.007402,
+      0.008371,
+      0.007768
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "hgb_incident_only",
+     "y": "hgb_event_only",
+     "n": 5,
+     "mean_diff": 0.09864909980701426,
+     "per_seed": [
+      0.130139,
+      0.090198,
+      0.090785,
+      0.090597,
+      0.091526
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "hgb_event_plus_incident",
+     "y": "hgb_event_only",
+     "n": 5,
+     "mean_diff": -0.0010781144397306343,
+     "per_seed": [
+      -0.000945,
+      -0.001189,
+      -0.001278,
+      -0.000912,
+      -0.001067
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "lr_incident_only",
+     "y": "lr_event_only",
+     "n": 5,
+     "mean_diff": 0.08754712679244668,
+     "per_seed": [
+      0.08835,
+      0.091265,
+      0.084621,
+      0.089018,
+      0.084482
+     ],
+     "seeds_positive": 5,
+     "seeds_negative": 0,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    },
+    {
+     "x": "lr_event_plus_incident",
+     "y": "lr_event_only",
+     "n": 5,
+     "mean_diff": -0.00916722988103284,
+     "per_seed": [
+      -0.008558,
+      -0.008583,
+      -0.010073,
+      -0.008876,
+      -0.009747
+     ],
+     "seeds_positive": 0,
+     "seeds_negative": 5,
+     "p_sign_flip": 0.0625,
+     "p_sign_flip_holm": 0.5
+    }
+   ]
+  },
+  "incident_bootstrap_seed42": {
+   "frag_minus_rf_event_only": {
+    "f1_macro_diff": [
+     -0.007642203691951698,
+     0.006244965527450135
+    ],
+    "fpr_diff": [
+     -0.0009040783724149974,
+     0.0007190629307313267
+    ],
+    "n_boot": 1000
+   },
+   "rf_incident_only_minus_frag": {
+    "f1_macro_diff": [
+     -0.17765408131486526,
+     -0.10771169200577649
+    ],
+    "fpr_diff": [
+     0.08371817644818484,
+     0.09114932300477904
+    ],
+    "n_boot": 1000
+   },
+   "rf_incident_only_minus_rf_event_only": {
+    "f1_macro_diff": [
+     -0.1760884248127738,
+     -0.1072213979611408
+    ],
+    "fpr_diff": [
+     0.08355893545517099,
+     0.09093960972406699
+    ],
+    "n_boot": 1000
+   },
+   "rf_event_plus_incident_minus_rf_event_only": {
+    "f1_macro_diff": [
+     -0.0013534405433502426,
+     0.004841797666910247
+    ],
+    "fpr_diff": [
+     0.0059957868687707545,
+     0.008139812062422005
+    ],
+    "n_boot": 1000
+   },
+   "hgb_incident_only_minus_hgb_event_only": {
+    "f1_macro_diff": [
+     -0.6775730326564258,
+     -0.4635180838016526
+    ],
+    "fpr_diff": [
+     0.12461430523586878,
+     0.13565874669278732
+    ],
+    "n_boot": 1000
+   },
+   "hgb_event_plus_incident_minus_hgb_event_only": {
+    "f1_macro_diff": [
+     0.0007104664771596603,
+     0.0024657533777554916
+    ],
+    "fpr_diff": [
+     -0.0015624502844877755,
+     -0.00011283994150012537
+    ],
+    "n_boot": 1000
+   },
+   "lr_incident_only_minus_lr_event_only": {
+    "f1_macro_diff": [
+     -0.05616801398631667,
+     0.018787157878563426
+    ],
+    "fpr_diff": [
+     0.08361914582291582,
+     0.09334194886743157
+    ],
+    "n_boot": 1000
+   },
+   "lr_event_plus_incident_minus_lr_event_only": {
+    "f1_macro_diff": [
+     0.27384568665626935,
+     0.3564539641516498
+    ],
+    "fpr_diff": [
+     -0.009576806804548456,
+     -0.007412642369066529
+    ],
+    "n_boot": 1000
+   }
+  }
+ },
+ "loso": {
+  "unit": "held-out source (seed-mean)",
+  "comparisons": {
+   "f1_macro": [
+    {
+     "x": "frag_soft",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": -0.07606881451123132,
+     "median_diff": -0.05631761064123836,
+     "folds_positive": 5,
+     "folds_negative": 8,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.533924,
+      "CTU-Honeypot-Capture-5-1": 0.567843,
+      "CTU-IoT-Malware-Capture-1-1": -0.171187,
+      "CTU-IoT-Malware-Capture-20-1": -0.304894,
+      "CTU-IoT-Malware-Capture-21-1": -0.056318,
+      "CTU-IoT-Malware-Capture-3-1": -0.381802,
+      "CTU-IoT-Malware-Capture-34-1": 0.008124,
+      "CTU-IoT-Malware-Capture-42-1": 0.03534,
+      "CTU-IoT-Malware-Capture-44-1": 0.013572,
+      "CTU-IoT-Malware-Capture-8-1": -0.173542,
+      "data_1": -0.016899,
+      "data_10": -0.568821,
+      "data_36": -0.474235
+     },
+     "p_sign_flip": 0.434326171875,
+     "p_wilcoxon": 0.305419921875,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "frag_soft",
+     "n": 13,
+     "mean_diff": -0.047850582723976354,
+     "median_diff": 0.023513604793912013,
+     "folds_positive": 7,
+     "folds_negative": 5,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.708914,
+      "CTU-Honeypot-Capture-5-1": -0.59377,
+      "CTU-IoT-Malware-Capture-1-1": 0.023514,
+      "CTU-IoT-Malware-Capture-20-1": -0.256934,
+      "CTU-IoT-Malware-Capture-21-1": -0.33951,
+      "CTU-IoT-Malware-Capture-3-1": 0.242662,
+      "CTU-IoT-Malware-Capture-34-1": 0.046825,
+      "CTU-IoT-Malware-Capture-42-1": -0.20702,
+      "CTU-IoT-Malware-Capture-44-1": 0.0,
+      "CTU-IoT-Malware-Capture-8-1": 0.45198,
+      "data_1": 0.077916,
+      "data_10": 0.362354,
+      "data_36": 0.27884
+     },
+     "p_sign_flip": 0.634765625,
+     "p_wilcoxon": 0.90966796875,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": -0.12391939723520767,
+     "median_diff": -0.1476737255566386,
+     "folds_positive": 4,
+     "folds_negative": 9,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.17499,
+      "CTU-Honeypot-Capture-5-1": -0.025927,
+      "CTU-IoT-Malware-Capture-1-1": -0.147674,
+      "CTU-IoT-Malware-Capture-20-1": -0.561828,
+      "CTU-IoT-Malware-Capture-21-1": -0.395828,
+      "CTU-IoT-Malware-Capture-3-1": -0.139141,
+      "CTU-IoT-Malware-Capture-34-1": 0.054949,
+      "CTU-IoT-Malware-Capture-42-1": -0.171681,
+      "CTU-IoT-Malware-Capture-44-1": 0.013572,
+      "CTU-IoT-Malware-Capture-8-1": 0.278437,
+      "data_1": 0.061017,
+      "data_10": -0.206467,
+      "data_36": -0.195395
+     },
+     "p_sign_flip": 0.054443359375,
+     "p_wilcoxon": 0.068115234375,
+     "p_sign_flip_holm": 0.381103515625
+    },
+    {
+     "x": "rf_event_plus_incident",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": 0.06889519211884101,
+     "median_diff": 0.035946566371428124,
+     "folds_positive": 9,
+     "folds_negative": 4,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.03337,
+      "CTU-Honeypot-Capture-5-1": 0.004421,
+      "CTU-IoT-Malware-Capture-1-1": -0.097656,
+      "CTU-IoT-Malware-Capture-20-1": 0.180149,
+      "CTU-IoT-Malware-Capture-21-1": 0.44475,
+      "CTU-IoT-Malware-Capture-3-1": -0.02549,
+      "CTU-IoT-Malware-Capture-34-1": 0.098572,
+      "CTU-IoT-Malware-Capture-42-1": -0.073048,
+      "CTU-IoT-Malware-Capture-44-1": 0.127887,
+      "CTU-IoT-Malware-Capture-8-1": -0.091715,
+      "data_1": 0.166773,
+      "data_10": 0.035947,
+      "data_36": 0.091678
+     },
+     "p_sign_flip": 0.099609375,
+     "p_wilcoxon": 0.10986328125,
+     "p_sign_flip_holm": 0.59765625
+    },
+    {
+     "x": "hgb_incident_only",
+     "y": "hgb_event_only",
+     "n": 13,
+     "mean_diff": -0.037660588266670424,
+     "median_diff": -0.0445872168577186,
+     "folds_positive": 6,
+     "folds_negative": 7,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.044587,
+      "CTU-Honeypot-Capture-5-1": -0.127708,
+      "CTU-IoT-Malware-Capture-1-1": -0.054748,
+      "CTU-IoT-Malware-Capture-20-1": -0.37971,
+      "CTU-IoT-Malware-Capture-21-1": -0.483091,
+      "CTU-IoT-Malware-Capture-3-1": 0.077961,
+      "CTU-IoT-Malware-Capture-34-1": 0.047698,
+      "CTU-IoT-Malware-Capture-42-1": -0.082039,
+      "CTU-IoT-Malware-Capture-44-1": 0.118209,
+      "CTU-IoT-Malware-Capture-8-1": 0.423699,
+      "data_1": 0.069719,
+      "data_10": 0.072048,
+      "data_36": -0.127038
+     },
+     "p_sign_flip": 0.56787109375,
+     "p_wilcoxon": 0.587890625,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "hgb_event_plus_incident",
+     "y": "hgb_event_only",
+     "n": 13,
+     "mean_diff": 0.054025702592133504,
+     "median_diff": 0.032549923410339854,
+     "folds_positive": 11,
+     "folds_negative": 1,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.117159,
+      "CTU-Honeypot-Capture-5-1": 0.134072,
+      "CTU-IoT-Malware-Capture-1-1": -0.055871,
+      "CTU-IoT-Malware-Capture-20-1": 0.015914,
+      "CTU-IoT-Malware-Capture-21-1": 0.24578,
+      "CTU-IoT-Malware-Capture-3-1": 0.03255,
+      "CTU-IoT-Malware-Capture-34-1": 0.011946,
+      "CTU-IoT-Malware-Capture-42-1": 0.014671,
+      "CTU-IoT-Malware-Capture-44-1": 0.04909,
+      "CTU-IoT-Malware-Capture-8-1": 0.0,
+      "data_1": 0.057341,
+      "data_10": 0.078173,
+      "data_36": 0.001511
+     },
+     "p_sign_flip": 0.01318359375,
+     "p_wilcoxon": 0.00927734375,
+     "p_sign_flip_holm": 0.10546875
+    },
+    {
+     "x": "lr_incident_only",
+     "y": "lr_event_only",
+     "n": 13,
+     "mean_diff": -0.10455660522636105,
+     "median_diff": -0.060215779634566036,
+     "folds_positive": 4,
+     "folds_negative": 9,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.025466,
+      "CTU-Honeypot-Capture-5-1": -0.023285,
+      "CTU-IoT-Malware-Capture-1-1": -0.074953,
+      "CTU-IoT-Malware-Capture-20-1": -0.407159,
+      "CTU-IoT-Malware-Capture-21-1": -0.843011,
+      "CTU-IoT-Malware-Capture-3-1": 0.126018,
+      "CTU-IoT-Malware-Capture-34-1": 0.099872,
+      "CTU-IoT-Malware-Capture-42-1": -0.131321,
+      "CTU-IoT-Malware-Capture-44-1": -0.124116,
+      "CTU-IoT-Malware-Capture-8-1": 0.213565,
+      "data_1": 0.112786,
+      "data_10": -0.221951,
+      "data_36": -0.060216
+     },
+     "p_sign_flip": 0.2060546875,
+     "p_wilcoxon": 0.2734375,
+     "p_sign_flip_holm": 0.82421875
+    },
+    {
+     "x": "lr_event_plus_incident",
+     "y": "lr_event_only",
+     "n": 13,
+     "mean_diff": 0.10117625075775472,
+     "median_diff": 0.12163373608804134,
+     "folds_positive": 11,
+     "folds_negative": 2,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.023736,
+      "CTU-Honeypot-Capture-5-1": 0.037298,
+      "CTU-IoT-Malware-Capture-1-1": 0.237402,
+      "CTU-IoT-Malware-Capture-20-1": 0.127099,
+      "CTU-IoT-Malware-Capture-21-1": -0.463251,
+      "CTU-IoT-Malware-Capture-3-1": 0.228715,
+      "CTU-IoT-Malware-Capture-34-1": 0.371529,
+      "CTU-IoT-Malware-Capture-42-1": -0.000589,
+      "CTU-IoT-Malware-Capture-44-1": 0.164317,
+      "CTU-IoT-Malware-Capture-8-1": 0.416619,
+      "data_1": 0.042478,
+      "data_10": 0.008306,
+      "data_36": 0.121634
+     },
+     "p_sign_flip": 0.123779296875,
+     "p_wilcoxon": 0.026611328125,
+     "p_sign_flip_holm": 0.618896484375
+    }
+   ],
+   "f1_macro_present": [
+    {
+     "x": "frag_soft",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": -0.24210277707322045,
+     "median_diff": -0.24257872612784895,
+     "folds_positive": 4,
+     "folds_negative": 9,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.001329,
+      "CTU-Honeypot-Capture-5-1": 0.071591,
+      "CTU-IoT-Malware-Capture-1-1": -0.302194,
+      "CTU-IoT-Malware-Capture-20-1": -0.304894,
+      "CTU-IoT-Malware-Capture-21-1": -0.333943,
+      "CTU-IoT-Malware-Capture-3-1": -0.381802,
+      "CTU-IoT-Malware-Capture-34-1": 0.000566,
+      "CTU-IoT-Malware-Capture-42-1": 0.022112,
+      "CTU-IoT-Malware-Capture-44-1": -0.086566,
+      "CTU-IoT-Malware-Capture-8-1": -0.242579,
+      "data_1": -0.026343,
+      "data_10": -0.853246,
+      "data_36": -0.711368
+     },
+     "p_sign_flip": 0.0068359375,
+     "p_wilcoxon": 0.013427734375,
+     "p_sign_flip_holm": 0.0546875
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "frag_soft",
+     "n": 13,
+     "mean_diff": 0.14874236057938822,
+     "median_diff": 0.06812070353490872,
+     "folds_positive": 7,
+     "folds_negative": 5,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.130788,
+      "CTU-Honeypot-Capture-5-1": -0.140531,
+      "CTU-IoT-Malware-Capture-1-1": 0.105295,
+      "CTU-IoT-Malware-Capture-20-1": -0.015118,
+      "CTU-IoT-Malware-Capture-21-1": -0.180088,
+      "CTU-IoT-Malware-Capture-3-1": 0.242662,
+      "CTU-IoT-Malware-Capture-34-1": 0.068121,
+      "CTU-IoT-Malware-Capture-42-1": -0.180356,
+      "CTU-IoT-Malware-Capture-44-1": 0.0,
+      "CTU-IoT-Malware-Capture-8-1": 0.764627,
+      "data_1": 0.197774,
+      "data_10": 0.543546,
+      "data_36": 0.658508
+     },
+     "p_sign_flip": 0.1357421875,
+     "p_wilcoxon": 0.2333984375,
+     "p_sign_flip_holm": 0.54296875
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": -0.09336041649383219,
+     "median_diff": -0.12945877014487217,
+     "folds_positive": 3,
+     "folds_negative": 10,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.129459,
+      "CTU-Honeypot-Capture-5-1": -0.068941,
+      "CTU-IoT-Malware-Capture-1-1": -0.196898,
+      "CTU-IoT-Malware-Capture-20-1": -0.320011,
+      "CTU-IoT-Malware-Capture-21-1": -0.514031,
+      "CTU-IoT-Malware-Capture-3-1": -0.139141,
+      "CTU-IoT-Malware-Capture-34-1": 0.068687,
+      "CTU-IoT-Malware-Capture-42-1": -0.158244,
+      "CTU-IoT-Malware-Capture-44-1": -0.086566,
+      "CTU-IoT-Malware-Capture-8-1": 0.522048,
+      "data_1": 0.171432,
+      "data_10": -0.3097,
+      "data_36": -0.05286
+     },
+     "p_sign_flip": 0.210693359375,
+     "p_wilcoxon": 0.127197265625,
+     "p_sign_flip_holm": 0.632080078125
+    },
+    {
+     "x": "rf_event_plus_incident",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": 0.06744472063852688,
+     "median_diff": 0.05391984955714246,
+     "folds_positive": 9,
+     "folds_negative": 4,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.000222,
+      "CTU-Honeypot-Capture-5-1": 0.017683,
+      "CTU-IoT-Malware-Capture-1-1": -0.130208,
+      "CTU-IoT-Malware-Capture-20-1": 0.180149,
+      "CTU-IoT-Malware-Capture-21-1": 0.167125,
+      "CTU-IoT-Malware-Capture-3-1": -0.02549,
+      "CTU-IoT-Malware-Capture-34-1": 0.115103,
+      "CTU-IoT-Malware-Capture-42-1": -0.026734,
+      "CTU-IoT-Malware-Capture-44-1": 0.170515,
+      "CTU-IoT-Malware-Capture-8-1": -0.033181,
+      "data_1": 0.25016,
+      "data_10": 0.05392,
+      "data_36": 0.137518
+     },
+     "p_sign_flip": 0.052490234375,
+     "p_wilcoxon": 0.080322265625,
+     "p_sign_flip_holm": 0.27685546875
+    },
+    {
+     "x": "hgb_incident_only",
+     "y": "hgb_event_only",
+     "n": 13,
+     "mean_diff": 0.0159194336738939,
+     "median_diff": 0.022297753587455227,
+     "folds_positive": 7,
+     "folds_negative": 6,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.066017,
+      "CTU-Honeypot-Capture-5-1": -0.220032,
+      "CTU-IoT-Malware-Capture-1-1": -0.085982,
+      "CTU-IoT-Malware-Capture-20-1": -0.143404,
+      "CTU-IoT-Malware-Capture-21-1": -0.349106,
+      "CTU-IoT-Malware-Capture-3-1": 0.077961,
+      "CTU-IoT-Malware-Capture-34-1": 0.059622,
+      "CTU-IoT-Malware-Capture-42-1": -0.102314,
+      "CTU-IoT-Malware-Capture-44-1": 0.022298,
+      "CTU-IoT-Malware-Capture-8-1": 0.722206,
+      "data_1": 0.176628,
+      "data_10": 0.068695,
+      "data_36": -0.085636
+     },
+     "p_sign_flip": 0.862060546875,
+     "p_wilcoxon": 0.635498046875,
+     "p_sign_flip_holm": 0.862060546875
+    },
+    {
+     "x": "hgb_event_plus_incident",
+     "y": "hgb_event_only",
+     "n": 13,
+     "mean_diff": 0.05755150762216166,
+     "median_diff": 0.032549923410339854,
+     "folds_positive": 11,
+     "folds_negative": 1,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.201138,
+      "CTU-Honeypot-Capture-5-1": 0.011945,
+      "CTU-IoT-Malware-Capture-1-1": -0.125064,
+      "CTU-IoT-Malware-Capture-20-1": 0.015914,
+      "CTU-IoT-Malware-Capture-21-1": 0.24578,
+      "CTU-IoT-Malware-Capture-3-1": 0.03255,
+      "CTU-IoT-Malware-Capture-34-1": 0.014932,
+      "CTU-IoT-Malware-Capture-42-1": 0.026632,
+      "CTU-IoT-Malware-Capture-44-1": 0.081816,
+      "CTU-IoT-Malware-Capture-8-1": 0.0,
+      "data_1": 0.123825,
+      "data_10": 0.077883,
+      "data_36": 0.040817
+     },
+     "p_sign_flip": 0.04443359375,
+     "p_wilcoxon": 0.02099609375,
+     "p_sign_flip_holm": 0.27685546875
+    },
+    {
+     "x": "lr_incident_only",
+     "y": "lr_event_only",
+     "n": 13,
+     "mean_diff": -0.1164601826134412,
+     "median_diff": -0.09993775843671315,
+     "folds_positive": 5,
+     "folds_negative": 8,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.101864,
+      "CTU-Honeypot-Capture-5-1": -0.163862,
+      "CTU-IoT-Malware-Capture-1-1": -0.099938,
+      "CTU-IoT-Malware-Capture-20-1": -0.814319,
+      "CTU-IoT-Malware-Capture-21-1": -0.722344,
+      "CTU-IoT-Malware-Capture-3-1": 0.120771,
+      "CTU-IoT-Malware-Capture-34-1": 0.136338,
+      "CTU-IoT-Malware-Capture-42-1": -0.175094,
+      "CTU-IoT-Malware-Capture-44-1": -0.276987,
+      "CTU-IoT-Malware-Capture-8-1": 0.195405,
+      "data_1": 0.282923,
+      "data_10": -0.005893,
+      "data_36": 0.110881
+     },
+     "p_sign_flip": 0.260498046875,
+     "p_wilcoxon": 0.497314453125,
+     "p_sign_flip_holm": 0.632080078125
+    },
+    {
+     "x": "lr_event_plus_incident",
+     "y": "lr_event_only",
+     "n": 13,
+     "mean_diff": 0.12690811463676002,
+     "median_diff": 0.09064366077725786,
+     "folds_positive": 10,
+     "folds_negative": 3,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.031284,
+      "CTU-Honeypot-Capture-5-1": 0.017259,
+      "CTU-IoT-Malware-Capture-1-1": 0.316536,
+      "CTU-IoT-Malware-Capture-20-1": -0.0553,
+      "CTU-IoT-Malware-Capture-21-1": -0.204174,
+      "CTU-IoT-Malware-Capture-3-1": 0.223467,
+      "CTU-IoT-Malware-Capture-34-1": 0.42839,
+      "CTU-IoT-Malware-Capture-42-1": -0.000786,
+      "CTU-IoT-Malware-Capture-44-1": 0.10759,
+      "CTU-IoT-Malware-Capture-8-1": 0.499986,
+      "data_1": 0.090644,
+      "data_10": 0.012459,
+      "data_36": 0.182451
+     },
+     "p_sign_flip": 0.03955078125,
+     "p_wilcoxon": 0.03271484375,
+     "p_sign_flip_holm": 0.27685546875
+    }
+   ],
+   "pr_auc_binary": [
+    {
+     "x": "frag_soft",
+     "y": "rf_event_only",
+     "n": 11,
+     "mean_diff": 0.005461030587361893,
+     "median_diff": -7.545426047306236e-07,
+     "folds_positive": 5,
+     "folds_negative": 6,
+     "per_fold": {
+      "CTU-IoT-Malware-Capture-1-1": -0.056904,
+      "CTU-IoT-Malware-Capture-20-1": -0.007583,
+      "CTU-IoT-Malware-Capture-21-1": 0.009327,
+      "CTU-IoT-Malware-Capture-3-1": 0.031465,
+      "CTU-IoT-Malware-Capture-34-1": 0.015877,
+      "CTU-IoT-Malware-Capture-42-1": -0.000547,
+      "CTU-IoT-Malware-Capture-44-1": 0.06593,
+      "CTU-IoT-Malware-Capture-8-1": -0.000136,
+      "data_1": 0.00265,
+      "data_10": -6e-06,
+      "data_36": -1e-06
+     },
+     "p_sign_flip": 0.53125,
+     "p_wilcoxon": 0.5771484375,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "frag_soft",
+     "n": 11,
+     "mean_diff": -0.17243805808673313,
+     "median_diff": -0.00012801296205178225,
+     "folds_positive": 5,
+     "folds_negative": 6,
+     "per_fold": {
+      "CTU-IoT-Malware-Capture-1-1": 0.059205,
+      "CTU-IoT-Malware-Capture-20-1": -0.962401,
+      "CTU-IoT-Malware-Capture-21-1": -0.974447,
+      "CTU-IoT-Malware-Capture-3-1": 0.006532,
+      "CTU-IoT-Malware-Capture-34-1": -0.001147,
+      "CTU-IoT-Malware-Capture-42-1": -0.000572,
+      "CTU-IoT-Malware-Capture-44-1": -0.02403,
+      "CTU-IoT-Malware-Capture-8-1": 0.000162,
+      "data_1": -0.000128,
+      "data_10": 7e-06,
+      "data_36": 1e-06
+     },
+     "p_sign_flip": 0.32421875,
+     "p_wilcoxon": 0.4130859375,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "rf_event_only",
+     "n": 11,
+     "mean_diff": -0.16697702749937124,
+     "median_diff": 2.5228795571430318e-05,
+     "folds_positive": 7,
+     "folds_negative": 4,
+     "per_fold": {
+      "CTU-IoT-Malware-Capture-1-1": 0.0023,
+      "CTU-IoT-Malware-Capture-20-1": -0.969983,
+      "CTU-IoT-Malware-Capture-21-1": -0.96512,
+      "CTU-IoT-Malware-Capture-3-1": 0.037997,
+      "CTU-IoT-Malware-Capture-34-1": 0.01473,
+      "CTU-IoT-Malware-Capture-42-1": -0.001119,
+      "CTU-IoT-Malware-Capture-44-1": 0.0419,
+      "CTU-IoT-Malware-Capture-8-1": 2.5e-05,
+      "data_1": 0.002522,
+      "data_10": 1e-06,
+      "data_36": -0.0
+     },
+     "p_sign_flip": 0.4912109375,
+     "p_wilcoxon": 0.5771484375,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "rf_event_plus_incident",
+     "y": "rf_event_only",
+     "n": 11,
+     "mean_diff": 0.007205320307231152,
+     "median_diff": 3.3705618757706723e-05,
+     "folds_positive": 8,
+     "folds_negative": 2,
+     "per_fold": {
+      "CTU-IoT-Malware-Capture-1-1": -0.030346,
+      "CTU-IoT-Malware-Capture-20-1": 0.0,
+      "CTU-IoT-Malware-Capture-21-1": 0.029264,
+      "CTU-IoT-Malware-Capture-3-1": 0.018305,
+      "CTU-IoT-Malware-Capture-34-1": 0.00689,
+      "CTU-IoT-Malware-Capture-42-1": -0.000528,
+      "CTU-IoT-Malware-Capture-44-1": 0.05284,
+      "CTU-IoT-Malware-Capture-8-1": 3.4e-05,
+      "data_1": 0.002798,
+      "data_10": 1e-06,
+      "data_36": 0.0
+     },
+     "p_sign_flip": 0.298828125,
+     "p_wilcoxon": 0.16015625,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "hgb_incident_only",
+     "y": "hgb_event_only",
+     "n": 11,
+     "mean_diff": -0.09985159820306223,
+     "median_diff": 1.1810451505667174e-08,
+     "folds_positive": 6,
+     "folds_negative": 5,
+     "per_fold": {
+      "CTU-IoT-Malware-Capture-1-1": -0.002047,
+      "CTU-IoT-Malware-Capture-20-1": -0.661946,
+      "CTU-IoT-Malware-Capture-21-1": -0.382078,
+      "CTU-IoT-Malware-Capture-3-1": 0.016425,
+      "CTU-IoT-Malware-Capture-34-1": 0.00313,
+      "CTU-IoT-Malware-Capture-42-1": -0.000772,
+      "CTU-IoT-Malware-Capture-44-1": -0.120253,
+      "CTU-IoT-Malware-Capture-8-1": 0.046061,
+      "data_1": 0.003106,
+      "data_10": 6e-06,
+      "data_36": 0.0
+     },
+     "p_sign_flip": 0.23828125,
+     "p_wilcoxon": 0.7646484375,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "hgb_event_plus_incident",
+     "y": "hgb_event_only",
+     "n": 11,
+     "mean_diff": 0.08678945901412068,
+     "median_diff": 0.010886874475560582,
+     "folds_positive": 8,
+     "folds_negative": 3,
+     "per_fold": {
+      "CTU-IoT-Malware-Capture-1-1": -0.044767,
+      "CTU-IoT-Malware-Capture-20-1": 0.225645,
+      "CTU-IoT-Malware-Capture-21-1": 0.585349,
+      "CTU-IoT-Malware-Capture-3-1": 0.010887,
+      "CTU-IoT-Malware-Capture-34-1": 0.014287,
+      "CTU-IoT-Malware-Capture-42-1": -0.000805,
+      "CTU-IoT-Malware-Capture-44-1": 0.147355,
+      "CTU-IoT-Malware-Capture-8-1": 0.013851,
+      "data_1": 0.00288,
+      "data_10": 6e-06,
+      "data_36": -6e-06
+     },
+     "p_sign_flip": 0.130859375,
+     "p_wilcoxon": 0.0673828125,
+     "p_sign_flip_holm": 0.916015625
+    },
+    {
+     "x": "lr_incident_only",
+     "y": "lr_event_only",
+     "n": 11,
+     "mean_diff": -0.2634580880647208,
+     "median_diff": -0.0009619765390916006,
+     "folds_positive": 4,
+     "folds_negative": 7,
+     "per_fold": {
+      "CTU-IoT-Malware-Capture-1-1": -0.307222,
+      "CTU-IoT-Malware-Capture-20-1": -0.991615,
+      "CTU-IoT-Malware-Capture-21-1": -0.995174,
+      "CTU-IoT-Malware-Capture-3-1": -0.001374,
+      "CTU-IoT-Malware-Capture-34-1": 0.043427,
+      "CTU-IoT-Malware-Capture-42-1": -0.000962,
+      "CTU-IoT-Malware-Capture-44-1": -0.646257,
+      "CTU-IoT-Malware-Capture-8-1": -0.000154,
+      "data_1": 0.001292,
+      "data_10": 0.0,
+      "data_36": 0.0
+     },
+     "p_sign_flip": 0.08203125,
+     "p_wilcoxon": 0.123046875,
+     "p_sign_flip_holm": 0.65625
+    },
+    {
+     "x": "lr_event_plus_incident",
+     "y": "lr_event_only",
+     "n": 11,
+     "mean_diff": -0.00024057441233826804,
+     "median_diff": 0.0,
+     "folds_positive": 5,
+     "folds_negative": 5,
+     "per_fold": {
+      "CTU-IoT-Malware-Capture-1-1": -0.023711,
+      "CTU-IoT-Malware-Capture-20-1": -0.050315,
+      "CTU-IoT-Malware-Capture-21-1": -0.003175,
+      "CTU-IoT-Malware-Capture-3-1": -0.000102,
+      "CTU-IoT-Malware-Capture-34-1": 0.051282,
+      "CTU-IoT-Malware-Capture-42-1": -0.000263,
+      "CTU-IoT-Malware-Capture-44-1": 0.022129,
+      "CTU-IoT-Malware-Capture-8-1": 0.0,
+      "data_1": 0.001508,
+      "data_10": 0.0,
+      "data_36": 0.0
+     },
+     "p_sign_flip": 0.8828125,
+     "p_wilcoxon": 0.845703125,
+     "p_sign_flip_holm": 1.0
+    }
+   ],
+   "fpr": [
+    {
+     "x": "frag_soft",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": -0.15031390887466964,
+     "median_diff": -0.06451612903225806,
+     "folds_positive": 0,
+     "folds_negative": 10,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.002655,
+      "CTU-Honeypot-Capture-5-1": -0.133333,
+      "CTU-IoT-Malware-Capture-1-1": -0.066592,
+      "CTU-IoT-Malware-Capture-20-1": 0.0,
+      "CTU-IoT-Malware-Capture-21-1": 0.0,
+      "CTU-IoT-Malware-Capture-3-1": -0.568607,
+      "CTU-IoT-Malware-Capture-34-1": -0.048674,
+      "CTU-IoT-Malware-Capture-42-1": -0.098733,
+      "CTU-IoT-Malware-Capture-44-1": -0.004739,
+      "CTU-IoT-Malware-Capture-8-1": 0.0,
+      "data_1": -0.866232,
+      "data_10": -0.1,
+      "data_36": -0.064516
+     },
+     "p_sign_flip": 0.001953125,
+     "p_wilcoxon": 0.001953125,
+     "p_sign_flip_holm": 0.015625
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "frag_soft",
+     "n": 13,
+     "mean_diff": 0.2142498388608358,
+     "median_diff": 0.10767303476354524,
+     "folds_positive": 10,
+     "folds_negative": 0,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.230973,
+      "CTU-Honeypot-Capture-5-1": 0.246143,
+      "CTU-IoT-Malware-Capture-1-1": 0.065532,
+      "CTU-IoT-Malware-Capture-20-1": 0.107673,
+      "CTU-IoT-Malware-Capture-21-1": 0.531112,
+      "CTU-IoT-Malware-Capture-3-1": 0.02015,
+      "CTU-IoT-Malware-Capture-34-1": 0.099532,
+      "CTU-IoT-Malware-Capture-42-1": 0.571448,
+      "CTU-IoT-Malware-Capture-44-1": 0.0,
+      "CTU-IoT-Malware-Capture-8-1": 0.0,
+      "data_1": 0.248169,
+      "data_10": 0.0,
+      "data_36": 0.664516
+     },
+     "p_sign_flip": 0.001953125,
+     "p_wilcoxon": 0.001953125,
+     "p_sign_flip_holm": 0.015625
+    },
+    {
+     "x": "rf_incident_only",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": 0.06393592998616618,
+     "median_diff": 0.050858034321372855,
+     "folds_positive": 7,
+     "folds_negative": 5,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.228319,
+      "CTU-Honeypot-Capture-5-1": 0.112809,
+      "CTU-IoT-Malware-Capture-1-1": -0.00106,
+      "CTU-IoT-Malware-Capture-20-1": 0.107673,
+      "CTU-IoT-Malware-Capture-21-1": 0.531112,
+      "CTU-IoT-Malware-Capture-3-1": -0.548457,
+      "CTU-IoT-Malware-Capture-34-1": 0.050858,
+      "CTU-IoT-Malware-Capture-42-1": 0.472715,
+      "CTU-IoT-Malware-Capture-44-1": -0.004739,
+      "CTU-IoT-Malware-Capture-8-1": 0.0,
+      "data_1": -0.618063,
+      "data_10": -0.1,
+      "data_36": 0.6
+     },
+     "p_sign_flip": 0.51025390625,
+     "p_wilcoxon": 0.4697265625,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "rf_event_plus_incident",
+     "y": "rf_event_only",
+     "n": 13,
+     "mean_diff": -0.03700406149615069,
+     "median_diff": -0.0004424778761061947,
+     "folds_positive": 2,
+     "folds_negative": 7,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.000442,
+      "CTU-Honeypot-Capture-5-1": -0.03115,
+      "CTU-IoT-Malware-Capture-1-1": 0.002072,
+      "CTU-IoT-Malware-Capture-20-1": 0.0,
+      "CTU-IoT-Malware-Capture-21-1": 0.0,
+      "CTU-IoT-Malware-Capture-3-1": -0.001367,
+      "CTU-IoT-Malware-Capture-34-1": -0.016745,
+      "CTU-IoT-Malware-Capture-42-1": 0.102308,
+      "CTU-IoT-Malware-Capture-44-1": 0.0,
+      "CTU-IoT-Malware-Capture-8-1": 0.0,
+      "data_1": -0.384546,
+      "data_10": -0.086667,
+      "data_36": -0.064516
+     },
+     "p_sign_flip": 0.27734375,
+     "p_wilcoxon": 0.203125,
+     "p_sign_flip_holm": 0.83203125
+    },
+    {
+     "x": "hgb_incident_only",
+     "y": "hgb_event_only",
+     "n": 13,
+     "mean_diff": 0.04284772158944606,
+     "median_diff": 0.0625065002600104,
+     "folds_positive": 8,
+     "folds_negative": 5,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.034071,
+      "CTU-Honeypot-Capture-5-1": 0.312373,
+      "CTU-IoT-Malware-Capture-1-1": -0.227364,
+      "CTU-IoT-Malware-Capture-20-1": 0.101472,
+      "CTU-IoT-Malware-Capture-21-1": 0.616748,
+      "CTU-IoT-Malware-Capture-3-1": -0.541843,
+      "CTU-IoT-Malware-Capture-34-1": 0.062507,
+      "CTU-IoT-Malware-Capture-42-1": 0.342896,
+      "CTU-IoT-Malware-Capture-44-1": -0.059716,
+      "CTU-IoT-Malware-Capture-8-1": 0.144979,
+      "data_1": -0.621576,
+      "data_10": -0.233333,
+      "data_36": 0.625806
+     },
+     "p_sign_flip": 0.69287109375,
+     "p_wilcoxon": 0.587890625,
+     "p_sign_flip_holm": 1.0
+    },
+    {
+     "x": "hgb_event_plus_incident",
+     "y": "hgb_event_only",
+     "n": 13,
+     "mean_diff": -0.0723120010963927,
+     "median_diff": -0.010400416016640667,
+     "folds_positive": 3,
+     "folds_negative": 7,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.202212,
+      "CTU-Honeypot-Capture-5-1": -0.022562,
+      "CTU-IoT-Malware-Capture-1-1": 0.026694,
+      "CTU-IoT-Malware-Capture-20-1": 0.0,
+      "CTU-IoT-Malware-Capture-21-1": 0.0,
+      "CTU-IoT-Malware-Capture-3-1": 0.000353,
+      "CTU-IoT-Malware-Capture-34-1": -0.0104,
+      "CTU-IoT-Malware-Capture-42-1": -0.030271,
+      "CTU-IoT-Malware-Capture-44-1": -0.196209,
+      "CTU-IoT-Malware-Capture-8-1": 0.0,
+      "data_1": -0.394481,
+      "data_10": -0.24,
+      "data_36": 0.129032
+     },
+     "p_sign_flip": 0.078125,
+     "p_wilcoxon": 0.10546875,
+     "p_sign_flip_holm": 0.36767578125
+    },
+    {
+     "x": "lr_incident_only",
+     "y": "lr_event_only",
+     "n": 13,
+     "mean_diff": 0.2317026492278514,
+     "median_diff": 0.23071324599708876,
+     "folds_positive": 9,
+     "folds_negative": 4,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": 0.160177,
+      "CTU-Honeypot-Capture-5-1": 0.230713,
+      "CTU-IoT-Malware-Capture-1-1": -0.085584,
+      "CTU-IoT-Malware-Capture-20-1": 0.794488,
+      "CTU-IoT-Malware-Capture-21-1": 0.649694,
+      "CTU-IoT-Malware-Capture-3-1": -0.40873,
+      "CTU-IoT-Malware-Capture-34-1": 0.674987,
+      "CTU-IoT-Malware-Capture-42-1": 0.448371,
+      "CTU-IoT-Malware-Capture-44-1": 0.265403,
+      "CTU-IoT-Malware-Capture-8-1": 0.689317,
+      "data_1": -0.310788,
+      "data_10": 0.026667,
+      "data_36": -0.122581
+     },
+     "p_sign_flip": 0.061279296875,
+     "p_wilcoxon": 0.080322265625,
+     "p_sign_flip_holm": 0.36767578125
+    },
+    {
+     "x": "lr_event_plus_incident",
+     "y": "lr_event_only",
+     "n": 13,
+     "mean_diff": -0.08927910099599487,
+     "median_diff": -0.0009170105456212746,
+     "folds_positive": 4,
+     "folds_negative": 8,
+     "per_fold": {
+      "CTU-Honeypot-Capture-4-1": -0.058407,
+      "CTU-Honeypot-Capture-5-1": -0.028675,
+      "CTU-IoT-Malware-Capture-1-1": 0.000517,
+      "CTU-IoT-Malware-Capture-20-1": -0.000313,
+      "CTU-IoT-Malware-Capture-21-1": 0.021638,
+      "CTU-IoT-Malware-Capture-3-1": -0.002778,
+      "CTU-IoT-Malware-Capture-34-1": 0.020801,
+      "CTU-IoT-Malware-Capture-42-1": 0.002036,
+      "CTU-IoT-Malware-Capture-44-1": 0.0,
+      "CTU-IoT-Malware-Capture-8-1": -0.000917,
+      "data_1": -0.500552,
+      "data_10": -0.233333,
+      "data_36": -0.380645
+     },
+     "p_sign_flip": 0.06787109375,
+     "p_wilcoxon": 0.12939453125,
+     "p_sign_flip_holm": 0.36767578125
+    }
+   ]
+  }
+ }
+}

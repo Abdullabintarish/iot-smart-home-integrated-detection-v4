@@ -1,0 +1,44 @@
+{
+ "transfer_runB": {
+  "values_checked": 550,
+  "mismatches": [],
+  "manifest_present": true,
+  "manifest_hashes_ok": true,
+  "stats_mismatches": [],
+  "reproduces_historical_ablation": {
+   "rf_event_only|42": true,
+   "rf_event_only|1": true,
+   "rf_event_only|2": true,
+   "rf_event_only|3": true,
+   "rf_event_only|4": true,
+   "rf_incident_only|42": true,
+   "rf_incident_only|1": true,
+   "rf_incident_only|2": true,
+   "rf_incident_only|3": true,
+   "rf_incident_only|4": true,
+   "rf_event_plus_incident|42": true,
+   "rf_event_plus_incident|1": true,
+   "rf_event_plus_incident|2": true,
+   "rf_event_plus_incident|3": true,
+   "rf_event_plus_incident|4": true
+  }
+ },
+ "transfer_loso": {
+  "values_checked": 7865,
+  "mismatches": [],
+  "manifest_present": true,
+  "manifest_hashes_ok": true,
+  "stats_mismatches": []
+ },
+ "cross_log_primary_augmented": {
+  "values_checked": 120,
+  "mismatches": [],
+  "manifest_hashes_ok": true
+ },
+ "cross_log_loco": {
+  "values_checked": 1080,
+  "mismatches": [],
+  "manifest_hashes_ok": true
+ },
+ "all_ok": true
+}

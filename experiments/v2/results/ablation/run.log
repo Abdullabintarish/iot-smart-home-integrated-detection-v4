@@ -1,0 +1,334 @@
+[18:23:07] 4,211,383 events, 20 event features
+[18:23:07] runB: building 300 s context (completed and causal)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:23:43]   runB                             event_only           seed=42  f1=0.9949 fpr=0.0042 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:24:00]   runB                             event_no_sport       seed=42  f1=0.9934 fpr=0.0065 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:24:16]   runB                             incident_only        seed=42  f1=0.8574 fpr=0.0914 (16s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:24:34]   runB                             event_plus_incident  seed=42  f1=0.9964 fpr=0.0113 (18s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:24:53]   runB                             event_plus_causal    seed=42  f1=0.9960 fpr=0.0123 (18s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:25:11]   runB                             event_only           seed=1   f1=0.9943 fpr=0.0040 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:25:29]   runB                             event_no_sport       seed=1   f1=0.9936 fpr=0.0033 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:25:45]   runB                             incident_only        seed=1   f1=0.8533 fpr=0.0919 (16s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:26:02]   runB                             event_plus_incident  seed=1   f1=0.9963 fpr=0.0114 (18s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:26:21]   runB                             event_plus_causal    seed=1   f1=0.9958 fpr=0.0125 (18s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:26:39]   runB                             event_only           seed=2   f1=0.9948 fpr=0.0042 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:26:56]   runB                             event_no_sport       seed=2   f1=0.9941 fpr=0.0021 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:27:12]   runB                             incident_only        seed=2   f1=0.8542 fpr=0.0915 (16s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:27:30]   runB                             event_plus_incident  seed=2   f1=0.9959 fpr=0.0116 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:27:48]   runB                             event_plus_causal    seed=2   f1=0.9947 fpr=0.0119 (18s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:28:07]   runB                             event_only           seed=3   f1=0.9973 fpr=0.0031 (18s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:28:23]   runB                             event_no_sport       seed=3   f1=0.9939 fpr=0.0037 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:28:39]   runB                             incident_only        seed=3   f1=0.8560 fpr=0.0919 (16s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:28:56]   runB                             event_plus_incident  seed=3   f1=0.9967 fpr=0.0115 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:29:14]   runB                             event_plus_causal    seed=3   f1=0.9960 fpr=0.0112 (18s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:29:32]   runB                             event_only           seed=4   f1=0.9946 fpr=0.0033 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:29:50]   runB                             event_no_sport       seed=4   f1=0.9935 fpr=0.0025 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:30:06]   runB                             incident_only        seed=4   f1=0.8623 fpr=0.0912 (16s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:30:23]   runB                             event_plus_incident  seed=4   f1=0.9966 fpr=0.0110 (17s)
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+C:\Users\user\Desktop\Thesis_Part2_Report\Thesis_Part1_Reoprt\submission\code\.venv\Lib\site-packages\sklearn\metrics\_classification.py:614: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+[18:30:40]   runB                             event_plus_causal    seed=4   f1=0.9962 fpr=0.0108 (18s)
+[18:30:47] runB: saved 1,692,332 prediction rows
+[18:30:47] loso: building 300 s context (completed and causal)
+[18:31:12]   CTU-Honeypot-Capture-4-1         event_only           seed=42  f1=0.3326 fpr=0.0044 (4s)
+[18:31:16]   CTU-Honeypot-Capture-4-1         event_no_sport       seed=42  f1=0.4994 fpr=0.0022 (3s)
+[18:31:18]   CTU-Honeypot-Capture-4-1         incident_only        seed=42  f1=0.4488 fpr=0.1858 (3s)
+[18:31:22]   CTU-Honeypot-Capture-4-1         event_plus_incident  seed=42  f1=0.4994 fpr=0.0022 (4s)
+[18:31:26]   CTU-Honeypot-Capture-4-1         event_plus_causal    seed=42  f1=0.3326 fpr=0.0044 (4s)
+[18:31:32]   CTU-Honeypot-Capture-4-1         event_only           seed=1   f1=0.4994 fpr=0.0022 (4s)
+[18:31:35]   CTU-Honeypot-Capture-4-1         event_no_sport       seed=1   f1=0.4994 fpr=0.0022 (3s)
+[18:31:38]   CTU-Honeypot-Capture-4-1         incident_only        seed=1   f1=0.2161 fpr=0.2389 (3s)
+[18:31:41]   CTU-Honeypot-Capture-4-1         event_plus_incident  seed=1   f1=0.4994 fpr=0.0022 (4s)
+[18:31:45]   CTU-Honeypot-Capture-4-1         event_plus_causal    seed=1   f1=0.4994 fpr=0.0022 (4s)
+[18:31:51]   CTU-Honeypot-Capture-4-1         event_only           seed=2   f1=0.4994 fpr=0.0022 (4s)
+[18:31:55]   CTU-Honeypot-Capture-4-1         event_no_sport       seed=2   f1=0.4994 fpr=0.0022 (3s)
+[18:31:57]   CTU-Honeypot-Capture-4-1         incident_only        seed=2   f1=0.2876 fpr=0.2412 (3s)
+[18:32:01]   CTU-Honeypot-Capture-4-1         event_plus_incident  seed=2   f1=0.4994 fpr=0.0022 (3s)
+[18:32:05]   CTU-Honeypot-Capture-4-1         event_plus_causal    seed=2   f1=0.4994 fpr=0.0022 (4s)
+[18:32:11]   CTU-Honeypot-Capture-5-1         event_only           seed=42  f1=0.2300 fpr=0.1485 (4s)
+[18:32:14]   CTU-Honeypot-Capture-5-1         event_no_sport       seed=42  f1=0.2351 fpr=0.1128 (3s)
+[18:32:17]   CTU-Honeypot-Capture-5-1         incident_only        seed=42  f1=0.2090 fpr=0.2817 (3s)
+[18:32:21]   CTU-Honeypot-Capture-5-1         event_plus_incident  seed=42  f1=0.2343 fpr=0.1179 (4s)
+[18:32:25]   CTU-Honeypot-Capture-5-1         event_plus_causal    seed=42  f1=0.2378 fpr=0.0932 (4s)
+[18:32:30]   CTU-Honeypot-Capture-5-1         event_only           seed=1   f1=0.2351 fpr=0.1128 (4s)
+[18:32:34]   CTU-Honeypot-Capture-5-1         event_no_sport       seed=1   f1=0.2346 fpr=0.1157 (3s)
+[18:32:36]   CTU-Honeypot-Capture-5-1         incident_only        seed=1   f1=0.1738 fpr=0.2314 (3s)
+[18:32:40]   CTU-Honeypot-Capture-5-1         event_plus_incident  seed=1   f1=0.2389 fpr=0.0852 (4s)
+[18:32:44]   CTU-Honeypot-Capture-5-1         event_plus_causal    seed=1   f1=0.2305 fpr=0.1448 (4s)
+[18:32:50]   CTU-Honeypot-Capture-5-1         event_only           seed=2   f1=0.2273 fpr=0.1667 (3s)
+[18:32:53]   CTU-Honeypot-Capture-5-1         event_no_sport       seed=2   f1=0.2326 fpr=0.1303 (3s)
+[18:32:56]   CTU-Honeypot-Capture-5-1         incident_only        seed=2   f1=0.2161 fpr=0.2387 (3s)
+[18:32:59]   CTU-Honeypot-Capture-5-1         event_plus_incident  seed=2   f1=0.2369 fpr=0.0997 (4s)
+[18:33:03]   CTU-Honeypot-Capture-5-1         event_plus_causal    seed=2   f1=0.2326 fpr=0.1303 (4s)
+[18:33:13]   CTU-IoT-Malware-Capture-1-1      event_only           seed=42  f1=0.3927 fpr=0.0894 (8s)
+[18:33:20]   CTU-IoT-Malware-Capture-1-1      event_no_sport       seed=42  f1=0.3967 fpr=0.0888 (7s)
+[18:33:26]   CTU-IoT-Malware-Capture-1-1      incident_only        seed=42  f1=0.2449 fpr=0.0894 (6s)
+[18:33:34]   CTU-IoT-Malware-Capture-1-1      event_plus_incident  seed=42  f1=0.3016 fpr=0.0916 (7s)
+[18:33:42]   CTU-IoT-Malware-Capture-1-1      event_plus_causal    seed=42  f1=0.3952 fpr=0.0915 (8s)
+[18:33:51]   CTU-IoT-Malware-Capture-1-1      event_only           seed=1   f1=0.3929 fpr=0.0896 (8s)
+[18:33:58]   CTU-IoT-Malware-Capture-1-1      event_no_sport       seed=1   f1=0.3966 fpr=0.0888 (7s)
+[18:34:05]   CTU-IoT-Malware-Capture-1-1      incident_only        seed=1   f1=0.2522 fpr=0.0893 (7s)
+[18:34:12]   CTU-IoT-Malware-Capture-1-1      event_plus_incident  seed=1   f1=0.2668 fpr=0.0916 (8s)
+[18:34:21]   CTU-IoT-Malware-Capture-1-1      event_plus_causal    seed=1   f1=0.3957 fpr=0.0913 (8s)
+[18:34:30]   CTU-IoT-Malware-Capture-1-1      event_only           seed=2   f1=0.3939 fpr=0.0899 (8s)
+[18:34:37]   CTU-IoT-Malware-Capture-1-1      event_no_sport       seed=2   f1=0.3969 fpr=0.0876 (7s)
+[18:34:44]   CTU-IoT-Malware-Capture-1-1      incident_only        seed=2   f1=0.2430 fpr=0.0879 (7s)
+[18:34:51]   CTU-IoT-Malware-Capture-1-1      event_plus_incident  seed=2   f1=0.3128 fpr=0.0916 (7s)
+[18:35:00]   CTU-IoT-Malware-Capture-1-1      event_plus_causal    seed=2   f1=0.3952 fpr=0.0913 (8s)
+[18:35:06]   CTU-IoT-Malware-Capture-20-1     event_only           seed=42  f1=0.8036 fpr=0.0000 (4s)
+[18:35:10]   CTU-IoT-Malware-Capture-20-1     event_no_sport       seed=42  f1=0.9838 fpr=0.0000 (4s)
+[18:35:13]   CTU-IoT-Malware-Capture-20-1     incident_only        seed=42  f1=0.2440 fpr=0.0968 (3s)
+[18:35:16]   CTU-IoT-Malware-Capture-20-1     event_plus_incident  seed=42  f1=0.9838 fpr=0.0000 (4s)
+[18:35:20]   CTU-IoT-Malware-Capture-20-1     event_plus_causal    seed=42  f1=0.9838 fpr=0.0000 (4s)
+[18:35:26]   CTU-IoT-Malware-Capture-20-1     event_only           seed=1   f1=0.8036 fpr=0.0000 (4s)
+[18:35:29]   CTU-IoT-Malware-Capture-20-1     event_no_sport       seed=1   f1=0.9838 fpr=0.0000 (3s)
+[18:35:32]   CTU-IoT-Malware-Capture-20-1     incident_only        seed=1   f1=0.2404 fpr=0.1156 (3s)
+[18:35:35]   CTU-IoT-Malware-Capture-20-1     event_plus_incident  seed=1   f1=0.9838 fpr=0.0000 (4s)
+[18:35:40]   CTU-IoT-Malware-Capture-20-1     event_plus_causal    seed=1   f1=0.9838 fpr=0.0000 (4s)
+[18:35:45]   CTU-IoT-Malware-Capture-20-1     event_only           seed=2   f1=0.8036 fpr=0.0000 (4s)
+[18:35:49]   CTU-IoT-Malware-Capture-20-1     event_no_sport       seed=2   f1=0.9838 fpr=0.0000 (4s)
+[18:35:52]   CTU-IoT-Malware-Capture-20-1     incident_only        seed=2   f1=0.2429 fpr=0.1034 (3s)
+[18:35:56]   CTU-IoT-Malware-Capture-20-1     event_plus_incident  seed=2   f1=0.9838 fpr=0.0000 (4s)
+[18:36:00]   CTU-IoT-Malware-Capture-20-1     event_plus_causal    seed=2   f1=0.9838 fpr=0.0000 (5s)
+[18:36:06]   CTU-IoT-Malware-Capture-21-1     event_only           seed=42  f1=0.5553 fpr=0.0000 (4s)
+[18:36:10]   CTU-IoT-Malware-Capture-21-1     event_no_sport       seed=42  f1=0.6543 fpr=0.0000 (3s)
+[18:36:12]   CTU-IoT-Malware-Capture-21-1     incident_only        seed=42  f1=0.1623 fpr=0.5186 (3s)
+[18:36:16]   CTU-IoT-Malware-Capture-21-1     event_plus_incident  seed=42  f1=1.0000 fpr=0.0000 (4s)
+[18:36:20]   CTU-IoT-Malware-Capture-21-1     event_plus_causal    seed=42  f1=0.6543 fpr=0.0000 (4s)
+[18:36:26]   CTU-IoT-Malware-Capture-21-1     event_only           seed=1   f1=0.5553 fpr=0.0000 (4s)
+[18:36:29]   CTU-IoT-Malware-Capture-21-1     event_no_sport       seed=1   f1=0.6543 fpr=0.0000 (3s)
+[18:36:31]   CTU-IoT-Malware-Capture-21-1     incident_only        seed=1   f1=0.1560 fpr=0.5458 (3s)
+[18:36:35]   CTU-IoT-Malware-Capture-21-1     event_plus_incident  seed=1   f1=1.0000 fpr=0.0000 (3s)
+[18:36:39]   CTU-IoT-Malware-Capture-21-1     event_plus_causal    seed=1   f1=0.6543 fpr=0.0000 (4s)
+[18:36:44]   CTU-IoT-Malware-Capture-21-1     event_only           seed=2   f1=0.5553 fpr=0.0000 (3s)
+[18:36:48]   CTU-IoT-Malware-Capture-21-1     event_no_sport       seed=2   f1=0.9814 fpr=0.0000 (3s)
+[18:36:50]   CTU-IoT-Malware-Capture-21-1     incident_only        seed=2   f1=0.1603 fpr=0.5275 (3s)
+[18:36:54]   CTU-IoT-Malware-Capture-21-1     event_plus_incident  seed=2   f1=1.0000 fpr=0.0000 (3s)
+[18:36:58]   CTU-IoT-Malware-Capture-21-1     event_plus_causal    seed=2   f1=0.6543 fpr=0.0000 (4s)
+[18:37:05]   CTU-IoT-Malware-Capture-3-1      event_only           seed=42  f1=0.4119 fpr=0.5690 (5s)
+[18:37:10]   CTU-IoT-Malware-Capture-3-1      event_no_sport       seed=42  f1=0.3593 fpr=0.5690 (4s)
+[18:37:13]   CTU-IoT-Malware-Capture-3-1      incident_only        seed=42  f1=0.2886 fpr=0.0251 (3s)
+[18:37:17]   CTU-IoT-Malware-Capture-3-1      event_plus_incident  seed=42  f1=0.3714 fpr=0.5690 (4s)
+[18:37:22]   CTU-IoT-Malware-Capture-3-1      event_plus_causal    seed=42  f1=0.3400 fpr=0.5686 (5s)
+[18:37:28]   CTU-IoT-Malware-Capture-3-1      event_only           seed=1   f1=0.3874 fpr=0.5690 (4s)
+[18:37:32]   CTU-IoT-Malware-Capture-3-1      event_no_sport       seed=1   f1=0.4079 fpr=0.5683 (4s)
+[18:37:36]   CTU-IoT-Malware-Capture-3-1      incident_only        seed=1   f1=0.2986 fpr=0.0269 (4s)
+[18:37:40]   CTU-IoT-Malware-Capture-3-1      event_plus_incident  seed=1   f1=0.3706 fpr=0.5686 (4s)
+[18:37:45]   CTU-IoT-Malware-Capture-3-1      event_plus_causal    seed=1   f1=0.3399 fpr=0.5686 (5s)
+[18:37:51]   CTU-IoT-Malware-Capture-3-1      event_only           seed=2   f1=0.4103 fpr=0.5690 (4s)
+[18:37:55]   CTU-IoT-Malware-Capture-3-1      event_no_sport       seed=2   f1=0.3088 fpr=0.5690 (4s)
+[18:37:58]   CTU-IoT-Malware-Capture-3-1      incident_only        seed=2   f1=0.3095 fpr=0.0214 (3s)
+[18:38:02]   CTU-IoT-Malware-Capture-3-1      event_plus_incident  seed=2   f1=0.3697 fpr=0.5690 (4s)
+[18:38:07]   CTU-IoT-Malware-Capture-3-1      event_plus_causal    seed=2   f1=0.3413 fpr=0.5690 (5s)
+[18:38:13]   CTU-IoT-Malware-Capture-34-1     event_only           seed=42  f1=0.0327 fpr=0.0447 (3s)
+[18:38:16]   CTU-IoT-Malware-Capture-34-1     event_no_sport       seed=42  f1=0.0295 fpr=0.0572 (3s)
+[18:38:19]   CTU-IoT-Malware-Capture-34-1     incident_only        seed=42  f1=0.0854 fpr=0.0931 (3s)
+[18:38:22]   CTU-IoT-Malware-Capture-34-1     event_plus_incident  seed=42  f1=0.1269 fpr=0.0307 (3s)
+[18:38:26]   CTU-IoT-Malware-Capture-34-1     event_plus_causal    seed=42  f1=0.1003 fpr=0.0406 (4s)
+[18:38:32]   CTU-IoT-Malware-Capture-34-1     event_only           seed=1   f1=0.0295 fpr=0.0510 (4s)
+[18:38:35]   CTU-IoT-Malware-Capture-34-1     event_no_sport       seed=1   f1=0.0296 fpr=0.0546 (3s)
+[18:38:38]   CTU-IoT-Malware-Capture-34-1     incident_only        seed=1   f1=0.0871 fpr=0.1004 (3s)
+[18:38:41]   CTU-IoT-Malware-Capture-34-1     event_plus_incident  seed=1   f1=0.1623 fpr=0.0255 (4s)
+[18:38:45]   CTU-IoT-Malware-Capture-34-1     event_plus_causal    seed=1   f1=0.1229 fpr=0.0504 (4s)
+[18:38:51]   CTU-IoT-Malware-Capture-34-1     event_only           seed=2   f1=0.0296 fpr=0.0525 (4s)
+[18:38:54]   CTU-IoT-Malware-Capture-34-1     event_no_sport       seed=2   f1=0.0295 fpr=0.0572 (3s)
+[18:38:56]   CTU-IoT-Malware-Capture-34-1     incident_only        seed=2   f1=0.0852 fpr=0.1004 (3s)
+[18:39:00]   CTU-IoT-Malware-Capture-34-1     event_plus_incident  seed=2   f1=0.1058 fpr=0.0385 (3s)
+[18:39:04]   CTU-IoT-Malware-Capture-34-1     event_plus_causal    seed=2   f1=0.0839 fpr=0.0442 (4s)
+[18:39:10]   CTU-IoT-Malware-Capture-42-1     event_only           seed=42  f1=0.2655 fpr=0.3416 (4s)
+[18:39:13]   CTU-IoT-Malware-Capture-42-1     event_no_sport       seed=42  f1=0.2655 fpr=0.3437 (3s)
+[18:39:16]   CTU-IoT-Malware-Capture-42-1     incident_only        seed=42  f1=0.0793 fpr=0.8170 (3s)
+[18:39:19]   CTU-IoT-Malware-Capture-42-1     event_plus_incident  seed=42  f1=0.1786 fpr=0.4441 (3s)
+[18:39:24]   CTU-IoT-Malware-Capture-42-1     event_plus_causal    seed=42  f1=0.1792 fpr=0.4452 (4s)
+[18:39:29]   CTU-IoT-Malware-Capture-42-1     event_only           seed=1   f1=0.2645 fpr=0.3416 (4s)
+[18:39:33]   CTU-IoT-Malware-Capture-42-1     event_no_sport       seed=1   f1=0.2640 fpr=0.3437 (3s)
+[18:39:35]   CTU-IoT-Malware-Capture-42-1     incident_only        seed=1   f1=0.0793 fpr=0.8161 (3s)
+[18:39:39]   CTU-IoT-Malware-Capture-42-1     event_plus_incident  seed=1   f1=0.1785 fpr=0.4441 (3s)
+[18:39:43]   CTU-IoT-Malware-Capture-42-1     event_plus_causal    seed=1   f1=0.1783 fpr=0.4450 (4s)
+[18:39:49]   CTU-IoT-Malware-Capture-42-1     event_only           seed=2   f1=0.2650 fpr=0.3419 (4s)
+[18:39:52]   CTU-IoT-Malware-Capture-42-1     event_no_sport       seed=2   f1=0.2650 fpr=0.3437 (4s)
+[18:39:55]   CTU-IoT-Malware-Capture-42-1     incident_only        seed=2   f1=0.0814 fpr=0.8113 (3s)
+[18:39:58]   CTU-IoT-Malware-Capture-42-1     event_plus_incident  seed=2   f1=0.1788 fpr=0.4441 (3s)
+[18:40:03]   CTU-IoT-Malware-Capture-42-1     event_plus_causal    seed=2   f1=0.1791 fpr=0.4443 (4s)
+[18:40:09]   CTU-IoT-Malware-Capture-44-1     event_only           seed=42  f1=0.2606 fpr=0.0047 (4s)
+[18:40:13]   CTU-IoT-Malware-Capture-44-1     event_no_sport       seed=42  f1=0.3270 fpr=0.0047 (3s)
+[18:40:16]   CTU-IoT-Malware-Capture-44-1     incident_only        seed=42  f1=0.3140 fpr=0.0000 (3s)
+[18:40:19]   CTU-IoT-Malware-Capture-44-1     event_plus_incident  seed=42  f1=0.4283 fpr=0.0047 (4s)
+[18:40:24]   CTU-IoT-Malware-Capture-44-1     event_plus_causal    seed=42  f1=0.4283 fpr=0.0047 (4s)
+[18:40:30]   CTU-IoT-Malware-Capture-44-1     event_only           seed=1   f1=0.3270 fpr=0.0047 (4s)
+[18:40:34]   CTU-IoT-Malware-Capture-44-1     event_no_sport       seed=1   f1=0.3236 fpr=0.0047 (4s)
+[18:40:36]   CTU-IoT-Malware-Capture-44-1     incident_only        seed=1   f1=0.3140 fpr=0.0000 (3s)
+[18:40:40]   CTU-IoT-Malware-Capture-44-1     event_plus_incident  seed=1   f1=0.4283 fpr=0.0047 (4s)
+[18:40:44]   CTU-IoT-Malware-Capture-44-1     event_plus_causal    seed=1   f1=0.3359 fpr=0.0047 (4s)
+[18:40:50]   CTU-IoT-Malware-Capture-44-1     event_only           seed=2   f1=0.3270 fpr=0.0047 (3s)
+[18:40:53]   CTU-IoT-Malware-Capture-44-1     event_no_sport       seed=2   f1=0.3404 fpr=0.0047 (3s)
+[18:40:55]   CTU-IoT-Malware-Capture-44-1     incident_only        seed=2   f1=0.3140 fpr=0.0000 (3s)
+[18:40:59]   CTU-IoT-Malware-Capture-44-1     event_plus_incident  seed=2   f1=0.4283 fpr=0.0047 (3s)
+[18:41:03]   CTU-IoT-Malware-Capture-44-1     event_plus_causal    seed=2   f1=0.3359 fpr=0.0047 (4s)
+[18:41:09]   CTU-IoT-Malware-Capture-8-1      event_only           seed=42  f1=0.2237 fpr=0.0000 (3s)
+[18:41:12]   CTU-IoT-Malware-Capture-8-1      event_no_sport       seed=42  f1=0.4072 fpr=0.0000 (3s)
+[18:41:15]   CTU-IoT-Malware-Capture-8-1      incident_only        seed=42  f1=0.6565 fpr=0.0000 (3s)
+[18:41:18]   CTU-IoT-Malware-Capture-8-1      event_plus_incident  seed=42  f1=0.1159 fpr=0.0000 (3s)
+[18:41:22]   CTU-IoT-Malware-Capture-8-1      event_plus_causal    seed=42  f1=0.6541 fpr=0.0000 (4s)
+[18:41:28]   CTU-IoT-Malware-Capture-8-1      event_only           seed=1   f1=0.4072 fpr=0.0000 (3s)
+[18:41:31]   CTU-IoT-Malware-Capture-8-1      event_no_sport       seed=1   f1=0.4072 fpr=0.0000 (3s)
+[18:41:33]   CTU-IoT-Malware-Capture-8-1      incident_only        seed=1   f1=0.6565 fpr=0.0000 (3s)
+[18:41:37]   CTU-IoT-Malware-Capture-8-1      event_plus_incident  seed=1   f1=0.6666 fpr=0.0000 (4s)
+[18:41:41]   CTU-IoT-Malware-Capture-8-1      event_plus_causal    seed=1   f1=0.6541 fpr=0.0000 (4s)
+[18:41:47]   CTU-IoT-Malware-Capture-8-1      event_only           seed=2   f1=0.4667 fpr=0.0000 (4s)
+[18:41:50]   CTU-IoT-Malware-Capture-8-1      event_no_sport       seed=2   f1=0.4072 fpr=0.0000 (3s)
+[18:41:53]   CTU-IoT-Malware-Capture-8-1      incident_only        seed=2   f1=0.6664 fpr=0.0000 (3s)
+[18:41:56]   CTU-IoT-Malware-Capture-8-1      event_plus_incident  seed=2   f1=0.1587 fpr=0.0000 (3s)
+[18:42:00]   CTU-IoT-Malware-Capture-8-1      event_plus_causal    seed=2   f1=0.6455 fpr=0.0000 (4s)
+[18:42:09]   data_1                           event_only           seed=42  f1=0.0477 fpr=0.8916 (7s)
+[18:42:16]   data_1                           event_no_sport       seed=42  f1=0.0448 fpr=0.8891 (7s)
+[18:42:23]   data_1                           incident_only        seed=42  f1=0.0920 fpr=0.2649 (7s)
+[18:42:30]   data_1                           event_plus_incident  seed=42  f1=0.0756 fpr=0.8721 (7s)
+[18:42:38]   data_1                           event_plus_causal    seed=42  f1=0.0700 fpr=0.8826 (7s)
+[18:42:46]   data_1                           event_only           seed=1   f1=0.0035 fpr=0.8781 (7s)
+[18:42:53]   data_1                           event_no_sport       seed=1   f1=0.0067 fpr=0.8786 (7s)
+[18:43:00]   data_1                           incident_only        seed=1   f1=0.0989 fpr=0.2579 (7s)
+[18:43:07]   data_1                           event_plus_incident  seed=1   f1=0.2517 fpr=0.3593 (7s)
+[18:43:14]   data_1                           event_plus_causal    seed=1   f1=0.2014 fpr=0.4807 (7s)
+[18:43:23]   data_1                           event_only           seed=2   f1=0.0056 fpr=0.7983 (7s)
+[18:43:29]   data_1                           event_no_sport       seed=2   f1=0.0100 fpr=0.6407 (7s)
+[18:43:36]   data_1                           incident_only        seed=2   f1=0.0078 fpr=0.2599 (7s)
+[18:43:44]   data_1                           event_plus_incident  seed=2   f1=0.2163 fpr=0.2509 (7s)
+[18:43:51]   data_1                           event_plus_causal    seed=2   f1=0.2005 fpr=0.2434 (7s)
+[18:44:01]   data_10                          event_only           seed=42  f1=0.5612 fpr=0.1000 (8s)
+[18:44:08]   data_10                          event_no_sport       seed=42  f1=0.5671 fpr=0.1000 (7s)
+[18:44:14]   data_10                          incident_only        seed=42  f1=0.2299 fpr=0.0000 (7s)
+[18:44:22]   data_10                          event_plus_incident  seed=42  f1=0.6036 fpr=0.0333 (8s)
+[18:44:30]   data_10                          event_plus_causal    seed=42  f1=0.5726 fpr=0.0667 (8s)
+[18:44:40]   data_10                          event_only           seed=1   f1=0.5869 fpr=0.1000 (8s)
+[18:44:47]   data_10                          event_no_sport       seed=1   f1=0.5905 fpr=0.1000 (7s)
+[18:44:54]   data_10                          incident_only        seed=1   f1=0.5611 fpr=0.0000 (7s)
+[18:45:02]   data_10                          event_plus_incident  seed=1   f1=0.6338 fpr=0.0333 (8s)
+[18:45:10]   data_10                          event_plus_causal    seed=1   f1=0.5856 fpr=0.0667 (8s)
+[18:45:19]   data_10                          event_only           seed=2   f1=0.5766 fpr=0.1000 (8s)
+[18:45:27]   data_10                          event_no_sport       seed=2   f1=0.5799 fpr=0.1000 (7s)
+[18:45:33]   data_10                          incident_only        seed=2   f1=0.2299 fpr=0.0000 (7s)
+[18:45:41]   data_10                          event_plus_incident  seed=2   f1=0.6053 fpr=0.0000 (8s)
+[18:45:49]   data_10                          event_plus_causal    seed=2   f1=0.5757 fpr=0.0667 (8s)
+[18:45:59]   data_36                          event_only           seed=42  f1=0.4483 fpr=0.0645 (8s)
+[18:46:06]   data_36                          event_no_sport       seed=42  f1=0.4129 fpr=0.1935 (7s)
+[18:46:13]   data_36                          incident_only        seed=42  f1=0.2520 fpr=0.7419 (7s)
+[18:46:21]   data_36                          event_plus_incident  seed=42  f1=0.5593 fpr=0.0000 (8s)
+[18:46:29]   data_36                          event_plus_causal    seed=42  f1=0.4537 fpr=0.0323 (8s)
+[18:46:38]   data_36                          event_only           seed=1   f1=0.5092 fpr=0.0645 (7s)
+[18:46:45]   data_36                          event_no_sport       seed=1   f1=0.5125 fpr=0.0645 (7s)
+[18:46:52]   data_36                          incident_only        seed=1   f1=0.2520 fpr=0.7419 (7s)
+[18:46:59]   data_36                          event_plus_incident  seed=1   f1=0.5596 fpr=0.0000 (8s)
+[18:47:07]   data_36                          event_plus_causal    seed=1   f1=0.5163 fpr=0.0323 (8s)
+[18:47:16]   data_36                          event_only           seed=2   f1=0.4807 fpr=0.0645 (7s)
+[18:47:24]   data_36                          event_no_sport       seed=2   f1=0.4777 fpr=0.0968 (7s)
+[18:47:30]   data_36                          incident_only        seed=2   f1=0.2520 fpr=0.7419 (7s)
+[18:47:38]   data_36                          event_plus_incident  seed=2   f1=0.5731 fpr=0.0000 (7s)
+[18:47:45]   data_36                          event_plus_causal    seed=2   f1=0.4961 fpr=0.0323 (8s)
+[18:47:56] loso: saved 4,211,383 prediction rows
+[18:47:56] done

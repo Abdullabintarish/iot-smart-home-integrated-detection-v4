@@ -1,0 +1,61 @@
+{
+  "run_id": "crosslog_v3_primary_augmented",
+  "created_utc": "2026-11-04T13:16:58Z",
+  "git_commit": "44c8e79aa19e23522728c9df4e34d7850080cf55",
+  "git_dirty": true,
+  "python": "3.15.0",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  },
+  "command": "v3/xl_v3.py primary",
+  "inputs": {
+    "CTU-IoT-Malware-Capture-1-1.parquet": "716865c458614de5b6ce599e30d6d63af64e361eee938c9371f1da8eced21794",
+    "CTU-IoT-Malware-Capture-3-1.parquet": "855cead294317c14d84f7e5796267c14c37674c03a0337fb1c8131ff9f03f4f9",
+    "CTU-IoT-Malware-Capture-20-1.parquet": "0ef6917b155b3465df68fa56ddc7e05ac8e44694a039f82dd38676650e866ef4",
+    "CTU-IoT-Malware-Capture-42-1.parquet": "9b19135fb223065184948746b7b77ecfe69ffa1ada9a267b7b88a7d43bcca7bc",
+    "CTU-IoT-Malware-Capture-36-1.parquet": "932fba9f4376933cb585bb3b3c9de12615721648458783072ee5e0193c050f25",
+    "CTU-IoT-Malware-Capture-7-1.parquet": "b1e1b766c46d3920d82bb3a6903849a79e6eb337377068594b58e585a355373f",
+    "CTU-IoT-Malware-Capture-8-1.parquet": "8ee0feb325916ed8b3bcda6c85bb8063533f00fa391dbf30697bb87c80fd8683",
+    "CTU-IoT-Malware-Capture-21-1.parquet": "64aa2abbebb7e9dd73d8850a4755e201b7ebe313aa47a238e9be9a5c059a7495",
+    "CTU-IoT-Malware-Capture-34-1.parquet": "9cc4a83b4968ef08449708951af61946f22a2c61a024b860c61664e098335402",
+    "alert_categories.json": "cb078216c1b858339c99db14725402150b3b666bb34dbc60d67984ad6eafdd6e"
+  },
+  "outputs": {
+    "primary_augmented.json": "8870e535c17f67125bbca40c5b8c17a2e338b533b868159c675fca149267bff7",
+    "primary_augmented_predictions.parquet": "12549d1d67ff64fa04066848e29cc9787f7198d65e590cf8c9404f1591691648"
+  },
+  "config": {
+    "rf_params": {
+      "n_estimators": 300,
+      "max_depth": 24,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced_subsample",
+      "n_jobs": -1
+    },
+    "budget_per_class": 60000,
+    "variant": "start_300",
+    "plan": "experiments/v3/PLAN_V3.md \u00a7B",
+    "train": [
+      "CTU-IoT-Malware-Capture-1-1",
+      "CTU-IoT-Malware-Capture-3-1",
+      "CTU-IoT-Malware-Capture-20-1",
+      "CTU-IoT-Malware-Capture-42-1",
+      "CTU-IoT-Malware-Capture-36-1",
+      "CTU-IoT-Malware-Capture-7-1"
+    ],
+    "test": [
+      "CTU-IoT-Malware-Capture-8-1",
+      "CTU-IoT-Malware-Capture-21-1",
+      "CTU-IoT-Malware-Capture-34-1"
+    ]
+  },
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ]
+}

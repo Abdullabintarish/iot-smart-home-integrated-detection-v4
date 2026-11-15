@@ -1,0 +1,14 @@
+[
+  {
+    "pcap": "CTU-IoT-Malware-Capture-36-1\\2018-12-21-13-36-41-192.168.1.198.pcap",
+    "size": 1039545119,
+    "complete_records": 13670225,
+    "trailing_bytes_dropped": 0
+  },
+  {
+    "pcap": "CTU-IoT-Malware-Capture-7-1\\2018-07-20-17-31-20-192.168.100.108.pcap",
+    "size": 940133712,
+    "complete_records": 11508430,
+    "trailing_bytes_dropped": 0
+  }
+]

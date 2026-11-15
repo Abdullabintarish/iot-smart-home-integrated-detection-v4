@@ -1,0 +1,6385 @@
+{
+  "design": "runB",
+  "window_s": 300,
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "feature_sets": {
+    "event_only": [
+      "sport",
+      "dport",
+      "proto",
+      "app",
+      "duration",
+      "conn_state",
+      "missed_bytes",
+      "history",
+      "bwd_pkts",
+      "bwd_ip_bytes",
+      "bytes",
+      "flgs",
+      "state",
+      "stddev",
+      "sum",
+      "min",
+      "max",
+      "rate",
+      "srate",
+      "drate"
+    ],
+    "event_no_sport": [
+      "dport",
+      "proto",
+      "app",
+      "duration",
+      "conn_state",
+      "missed_bytes",
+      "history",
+      "bwd_pkts",
+      "bwd_ip_bytes",
+      "bytes",
+      "flgs",
+      "state",
+      "stddev",
+      "sum",
+      "min",
+      "max",
+      "rate",
+      "srate",
+      "drate"
+    ],
+    "incident_only": [
+      "n_events",
+      "span_s",
+      "events_per_s"
+    ],
+    "event_plus_incident": [
+      "sport",
+      "dport",
+      "proto",
+      "app",
+      "duration",
+      "conn_state",
+      "missed_bytes",
+      "history",
+      "bwd_pkts",
+      "bwd_ip_bytes",
+      "bytes",
+      "flgs",
+      "state",
+      "stddev",
+      "sum",
+      "min",
+      "max",
+      "rate",
+      "srate",
+      "drate",
+      "n_events",
+      "span_s",
+      "events_per_s"
+    ],
+    "event_plus_causal": [
+      "sport",
+      "dport",
+      "proto",
+      "app",
+      "duration",
+      "conn_state",
+      "missed_bytes",
+      "history",
+      "bwd_pkts",
+      "bwd_ip_bytes",
+      "bytes",
+      "flgs",
+      "state",
+      "stddev",
+      "sum",
+      "min",
+      "max",
+      "rate",
+      "srate",
+      "drate",
+      "n_so_far",
+      "span_so_far",
+      "rate_so_far"
+    ]
+  },
+  "folds": {
+    "runB": {
+      "n_test": 1692332,
+      "test_classes": {
+        "dos": 1250540,
+        "recon": 314424,
+        "benign": 122807,
+        "c2": 3283,
+        "malware": 1278
+      },
+      "train_classes": {
+        "recon": 1368767,
+        "dos": 763794,
+        "benign": 370084,
+        "c2": 11719,
+        "malware": 4687
+      },
+      "test_classes_unseen_in_train": [],
+      "runs": {
+        "event_only|42": {
+          "accuracy": 0.9995816423727731,
+          "precision_macro": 0.9910675947414699,
+          "recall_macro": 0.9988613988675225,
+          "f1_macro": 0.9948775985582141,
+          "fpr": 0.004209857744265392,
+          "fnr": 0.0001114987018365429,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9985710202915119,
+              "recall": 0.9957901422557346,
+              "f1": 0.9971786424867086,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9579439252336449,
+              "recall": 0.9990862016448371,
+              "f1": 0.9780826002683763,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999800088440873,
+              "recall": 0.9999904041454092,
+              "f1": 0.9999852064677323,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9988430193381054,
+              "recall": 0.9994402462916316,
+              "f1": 0.9991415435682537,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122290,
+              138,
+              17,
+              0,
+              362
+            ],
+            [
+              1,
+              3280,
+              0,
+              0,
+              2
+            ],
+            [
+              12,
+              0,
+              1250528,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              162,
+              6,
+              8,
+              0,
+              314248
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 517,
+            "false_negative": 175
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.02875,
+            "dport": 0.19226,
+            "proto": 0.0766,
+            "app": 0.07001,
+            "duration": 0.07461,
+            "conn_state": 0.03543,
+            "missed_bytes": 0.0132,
+            "history": 0.11704,
+            "bwd_pkts": 0.06256,
+            "bwd_ip_bytes": 0.08886,
+            "bytes": 0.00087,
+            "flgs": 0.08658,
+            "state": 0.02031,
+            "stddev": 0.03833,
+            "sum": 0.00828,
+            "min": 0.01956,
+            "max": 0.01684,
+            "rate": 0.02685,
+            "srate": 0.01104,
+            "drate": 0.012
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7682404533506885,
+              "fpr": 0.003005085529357374,
+              "fnr": 0.0001697767804417149,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.45315559688961227,
+              "fpr": 0.11471861471861472,
+              "fnr": 0.09289617486338798,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6543717027730919,
+              "fpr": 0.020618556701030927,
+              "fnr": 0.0001469950021699262,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9117616938281119,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.9137914423948623,
+              "fpr": 0.0,
+              "fnr": 6.644191581277731e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_no_sport|42": {
+          "accuracy": 0.9994144175020031,
+          "precision_macro": 0.9887941341566739,
+          "recall_macro": 0.9983392367929096,
+          "f1_macro": 0.9934296998940633,
+          "fpr": 0.006522429503204215,
+          "fnr": 0.0001114987018365429,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9985676987420302,
+              "recall": 0.9934775704967957,
+              "f1": 0.9960161314023545,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9474140421843398,
+              "recall": 0.9987816021931161,
+              "f1": 0.9724199288256228,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999992003384168,
+              "recall": 0.9999904041454092,
+              "f1": 0.9999948022225696,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9979897295185831,
+              "recall": 0.9994466071292267,
+              "f1": 0.9987176370197693,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122006,
+              171,
+              0,
+              0,
+              630
+            ],
+            [
+              2,
+              3279,
+              0,
+              0,
+              2
+            ],
+            [
+              11,
+              0,
+              1250528,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              162,
+              11,
+              1,
+              0,
+              314250
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 801,
+            "false_negative": 175
+          },
+          "n_train": 196406,
+          "importances": {
+            "dport": 0.20814,
+            "proto": 0.08468,
+            "app": 0.05969,
+            "duration": 0.08911,
+            "conn_state": 0.04109,
+            "missed_bytes": 0.01872,
+            "history": 0.12243,
+            "bwd_pkts": 0.05199,
+            "bwd_ip_bytes": 0.09325,
+            "bytes": 0.00111,
+            "flgs": 0.08005,
+            "state": 0.01783,
+            "stddev": 0.03421,
+            "sum": 0.01364,
+            "min": 0.01697,
+            "max": 0.01406,
+            "rate": 0.0336,
+            "srate": 0.01023,
+            "drate": 0.0092
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7315968964742697,
+              "fpr": 0.005393743257820928,
+              "fnr": 0.00019192157789063423,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.44907664849923784,
+              "fpr": 0.12554112554112554,
+              "fnr": 0.09055425448868072,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6543798706199012,
+              "fpr": 0.020618556701030927,
+              "fnr": 0.0001469950021699262,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9117616938281119,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.6190465116786767,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "incident_only|42": {
+          "accuracy": 0.9886937078540144,
+          "precision_macro": 0.8456354488924755,
+          "recall_macro": 0.8709954282054472,
+          "f1_macro": 0.8574142532318809,
+          "fpr": 0.09139544162792024,
+          "fnr": 0.004235676398910498,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.943771092183945,
+              "recall": 0.9086045583720798,
+              "f1": 0.9258540147196708,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.77502691065662,
+              "recall": 0.8772464209564422,
+              "f1": 0.8229747106729532,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 1.0,
+              "recall": 0.9998080829081837,
+              "f1": 0.9999040322451657,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.5439481268011528,
+              "recall": 0.5907668231611893,
+              "f1": 0.5663915978994749,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9654311148206604,
+              "recall": 0.9785512556293413,
+              "f1": 0.9719469106221401,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              111583,
+              497,
+              0,
+              144,
+              10583
+            ],
+            [
+              320,
+              2880,
+              0,
+              83,
+              0
+            ],
+            [
+              14,
+              0,
+              1250300,
+              0,
+              226
+            ],
+            [
+              255,
+              60,
+              0,
+              755,
+              208
+            ],
+            [
+              6059,
+              279,
+              0,
+              406,
+              307680
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 11224,
+            "false_negative": 6648
+          },
+          "n_train": 196406,
+          "importances": {
+            "n_events": 0.35013,
+            "span_s": 0.34563,
+            "events_per_s": 0.30424
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.47808764940239046,
+              "fpr": 0.08396946564885496,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "malware"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 0.32501095050372314,
+              "fpr": 0.04871794871794872,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.4688784087808012,
+              "fpr": 0.08978442149963185,
+              "fnr": 0.03560883429786229,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.3316592357231931,
+              "fpr": 0.14516129032258066,
+              "fnr": 0.6666666666666666,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 0.3083511777301927,
+              "fpr": 0.13858424725822532,
+              "fnr": 1.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.5843388547732685,
+              "fpr": 0.029488291413703384,
+              "fnr": 0.034523489932885905,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.466706730033179,
+              "fpr": 0.12121212121212122,
+              "fnr": 0.2427790788446526,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.26726390444195597,
+              "fpr": 0.33084112149532713,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.4448795695471899,
+              "fpr": 0.01804123711340206,
+              "fnr": 0.0014489507356749871,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.6077654755679562,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.8870944487156793,
+              "fpr": 0.0,
+              "fnr": 9.301868213788824e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_incident|42": {
+          "accuracy": 0.9990468773266711,
+          "precision_macro": 0.9954084233232298,
+          "recall_macro": 0.99748450719086,
+          "f1_macro": 0.9964330510971822,
+          "fpr": 0.011286001612285945,
+          "fnr": 0.0001242414106178621,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9983965925536114,
+              "recall": 0.988713998387714,
+              "f1": 0.9935317052814179,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9876580373269115,
+              "recall": 0.999390801096558,
+              "f1": 0.9934897804693414,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999984006755547,
+              "recall": 0.9999888048363107,
+              "f1": 0.9999936027329125,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.9953271028037384,
+              "recall": 1.0,
+              "f1": 0.9976580796252927,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9956619832563327,
+              "recall": 0.9993289316337175,
+              "f1": 0.9974920873769456,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121421,
+              15,
+              2,
+              0,
+              1369
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              14,
+              0,
+              1250526,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              179,
+              26,
+              0,
+              6,
+              314213
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1386,
+            "false_negative": 195
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.01076,
+            "dport": 0.09835,
+            "proto": 0.04157,
+            "app": 0.05323,
+            "duration": 0.05274,
+            "conn_state": 0.02565,
+            "missed_bytes": 0.00727,
+            "history": 0.07312,
+            "bwd_pkts": 0.06425,
+            "bwd_ip_bytes": 0.09169,
+            "bytes": 0.00112,
+            "flgs": 0.05372,
+            "state": 0.012,
+            "stddev": 0.02102,
+            "sum": 0.01051,
+            "min": 0.00694,
+            "max": 0.01123,
+            "rate": 0.01908,
+            "srate": 0.00727,
+            "drate": 0.00787,
+            "n_events": 0.13566,
+            "span_s": 0.11139,
+            "events_per_s": 0.08356
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.5342578811570012,
+              "fpr": 0.011472406294412768,
+              "fnr": 0.00029526396598559114,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498812086575323,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.45679085065877517,
+              "fpr": 0.09740259740259741,
+              "fnr": 0.09523809523809523,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.988633486492015,
+              "fpr": 0.0,
+              "fnr": 0.00012599571614565106,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9117616938281119,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.8870944487156793,
+              "fpr": 0.0,
+              "fnr": 9.301868213788824e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_causal|42": {
+          "accuracy": 0.9989552877331398,
+          "precision_macro": 0.994748415554292,
+          "recall_macro": 0.9972623695554738,
+          "f1_macro": 0.9959833216585299,
+          "fpr": 0.012295716042245148,
+          "fnr": 0.00014208120291170896,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9981649111257406,
+              "recall": 0.9877042839577549,
+              "f1": 0.9929070467038027,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9817474566128067,
+              "recall": 0.999390801096558,
+              "f1": 0.9904905660377359,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999704133494967,
+              "recall": 0.9999896044908599,
+              "f1": 0.9999800088281016,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.9984375,
+              "recall": 1.0,
+              "f1": 0.9992181391712275,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9954217966834165,
+              "recall": 0.999227158232196,
+              "f1": 0.9973208475517816,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121297,
+              32,
+              34,
+              0,
+              1444
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              12,
+              0,
+              1250527,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              209,
+              29,
+              3,
+              2,
+              314181
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1510,
+            "false_negative": 223
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.01256,
+            "dport": 0.12364,
+            "proto": 0.0717,
+            "app": 0.05226,
+            "duration": 0.07955,
+            "conn_state": 0.03073,
+            "missed_bytes": 0.01038,
+            "history": 0.08254,
+            "bwd_pkts": 0.06071,
+            "bwd_ip_bytes": 0.08947,
+            "bytes": 0.00275,
+            "flgs": 0.06519,
+            "state": 0.01405,
+            "stddev": 0.03292,
+            "sum": 0.01126,
+            "min": 0.01053,
+            "max": 0.01237,
+            "rate": 0.0269,
+            "srate": 0.00927,
+            "drate": 0.01157,
+            "n_so_far": 0.06232,
+            "span_so_far": 0.06722,
+            "rate_so_far": 0.0601
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.5302080030768559,
+              "fpr": 0.012311433023407134,
+              "fnr": 0.0008562655013582142,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7427014176789069,
+              "fpr": 0.0,
+              "fnr": 0.0017986577181208054,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.7266373156691746,
+              "fpr": 0.11255411255411256,
+              "fnr": 0.00234192037470726,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.4959962317475271,
+              "fpr": 0.01588785046728972,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6553675845714279,
+              "fpr": 0.005154639175257732,
+              "fnr": 0.00017499405020229313,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9117616938281119,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.6091940734552369,
+              "fpr": 0.0,
+              "fnr": 6.644191581277731e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "event_only|1": {
+          "accuracy": 0.9995562336468258,
+          "precision_macro": 0.9900396198708359,
+          "recall_macro": 0.9988189296827501,
+          "f1_macro": 0.994321170386509,
+          "fpr": 0.004030714861530694,
+          "fnr": 0.00011659578534907058,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9985060614718968,
+              "recall": 0.9959692851384693,
+              "f1": 0.9972360600402769,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.952920662598082,
+              "recall": 0.9987816021931161,
+              "f1": 0.9753123140987507,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999792083998065,
+              "recall": 0.9999512210724967,
+              "f1": 0.9999652145403222,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9987921668843944,
+              "recall": 0.9993925400096685,
+              "f1": 0.999092263253195,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122312,
+              153,
+              15,
+              0,
+              327
+            ],
+            [
+              2,
+              3279,
+              0,
+              0,
+              2
+            ],
+            [
+              10,
+              0,
+              1250479,
+              0,
+              51
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              171,
+              9,
+              11,
+              0,
+              314233
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 495,
+            "false_negative": 183
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.02729,
+            "dport": 0.1922,
+            "proto": 0.08157,
+            "app": 0.06815,
+            "duration": 0.08426,
+            "conn_state": 0.03874,
+            "missed_bytes": 0.01447,
+            "history": 0.11399,
+            "bwd_pkts": 0.05375,
+            "bwd_ip_bytes": 0.08315,
+            "bytes": 0.00321,
+            "flgs": 0.07562,
+            "state": 0.01816,
+            "stddev": 0.04321,
+            "sum": 0.01508,
+            "min": 0.01747,
+            "max": 0.01869,
+            "rate": 0.03272,
+            "srate": 0.01213,
+            "drate": 0.00614
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.5618296549567162,
+              "fpr": 0.002696871628910464,
+              "fnr": 0.00018453997874099445,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.4513241082220225,
+              "fpr": 0.12121212121212122,
+              "fnr": 0.09055425448868072,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.645444904474014,
+              "fpr": 0.04896907216494845,
+              "fnr": 0.00021699262225084346,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9516113972032221,
+              "fpr": 0.0,
+              "fnr": 6.024072192481155e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.5999873755578841,
+              "fpr": 0.0,
+              "fnr": 7.973029897533278e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "event_no_sport|1": {
+          "accuracy": 0.999620050911996,
+          "precision_macro": 0.9885961989859618,
+          "recall_macro": 0.99898191307944,
+          "f1_macro": 0.9936413500450009,
+          "fpr": 0.003257143322449046,
+          "fnr": 0.00010703875376308118,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9986294105649602,
+              "recall": 0.9967428566775509,
+              "f1": 0.997685241786276,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9452291726722398,
+              "recall": 0.9987816021931161,
+              "f1": 0.9712677725118484,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999904037693994,
+              "recall": 0.9999512210724967,
+              "f1": 0.9999708120371159,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9991320079232098,
+              "recall": 0.9994338854540366,
+              "f1": 0.9992829238897643,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122407,
+              181,
+              1,
+              0,
+              218
+            ],
+            [
+              2,
+              3279,
+              0,
+              0,
+              2
+            ],
+            [
+              8,
+              0,
+              1250479,
+              0,
+              53
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              158,
+              9,
+              11,
+              0,
+              314246
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 400,
+            "false_negative": 168
+          },
+          "n_train": 196406,
+          "importances": {
+            "dport": 0.20393,
+            "proto": 0.08656,
+            "app": 0.06125,
+            "duration": 0.08247,
+            "conn_state": 0.03499,
+            "missed_bytes": 0.013,
+            "history": 0.11579,
+            "bwd_pkts": 0.05854,
+            "bwd_ip_bytes": 0.09297,
+            "bytes": 0.00102,
+            "flgs": 0.07735,
+            "state": 0.02033,
+            "stddev": 0.04431,
+            "sum": 0.01051,
+            "min": 0.02296,
+            "max": 0.02021,
+            "rate": 0.03322,
+            "srate": 0.00953,
+            "drate": 0.01106
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7138029184589333,
+              "fpr": 0.0014212085409496412,
+              "fnr": 0.00017715837959135467,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.44847604165772326,
+              "fpr": 0.12987012987012986,
+              "fnr": 0.09055425448868072,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6261471459520193,
+              "fpr": 0.17783505154639176,
+              "fnr": 0.00013299547815374277,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9516113972032221,
+              "fpr": 0.0,
+              "fnr": 6.024072192481155e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.619034994605503,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "incident_only|1": {
+          "accuracy": 0.9887102530709104,
+          "precision_macro": 0.8419645602208348,
+          "recall_macro": 0.8664460520573289,
+          "f1_macro": 0.8533487832836404,
+          "fpr": 0.09194101313443044,
+          "fnr": 0.004164317229735111,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9446345678175719,
+              "recall": 0.9080589868655695,
+              "f1": 0.9259857426959341,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.7607512248230811,
+              "recall": 0.8513554675601583,
+              "f1": 0.8035072588759523,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 1.0,
+              "recall": 0.9998080829081837,
+              "f1": 0.9999040322451657,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.5390625,
+              "recall": 0.5938967136150235,
+              "f1": 0.5651526433358154,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9653745084635212,
+              "recall": 0.9791110093377096,
+              "f1": 0.9721942392653342,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              111516,
+              536,
+              0,
+              180,
+              10575
+            ],
+            [
+              351,
+              2795,
+              0,
+              83,
+              54
+            ],
+            [
+              14,
+              0,
+              1250300,
+              0,
+              226
+            ],
+            [
+              255,
+              77,
+              0,
+              759,
+              187
+            ],
+            [
+              5916,
+              266,
+              0,
+              386,
+              307856
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 11291,
+            "false_negative": 6536
+          },
+          "n_train": 196406,
+          "importances": {
+            "n_events": 0.36394,
+            "span_s": 0.33665,
+            "events_per_s": 0.29941
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.31309041835357626,
+              "fpr": 0.11450381679389313,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 0.23684210526315788,
+              "fpr": 0.1,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.46916323746995736,
+              "fpr": 0.08976729850516259,
+              "fnr": 0.034634463210109837,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.32875273372251207,
+              "fpr": 0.1600496277915633,
+              "fnr": 0.6666666666666666,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 0.23054213633923779,
+              "fpr": 0.14356929212362912,
+              "fnr": 1.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.5834250637751862,
+              "fpr": 0.05290546400693842,
+              "fnr": 0.03374496644295302,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.4246814152605848,
+              "fpr": 0.12121212121212122,
+              "fnr": 0.26697892271662765,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.26726390444195597,
+              "fpr": 0.33084112149532713,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.44100995792776015,
+              "fpr": 0.020618556701030927,
+              "fnr": 0.001574946451820638,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.6077654755679562,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.8870944487156793,
+              "fpr": 0.0,
+              "fnr": 9.301868213788824e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_incident|1": {
+          "accuracy": 0.9991053764864105,
+          "precision_macro": 0.9950656532023074,
+          "recall_macro": 0.9975341411696819,
+          "f1_macro": 0.9962835622339895,
+          "fpr": 0.011383715911959417,
+          "fnr": 5.160797056434272e-05,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9993332784591324,
+              "recall": 0.9886162840880406,
+              "f1": 0.9939458937277167,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9873608185374662,
+              "recall": 0.999390801096558,
+              "f1": 0.9933393884347563,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999984006793914,
+              "recall": 0.9999912037999584,
+              "f1": 0.9999948022267261,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.993006993006993,
+              "recall": 1.0,
+              "f1": 0.9964912280701754,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9956287753285545,
+              "recall": 0.9996724168638527,
+              "f1": 0.9976464987105733,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121409,
+              16,
+              2,
+              0,
+              1380
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              11,
+              0,
+              1250529,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              68,
+              26,
+              0,
+              9,
+              314321
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1398,
+            "false_negative": 81
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.00848,
+            "dport": 0.09337,
+            "proto": 0.03433,
+            "app": 0.07017,
+            "duration": 0.05405,
+            "conn_state": 0.02498,
+            "missed_bytes": 0.01337,
+            "history": 0.08753,
+            "bwd_pkts": 0.06114,
+            "bwd_ip_bytes": 0.06723,
+            "bytes": 0.0012,
+            "flgs": 0.05657,
+            "state": 0.01669,
+            "stddev": 0.02418,
+            "sum": 0.00773,
+            "min": 0.00797,
+            "max": 0.00953,
+            "rate": 0.0175,
+            "srate": 0.00936,
+            "drate": 0.00609,
+            "n_events": 0.14049,
+            "span_s": 0.10144,
+            "events_per_s": 0.08659
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.5317226000373443,
+              "fpr": 0.011446721802708858,
+              "fnr": 0.00024359277193811268,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498812086575323,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.6748933892640813,
+              "fpr": 0.1277056277056277,
+              "fnr": 0.0117096018735363,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.985494339886801,
+              "fpr": 0.005154639175257732,
+              "fnr": 0.0001469950021699262,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9374979919678714,
+              "fpr": 0.0,
+              "fnr": 8.03209625664154e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.8999980067345794,
+              "fpr": 0.0,
+              "fnr": 7.973029897533278e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_causal|1": {
+          "accuracy": 0.9989464242240884,
+          "precision_macro": 0.9944660703562465,
+          "recall_macro": 0.9972300010773416,
+          "f1_macro": 0.9958245170115806,
+          "fpr": 0.01248300178328597,
+          "fnr": 0.00014208120291170896,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.998164563734084,
+              "recall": 0.987516998216714,
+              "f1": 0.9928122339380444,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9811602870813397,
+              "recall": 0.999390801096558,
+              "f1": 0.9901916402595443,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999728122018838,
+              "recall": 0.9999896044908599,
+              "f1": 0.9999812082758753,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.9976580796252927,
+              "recall": 1.0,
+              "f1": 0.9988276670574443,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9953746091386318,
+              "recall": 0.9992526015825763,
+              "f1": 0.9973098355269945,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121274,
+              39,
+              33,
+              1,
+              1460
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              1250527,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              208,
+              24,
+              1,
+              2,
+              314189
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1533,
+            "false_negative": 223
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.01399,
+            "dport": 0.13248,
+            "proto": 0.05601,
+            "app": 0.05612,
+            "duration": 0.08114,
+            "conn_state": 0.03212,
+            "missed_bytes": 0.01127,
+            "history": 0.0966,
+            "bwd_pkts": 0.05839,
+            "bwd_ip_bytes": 0.079,
+            "bytes": 0.00138,
+            "flgs": 0.05464,
+            "state": 0.01721,
+            "stddev": 0.04103,
+            "sum": 0.0111,
+            "min": 0.01336,
+            "max": 0.01323,
+            "rate": 0.02536,
+            "srate": 0.00823,
+            "drate": 0.00999,
+            "n_so_far": 0.06218,
+            "span_so_far": 0.06121,
+            "rate_so_far": 0.06396
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.5313659618951166,
+              "fpr": 0.012422732487457407,
+              "fnr": 0.0007455415141136176,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.740924032264213,
+              "fpr": 0.0008673026886383347,
+              "fnr": 0.0022013422818791947,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.7205503195696392,
+              "fpr": 0.12554112554112554,
+              "fnr": 0.00234192037470726,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.4955209806694955,
+              "fpr": 0.017757009345794394,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6553416522966531,
+              "fpr": 0.007731958762886598,
+              "fnr": 0.0001679942881942014,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9242399141997435,
+              "fpr": 0.0,
+              "fnr": 1.0040120320801925e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.8870944487156793,
+              "fpr": 0.0,
+              "fnr": 9.301868213788824e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_only|2": {
+          "accuracy": 0.9995763242673423,
+          "precision_macro": 0.9910509348756786,
+          "recall_macro": 0.9987974958295128,
+          "f1_macro": 0.9948385627108094,
+          "fpr": 0.004169143452734779,
+          "fnr": 0.00011723292078813654,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.998497701646813,
+              "recall": 0.9958308565472652,
+              "f1": 0.9971624960250484,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.957931638913234,
+              "recall": 0.9987816021931161,
+              "f1": 0.9779302117506711,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999792093142272,
+              "recall": 0.9999952020727045,
+              "f1": 0.999987205629523,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9988461245041196,
+              "recall": 0.9993798183344783,
+              "f1": 0.9991129001488038,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122295,
+              135,
+              16,
+              0,
+              361
+            ],
+            [
+              2,
+              3279,
+              0,
+              0,
+              2
+            ],
+            [
+              6,
+              0,
+              1250534,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              176,
+              9,
+              10,
+              0,
+              314229
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 512,
+            "false_negative": 184
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.02643,
+            "dport": 0.18824,
+            "proto": 0.07903,
+            "app": 0.06708,
+            "duration": 0.08563,
+            "conn_state": 0.03578,
+            "missed_bytes": 0.01547,
+            "history": 0.12158,
+            "bwd_pkts": 0.05735,
+            "bwd_ip_bytes": 0.0893,
+            "bytes": 0.0009,
+            "flgs": 0.07665,
+            "state": 0.02012,
+            "stddev": 0.03265,
+            "sum": 0.01458,
+            "min": 0.01977,
+            "max": 0.01786,
+            "rate": 0.03332,
+            "srate": 0.01126,
+            "drate": 0.00699
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7545682959965602,
+              "fpr": 0.002979401037653465,
+              "fnr": 0.0001697767804417149,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.45513367463026166,
+              "fpr": 0.10173160173160173,
+              "fnr": 0.09289617486338798,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.64699231810922,
+              "fpr": 0.030927835051546393,
+              "fnr": 0.00024499167028321035,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9827581186831351,
+              "fpr": 0.0,
+              "fnr": 2.008024064160385e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.9285700997295807,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_no_sport|2": {
+          "accuracy": 0.999722276716389,
+          "precision_macro": 0.989174210338738,
+          "recall_macro": 0.9992027304935405,
+          "f1_macro": 0.9940543271896469,
+          "fpr": 0.002133428876204125,
+          "fnr": 0.0001178700562272025,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9984926260897906,
+              "recall": 0.9978665711237958,
+              "f1": 0.9981795004418886,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9476878612716763,
+              "recall": 0.9987816021931161,
+              "f1": 0.9725641405902418,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999928031263219,
+              "recall": 0.9999952020727045,
+              "f1": 0.9999940025980745,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9996977612059009,
+              "recall": 0.9993702770780857,
+              "f1": 0.9995339923180304,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122545,
+              169,
+              0,
+              0,
+              93
+            ],
+            [
+              2,
+              3279,
+              0,
+              0,
+              2
+            ],
+            [
+              6,
+              0,
+              1250534,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              177,
+              12,
+              9,
+              0,
+              314226
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 262,
+            "false_negative": 185
+          },
+          "n_train": 196406,
+          "importances": {
+            "dport": 0.20631,
+            "proto": 0.09411,
+            "app": 0.0465,
+            "duration": 0.07955,
+            "conn_state": 0.03232,
+            "missed_bytes": 0.01528,
+            "history": 0.10645,
+            "bwd_pkts": 0.05624,
+            "bwd_ip_bytes": 0.10847,
+            "bytes": 0.00247,
+            "flgs": 0.08073,
+            "state": 0.01669,
+            "stddev": 0.04003,
+            "sum": 0.01246,
+            "min": 0.02384,
+            "max": 0.01571,
+            "rate": 0.04053,
+            "srate": 0.01353,
+            "drate": 0.00878
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7365588017476318,
+              "fpr": 0.0006849197787709115,
+              "fnr": 0.00020668477618991378,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.44847604165772326,
+              "fpr": 0.12987012987012986,
+              "fnr": 0.09055425448868072,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6451590838618112,
+              "fpr": 0.04381443298969072,
+              "fnr": 0.00023799190827511864,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9827581186831351,
+              "fpr": 0.0,
+              "fnr": 2.008024064160385e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.9285700997295807,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "incident_only|2": {
+          "accuracy": 0.9886086181671209,
+          "precision_macro": 0.8426352013998464,
+          "recall_macro": 0.8676253607742508,
+          "f1_macro": 0.8542090670805862,
+          "fpr": 0.09145244163606309,
+          "fnr": 0.004288558640352973,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9431056488627046,
+              "recall": 0.9085475583639369,
+              "f1": 0.9255041183838351,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.7601387406616862,
+              "recall": 0.8678038379530917,
+              "f1": 0.8104110368368653,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.999997600581619,
+              "recall": 0.9998080829081837,
+              "f1": 0.9999028327647917,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.5445255474452555,
+              "recall": 0.5837245696400626,
+              "f1": 0.5634441087613293,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9654084694479668,
+              "recall": 0.9782427550059792,
+              "f1": 0.97178323865611,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              111576,
+              501,
+              0,
+              153,
+              10577
+            ],
+            [
+              320,
+              2849,
+              0,
+              83,
+              31
+            ],
+            [
+              14,
+              0,
+              1250300,
+              0,
+              226
+            ],
+            [
+              291,
+              54,
+              0,
+              746,
+              187
+            ],
+            [
+              6106,
+              344,
+              3,
+              388,
+              307583
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 11231,
+            "false_negative": 6731
+          },
+          "n_train": 196406,
+          "importances": {
+            "n_events": 0.35164,
+            "span_s": 0.32823,
+            "events_per_s": 0.32013
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.476,
+              "fpr": 0.0916030534351145,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "malware"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 0.24375821287779237,
+              "fpr": 0.04871794871794872,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.46883404495033504,
+              "fpr": 0.08975017551069331,
+              "fnr": 0.03560883429786229,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.32875273372251207,
+              "fpr": 0.1600496277915633,
+              "fnr": 0.6666666666666666,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 0.3083511777301927,
+              "fpr": 0.13858424725822532,
+              "fnr": 1.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.5807510719399953,
+              "fpr": 0.029488291413703384,
+              "fnr": 0.03589261744966443,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.4458913117920413,
+              "fpr": 0.12121212121212122,
+              "fnr": 0.2427790788446526,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.26726390444195597,
+              "fpr": 0.33084112149532713,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.35141893234078814,
+              "fpr": 0.01288659793814433,
+              "fnr": 0.0016729431199339223,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "malware",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.6077654755679562,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.8870944487156793,
+              "fpr": 0.0,
+              "fnr": 9.301868213788824e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_incident|2": {
+          "accuracy": 0.9990581044381363,
+          "precision_macro": 0.9944881533511418,
+          "recall_macro": 0.9973379550226138,
+          "f1_macro": 0.9958955208268643,
+          "fpr": 0.011571001653000236,
+          "fnr": 8.665041971297048e-05,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9988808610786524,
+              "recall": 0.9884289983469997,
+              "f1": 0.9936274449615068,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9864620938628159,
+              "recall": 0.9987816021931161,
+              "f1": 0.9925836234296957,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999752111847134,
+              "recall": 0.9999944024181554,
+              "f1": 0.9999848067093572,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.991466252909232,
+              "recall": 1.0,
+              "f1": 0.995714842228282,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9956563477202954,
+              "recall": 0.9994847721547974,
+              "f1": 0.9975668868054796,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121386,
+              19,
+              31,
+              0,
+              1371
+            ],
+            [
+              4,
+              3279,
+              0,
+              0,
+              0
+            ],
+            [
+              7,
+              0,
+              1250533,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              125,
+              26,
+              0,
+              11,
+              314262
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1421,
+            "false_negative": 136
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.01176,
+            "dport": 0.09245,
+            "proto": 0.03468,
+            "app": 0.05602,
+            "duration": 0.04717,
+            "conn_state": 0.02349,
+            "missed_bytes": 0.01012,
+            "history": 0.09391,
+            "bwd_pkts": 0.06181,
+            "bwd_ip_bytes": 0.09172,
+            "bytes": 0.00098,
+            "flgs": 0.0542,
+            "state": 0.01301,
+            "stddev": 0.0265,
+            "sum": 0.00787,
+            "min": 0.01092,
+            "max": 0.00937,
+            "rate": 0.01655,
+            "srate": 0.00927,
+            "drate": 0.00666,
+            "n_events": 0.13831,
+            "span_s": 0.11307,
+            "events_per_s": 0.07015
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.5328617709839916,
+              "fpr": 0.011626513244636223,
+              "fnr": 0.00041336955237982755,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498846839206057,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.6585873280866865,
+              "fpr": 0.12554112554112554,
+              "fnr": 0.0351288056206089,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.980546498415931,
+              "fpr": 0.010309278350515464,
+              "fnr": 0.00018899357421847657,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.8999980067345794,
+              "fpr": 0.0,
+              "fnr": 7.973029897533278e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_causal|2": {
+          "accuracy": 0.9989428788204678,
+          "precision_macro": 0.9922516504692253,
+          "recall_macro": 0.9972942704515579,
+          "f1_macro": 0.9947374824965551,
+          "fpr": 0.011904858843551263,
+          "fnr": 0.0001745751103040729,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9977470625477927,
+              "recall": 0.9880951411564487,
+              "f1": 0.9928976459132826,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9764880952380952,
+              "recall": 0.999390801096558,
+              "f1": 0.9878067138341111,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999752111648913,
+              "recall": 0.9999936027636062,
+              "f1": 0.9999844068796847,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.991466252909232,
+              "recall": 1.0,
+              "f1": 0.995714842228282,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9955816304861157,
+              "recall": 0.9989918072411775,
+              "f1": 0.997283803627416,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121345,
+              44,
+              24,
+              0,
+              1394
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              8,
+              0,
+              1250532,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              264,
+              35,
+              7,
+              11,
+              314107
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1462,
+            "false_negative": 274
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.01307,
+            "dport": 0.11917,
+            "proto": 0.05524,
+            "app": 0.05001,
+            "duration": 0.07046,
+            "conn_state": 0.0303,
+            "missed_bytes": 0.01214,
+            "history": 0.10461,
+            "bwd_pkts": 0.06254,
+            "bwd_ip_bytes": 0.09272,
+            "bytes": 0.00088,
+            "flgs": 0.07545,
+            "state": 0.01299,
+            "stddev": 0.03697,
+            "sum": 0.00921,
+            "min": 0.01191,
+            "max": 0.01238,
+            "rate": 0.03033,
+            "srate": 0.00738,
+            "drate": 0.00864,
+            "n_so_far": 0.06247,
+            "span_so_far": 0.06706,
+            "rate_so_far": 0.05408
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.523202852432972,
+              "fpr": 0.011840550675502132,
+              "fnr": 0.0011589110664934452,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7427083808790926,
+              "fpr": 0.0,
+              "fnr": 0.0017986577181208054,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.7213372096932351,
+              "fpr": 0.12554112554112554,
+              "fnr": 0.00234192037470726,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.4964705882352941,
+              "fpr": 0.014018691588785047,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6485001642659295,
+              "fpr": 0.01288659793814433,
+              "fnr": 0.0002729907183155773,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9666656626526184,
+              "fpr": 0.0,
+              "fnr": 4.01604812832077e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.9137914423948623,
+              "fpr": 0.0,
+              "fnr": 6.644191581277731e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_only|3": {
+          "accuracy": 0.9996389597313057,
+          "precision_macro": 0.9955826741705474,
+          "recall_macro": 0.999003467192237,
+          "f1_macro": 0.9972761743952953,
+          "fpr": 0.003110571872938839,
+          "fnr": 0.00012360427517879612,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9984178634632479,
+              "recall": 0.9968894281270612,
+              "f1": 0.9976530603929494,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9805622009569378,
+              "recall": 0.9987816021931161,
+              "f1": 0.9895880488909009,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999824075436453,
+              "recall": 0.9999792089817199,
+              "f1": 0.9999808082601248,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9989508988889065,
+              "recall": 0.9993670966592881,
+              "f1": 0.9991589544325009,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122425,
+              56,
+              15,
+              0,
+              311
+            ],
+            [
+              4,
+              3279,
+              0,
+              0,
+              0
+            ],
+            [
+              7,
+              0,
+              1250514,
+              0,
+              19
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              183,
+              9,
+              7,
+              0,
+              314225
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 382,
+            "false_negative": 194
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.02957,
+            "dport": 0.19122,
+            "proto": 0.072,
+            "app": 0.06683,
+            "duration": 0.08202,
+            "conn_state": 0.03956,
+            "missed_bytes": 0.01871,
+            "history": 0.11624,
+            "bwd_pkts": 0.06303,
+            "bwd_ip_bytes": 0.07964,
+            "bytes": 0.00173,
+            "flgs": 0.07209,
+            "state": 0.02094,
+            "stddev": 0.0435,
+            "sum": 0.01172,
+            "min": 0.01642,
+            "max": 0.02053,
+            "rate": 0.03221,
+            "srate": 0.00822,
+            "drate": 0.01382
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.749148938652843,
+              "fpr": 0.0025770106676255545,
+              "fnr": 0.00016239518129207512,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.4529270606618673,
+              "fpr": 0.11255411255411256,
+              "fnr": 0.09211553473848556,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.4964705882352941,
+              "fpr": 0.014018691588785047,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6422798109553877,
+              "fpr": 0.03350515463917526,
+              "fnr": 0.00032198905237221936,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9516113972032221,
+              "fpr": 0.0,
+              "fnr": 6.024072192481155e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.629624757151248,
+              "fpr": 0.0,
+              "fnr": 3.986514948766639e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "event_no_sport|3": {
+          "accuracy": 0.9996005511920829,
+          "precision_macro": 0.989157103749322,
+          "recall_macro": 0.9988871688201882,
+          "f1_macro": 0.9938906515940431,
+          "fpr": 0.0037294291042041577,
+          "fnr": 0.00011404724359280675,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9985391094280491,
+              "recall": 0.9962705708957958,
+              "f1": 0.9974035502476206,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.948235974551764,
+              "recall": 0.9987816021931161,
+              "f1": 0.9728526924788607,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999928030054649,
+              "recall": 0.9999784093271706,
+              "f1": 0.9999856061145226,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9990176317613322,
+              "recall": 0.9994052616848587,
+              "f1": 0.9992114091292112,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122349,
+              171,
+              0,
+              0,
+              287
+            ],
+            [
+              2,
+              3279,
+              0,
+              0,
+              2
+            ],
+            [
+              7,
+              0,
+              1250513,
+              0,
+              20
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              170,
+              8,
+              9,
+              0,
+              314237
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 458,
+            "false_negative": 179
+          },
+          "n_train": 196406,
+          "importances": {
+            "dport": 0.18938,
+            "proto": 0.07963,
+            "app": 0.06456,
+            "duration": 0.08528,
+            "conn_state": 0.0337,
+            "missed_bytes": 0.01321,
+            "history": 0.12227,
+            "bwd_pkts": 0.06359,
+            "bwd_ip_bytes": 0.09951,
+            "bytes": 0.00192,
+            "flgs": 0.09277,
+            "state": 0.01813,
+            "stddev": 0.04049,
+            "sum": 0.01735,
+            "min": 0.01687,
+            "max": 0.01402,
+            "rate": 0.02653,
+            "srate": 0.0099,
+            "drate": 0.0109
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7443144618974914,
+              "fpr": 0.0023629732367596444,
+              "fnr": 0.0001697767804417149,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.44847604165772326,
+              "fpr": 0.12987012987012986,
+              "fnr": 0.09055425448868072,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6459500290648751,
+              "fpr": 0.04381443298969072,
+              "fnr": 0.0002239923842589352,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9516113972032221,
+              "fpr": 0.0,
+              "fnr": 6.024072192481155e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.6296245356715733,
+              "fpr": 0.0,
+              "fnr": 3.986514948766639e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "incident_only|3": {
+          "accuracy": 0.9885607552182433,
+          "precision_macro": 0.841759484012897,
+          "recall_macro": 0.87250870617677,
+          "f1_macro": 0.8559505419615903,
+          "fpr": 0.09188401312628759,
+          "fnr": 0.004346537965307975,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.942354979086569,
+              "recall": 0.9081159868737124,
+              "f1": 0.9249187234607219,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.7617647058823529,
+              "recall": 0.8678038379530917,
+              "f1": 0.8113341876690873,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 1.0,
+              "recall": 0.9998080829081837,
+              "f1": 0.9999040322451657,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.5391545391545391,
+              "recall": 0.6087636932707355,
+              "f1": 0.571848585079015,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9655231959410243,
+              "recall": 0.9780519298781264,
+              "f1": 0.9717471813539613,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              111523,
+              522,
+              0,
+              178,
+              10584
+            ],
+            [
+              351,
+              2849,
+              0,
+              83,
+              0
+            ],
+            [
+              14,
+              0,
+              1250300,
+              0,
+              226
+            ],
+            [
+              267,
+              62,
+              0,
+              778,
+              171
+            ],
+            [
+              6190,
+              307,
+              0,
+              404,
+              307523
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 11284,
+            "false_negative": 6822
+          },
+          "n_train": 196406,
+          "importances": {
+            "n_events": 0.34903,
+            "span_s": 0.35198,
+            "events_per_s": 0.29899
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.4449152542372881,
+              "fpr": 0.1984732824427481,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "malware"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 0.24206349206349206,
+              "fpr": 0.06153846153846154,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.46865608123678737,
+              "fpr": 0.08990428246091677,
+              "fnr": 0.036125546238337074,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.24838353774311078,
+              "fpr": 0.14764267990074442,
+              "fnr": 0.6666666666666666,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 0.3083511777301927,
+              "fpr": 0.13858424725822532,
+              "fnr": 1.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.584674470643608,
+              "fpr": 0.05290546400693842,
+              "fnr": 0.034711409395973156,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.45924694469794625,
+              "fpr": 0.12121212121212122,
+              "fnr": 0.26697892271662765,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.26726390444195597,
+              "fpr": 0.33084112149532713,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.4333789463588975,
+              "fpr": 0.010309278350515464,
+              "fnr": 0.001910935028209041,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.6077654755679562,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.8870944487156793,
+              "fpr": 0.0,
+              "fnr": 9.301868213788824e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_incident|3": {
+          "accuracy": 0.9990451046248608,
+          "precision_macro": 0.9960322523614555,
+          "recall_macro": 0.9974559223128423,
+          "f1_macro": 0.9967339528396018,
+          "fpr": 0.011481430211632887,
+          "fnr": 0.00012487854605692806,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9983880651024318,
+              "recall": 0.9885185697883672,
+              "f1": 0.9934288052373159,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9939412299303242,
+              "recall": 0.999390801096558,
+              "f1": 0.9966585662211421,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 1.0,
+              "recall": 0.9999936027636062,
+              "f1": 0.9999968013715719,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.9922360248447205,
+              "recall": 1.0,
+              "f1": 0.9961028838659393,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9955959419298012,
+              "recall": 0.9993766379156808,
+              "f1": 0.9974827075020396,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121397,
+              20,
+              0,
+              0,
+              1390
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              8,
+              0,
+              1250532,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              186,
+              0,
+              0,
+              10,
+              314228
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1410,
+            "false_negative": 196
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.00836,
+            "dport": 0.09415,
+            "proto": 0.04496,
+            "app": 0.05791,
+            "duration": 0.06692,
+            "conn_state": 0.02927,
+            "missed_bytes": 0.01187,
+            "history": 0.06868,
+            "bwd_pkts": 0.05699,
+            "bwd_ip_bytes": 0.08896,
+            "bytes": 0.00349,
+            "flgs": 0.0532,
+            "state": 0.01414,
+            "stddev": 0.02301,
+            "sum": 0.0089,
+            "min": 0.01376,
+            "max": 0.01107,
+            "rate": 0.01505,
+            "srate": 0.00645,
+            "drate": 0.00505,
+            "n_events": 0.13743,
+            "span_s": 0.09912,
+            "events_per_s": 0.08125
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7471426884129176,
+              "fpr": 0.011575144261228404,
+              "fnr": 0.0005610015353726232,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.6565747808594535,
+              "fpr": 0.12554112554112554,
+              "fnr": 0.0234192037470726,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.95260033831183,
+              "fpr": 0.0,
+              "fnr": 0.0005669807226554298,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9516113972032221,
+              "fpr": 0.0,
+              "fnr": 6.024072192481155e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.9285700997295807,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_causal|3": {
+          "accuracy": 0.999048059127878,
+          "precision_macro": 0.9944853887700387,
+          "recall_macro": 0.9974913384973444,
+          "f1_macro": 0.9959714849174457,
+          "fpr": 0.011220858745836964,
+          "fnr": 0.00014016979659451108,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9981915182204539,
+              "recall": 0.988779141254163,
+              "f1": 0.9934630362928298,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9861737300871656,
+              "recall": 0.999390801096558,
+              "f1": 0.9927382753403934,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999808085210167,
+              "recall": 0.9999928031090569,
+              "f1": 0.9999868057790687,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.9922360248447205,
+              "recall": 1.0,
+              "f1": 0.9961028838659393,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9958448621768358,
+              "recall": 0.9992939470269445,
+              "f1": 0.9975664233089976,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121429,
+              45,
+              22,
+              0,
+              1311
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              9,
+              0,
+              1250531,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              209,
+              1,
+              2,
+              10,
+              314202
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1378,
+            "false_negative": 220
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.01565,
+            "dport": 0.12482,
+            "proto": 0.06504,
+            "app": 0.06243,
+            "duration": 0.08293,
+            "conn_state": 0.03087,
+            "missed_bytes": 0.0101,
+            "history": 0.08559,
+            "bwd_pkts": 0.0523,
+            "bwd_ip_bytes": 0.08694,
+            "bytes": 0.00258,
+            "flgs": 0.06173,
+            "state": 0.01445,
+            "stddev": 0.03829,
+            "sum": 0.01074,
+            "min": 0.01558,
+            "max": 0.01629,
+            "rate": 0.02758,
+            "srate": 0.00961,
+            "drate": 0.00713,
+            "n_so_far": 0.06385,
+            "span_so_far": 0.05497,
+            "rate_so_far": 0.06054
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.6971598776661521,
+              "fpr": 0.011138507902261948,
+              "fnr": 0.0008710286996574938,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7474546553801729,
+              "fpr": 0.0,
+              "fnr": 0.0006174496644295302,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.7188898191519841,
+              "fpr": 0.12337662337662338,
+              "fnr": 0.0039032006245121,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.4962335216572505,
+              "fpr": 0.014953271028037384,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.639104725886814,
+              "fpr": 0.010309278350515464,
+              "fnr": 0.0004549845305259621,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9374979919678714,
+              "fpr": 0.0,
+              "fnr": 8.03209625664154e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.9285700997295807,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_only|4": {
+          "accuracy": 0.9996153237071685,
+          "precision_macro": 0.9903841565264349,
+          "recall_macro": 0.9990356395751974,
+          "f1_macro": 0.9946071416851865,
+          "fpr": 0.0032652861807551687,
+          "fnr": 0.00011404724359280675,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9985397887180324,
+              "recall": 0.9967347138192448,
+              "f1": 0.9976364347655995,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9543206284550481,
+              "recall": 0.9990862016448371,
+              "f1": 0.9761904761904762,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999792084164331,
+              "recall": 0.9999520207270459,
+              "f1": 0.9999656143869405,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.999081157042661,
+              "recall": 0.9994052616848587,
+              "f1": 0.9992431830829159,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122406,
+              153,
+              11,
+              0,
+              237
+            ],
+            [
+              3,
+              3280,
+              0,
+              0,
+              0
+            ],
+            [
+              8,
+              0,
+              1250480,
+              0,
+              52
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              168,
+              4,
+              15,
+              0,
+              314237
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 401,
+            "false_negative": 179
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.0292,
+            "dport": 0.18775,
+            "proto": 0.07473,
+            "app": 0.0634,
+            "duration": 0.08484,
+            "conn_state": 0.03186,
+            "missed_bytes": 0.01579,
+            "history": 0.10669,
+            "bwd_pkts": 0.06084,
+            "bwd_ip_bytes": 0.10253,
+            "bytes": 0.00087,
+            "flgs": 0.0835,
+            "state": 0.02096,
+            "stddev": 0.03298,
+            "sum": 0.01126,
+            "min": 0.01966,
+            "max": 0.01755,
+            "rate": 0.03606,
+            "srate": 0.01004,
+            "drate": 0.00948
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7444344808582001,
+              "fpr": 0.0019006523860892793,
+              "fnr": 0.00022144797448919333,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.44938871106588607,
+              "fpr": 0.1277056277056277,
+              "fnr": 0.09679937548790007,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6529014634688952,
+              "fpr": 0.03865979381443299,
+              "fnr": 0.00011899595413755932,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9516113972032221,
+              "fpr": 0.0,
+              "fnr": 6.024072192481155e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.6190352160951847,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "event_no_sport|4": {
+          "accuracy": 0.9996732319663045,
+          "precision_macro": 0.9883802428138091,
+          "recall_macro": 0.9990039871463765,
+          "f1_macro": 0.9935400141261914,
+          "fpr": 0.0025487146498163788,
+          "fnr": 0.00010512734744588331,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9986548072297997,
+              "recall": 0.9974512853501836,
+              "f1": 0.9980526834673641,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.943836405529954,
+              "recall": 0.998172403289674,
+              "f1": 0.9702442635085122,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999920031411661,
+              "recall": 0.9999528203815952,
+              "f1": 0.9999724113775479,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9994179981681254,
+              "recall": 0.9994434267104292,
+              "f1": 0.9994307122775326,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              122494,
+              184,
+              0,
+              0,
+              129
+            ],
+            [
+              6,
+              3277,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              1250481,
+              0,
+              54
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              154,
+              11,
+              10,
+              0,
+              314249
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 313,
+            "false_negative": 165
+          },
+          "n_train": 196406,
+          "importances": {
+            "dport": 0.19969,
+            "proto": 0.08493,
+            "app": 0.06257,
+            "duration": 0.09495,
+            "conn_state": 0.03508,
+            "missed_bytes": 0.01707,
+            "history": 0.11299,
+            "bwd_pkts": 0.061,
+            "bwd_ip_bytes": 0.10292,
+            "bytes": 0.00167,
+            "flgs": 0.07483,
+            "state": 0.01746,
+            "stddev": 0.03256,
+            "sum": 0.01246,
+            "min": 0.02329,
+            "max": 0.0185,
+            "rate": 0.03104,
+            "srate": 0.00843,
+            "drate": 0.00858
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7080764482389793,
+              "fpr": 0.000676358281536275,
+              "fnr": 0.00019192157789063423,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498916341569137,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.44732384823848237,
+              "fpr": 0.12987012987012986,
+              "fnr": 0.0936768149882904,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.47445972495088407,
+              "fpr": 0.09719626168224299,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6285963912962899,
+              "fpr": 0.17783505154639176,
+              "fnr": 9.099690610519242e-05,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.6666656626516104,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.6190354375845722,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "incident_only|4": {
+          "accuracy": 0.9886145271731551,
+          "precision_macro": 0.8542677868947889,
+          "recall_macro": 0.8713359978585107,
+          "f1_macro": 0.8623112513001928,
+          "fpr": 0.09118372731196105,
+          "fnr": 0.004405791561141109,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9416573858459046,
+              "recall": 0.908816272688039,
+              "f1": 0.92494540693073,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.7838888888888889,
+              "recall": 0.8595796527566251,
+              "f1": 0.8199912828708412,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 1.0,
+              "recall": 0.9998080829081837,
+              "f1": 0.9999040322451657,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.5803571428571429,
+              "recall": 0.6103286384976526,
+              "f1": 0.5949656750572082,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.965435516882008,
+              "recall": 0.9781473424420528,
+              "f1": 0.9717498593970186,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              111609,
+              480,
+              0,
+              129,
+              10589
+            ],
+            [
+              351,
+              2822,
+              0,
+              83,
+              27
+            ],
+            [
+              12,
+              0,
+              1250300,
+              0,
+              228
+            ],
+            [
+              274,
+              57,
+              0,
+              780,
+              167
+            ],
+            [
+              6278,
+              241,
+              0,
+              352,
+              307553
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 11198,
+            "false_negative": 6915
+          },
+          "n_train": 196406,
+          "importances": {
+            "n_events": 0.36403,
+            "span_s": 0.33369,
+            "events_per_s": 0.30228
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.30428769017980634,
+              "fpr": 0.16030534351145037,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 0.2410358565737052,
+              "fpr": 0.06923076923076923,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.46855327962266813,
+              "fpr": 0.08981010599133576,
+              "fnr": 0.036959666942246366,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.3316592357231931,
+              "fpr": 0.14516129032258066,
+              "fnr": 0.6666666666666666,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2",
+                "malware"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 0.23592845870594423,
+              "fpr": 0.10568295114656032,
+              "fnr": 1.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.5885435222150962,
+              "fpr": 0.015611448395490026,
+              "fnr": 0.03618791946308725,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.44082212295637213,
+              "fpr": 0.12121212121212122,
+              "fnr": 0.26697892271662765,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.26726390444195597,
+              "fpr": 0.33084112149532713,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.44570589825811535,
+              "fpr": 0.023195876288659795,
+              "fnr": 0.001399952401618345,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.6077654755679562,
+              "fpr": 0.0,
+              "fnr": 1.204814438496231e-05,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.6091938519802712,
+              "fpr": 0.0,
+              "fnr": 6.644191581277731e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            }
+          }
+        },
+        "event_plus_incident|4": {
+          "accuracy": 0.9990734678538253,
+          "precision_macro": 0.9957699101653887,
+          "recall_macro": 0.9975400888621939,
+          "f1_macro": 0.9966409022042374,
+          "fpr": 0.011033573004796144,
+          "fnr": 0.00011914432710533442,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9984626641126613,
+              "recall": 0.9889664269952039,
+              "f1": 0.9936918583245379,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9861737300871656,
+              "recall": 0.999390801096558,
+              "f1": 0.9927382753403934,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 1.0,
+              "recall": 0.9999952020727045,
+              "f1": 0.9999976010305972,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 0.9984375,
+              "recall": 1.0,
+              "f1": 0.9992181391712275,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.995775656627117,
+              "recall": 0.9993480141465028,
+              "f1": 0.9975586371544313,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121452,
+              22,
+              0,
+              0,
+              1333
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              0,
+              1250534,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              179,
+              24,
+              0,
+              2,
+              314219
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1355,
+            "false_negative": 187
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.00966,
+            "dport": 0.09643,
+            "proto": 0.04191,
+            "app": 0.06766,
+            "duration": 0.04341,
+            "conn_state": 0.02284,
+            "missed_bytes": 0.01208,
+            "history": 0.07741,
+            "bwd_pkts": 0.05008,
+            "bwd_ip_bytes": 0.0887,
+            "bytes": 0.00337,
+            "flgs": 0.05763,
+            "state": 0.01175,
+            "stddev": 0.02039,
+            "sum": 0.0142,
+            "min": 0.01391,
+            "max": 0.00845,
+            "rate": 0.01742,
+            "srate": 0.00923,
+            "drate": 0.01046,
+            "n_events": 0.14442,
+            "span_s": 0.09804,
+            "events_per_s": 0.08056
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 0.49808429118773945,
+              "fpr": 0.007633587786259542,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.5317330805463549,
+              "fpr": 0.011361106830362493,
+              "fnr": 0.0003026455651352309,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7498881590870649,
+              "fpr": 0.0,
+              "fnr": 2.6845637583892618e-05,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.46577867928529804,
+              "fpr": 0.05627705627705628,
+              "fnr": 0.09445745511319281,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.9879869256968701,
+              "fpr": 0.002577319587628866,
+              "fnr": 0.00012599571614565106,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.9827581186831351,
+              "fpr": 0.0,
+              "fnr": 2.008024064160385e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.9285700997295807,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        },
+        "event_plus_causal|4": {
+          "accuracy": 0.9990409683206368,
+          "precision_macro": 0.9948869302764403,
+          "recall_macro": 0.9975338462223682,
+          "f1_macro": 0.9961882338102637,
+          "fpr": 0.01080557297222471,
+          "fnr": 0.00016438094327901753,
+          "n_samples": 1692332,
+          "per_class": {
+            "benign": {
+              "precision": 0.9978806946064499,
+              "recall": 0.9891944270277753,
+              "f1": 0.993518575313337,
+              "support": 122807
+            },
+            "c2": {
+              "precision": 0.9805738194859533,
+              "recall": 0.999390801096558,
+              "f1": 0.989892894855936,
+              "support": 3283
+            },
+            "dos": {
+              "precision": 0.9999656158167243,
+              "recall": 0.9999936027636062,
+              "f1": 0.9999796090943439,
+              "support": 1250540
+            },
+            "malware": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 1278
+            },
+            "recon": {
+              "precision": 0.9960145214730735,
+              "recall": 0.9990904002239015,
+              "f1": 0.9975500897877009,
+              "support": 314424
+            }
+          },
+          "confusion_matrix": [
+            [
+              121480,
+              37,
+              35,
+              0,
+              1255
+            ],
+            [
+              2,
+              3281,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              0,
+              1250532,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              1278,
+              0
+            ],
+            [
+              250,
+              28,
+              8,
+              0,
+              314138
+            ]
+          ],
+          "classes": [
+            "benign",
+            "c2",
+            "dos",
+            "malware",
+            "recon"
+          ],
+          "binary_counts": {
+            "benign": 122807,
+            "attack": 1569525,
+            "false_positive": 1327,
+            "false_negative": 258
+          },
+          "n_train": 196406,
+          "importances": {
+            "sport": 0.01296,
+            "dport": 0.12763,
+            "proto": 0.0665,
+            "app": 0.06002,
+            "duration": 0.07241,
+            "conn_state": 0.03254,
+            "missed_bytes": 0.01334,
+            "history": 0.09489,
+            "bwd_pkts": 0.0516,
+            "bwd_ip_bytes": 0.0806,
+            "bytes": 0.00278,
+            "flgs": 0.06225,
+            "state": 0.01479,
+            "stddev": 0.02937,
+            "sum": 0.01417,
+            "min": 0.01768,
+            "max": 0.01383,
+            "rate": 0.03126,
+            "srate": 0.00888,
+            "drate": 0.00917,
+            "n_so_far": 0.06617,
+            "span_so_far": 0.06508,
+            "rate_so_far": 0.05209
+          },
+          "per_source": {
+            "CTU-Honeypot-Capture-4-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 131,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-Honeypot-Capture-5-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 390,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-1-1": {
+              "f1_macro": 0.7046263590191213,
+              "fpr": 0.010676187051591582,
+              "fnr": 0.0010038974843510097,
+              "n_samples": 252274,
+              "classes": [
+                "benign",
+                "c2",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-20-1": {
+              "f1_macro": 0.9702782538930017,
+              "fpr": 0.0,
+              "fnr": 0.1111111111111111,
+              "n_samples": 815,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-21-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 1004,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-3-1": {
+              "f1_macro": 0.7418607765656726,
+              "fpr": 0.0,
+              "fnr": 0.0020134228187919465,
+              "n_samples": 38403,
+              "classes": [
+                "benign",
+                "c2",
+                "malware",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-34-1": {
+              "f1_macro": 0.7224552726468421,
+              "fpr": 0.12121212121212122,
+              "fnr": 0.00234192037470726,
+              "n_samples": 1743,
+              "classes": [
+                "benign",
+                "c2",
+                "dos",
+                "recon"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-42-1": {
+              "f1_macro": 0.49504483246814535,
+              "fpr": 0.019626168224299065,
+              "fnr": NaN,
+              "n_samples": 1070,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-44-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": NaN,
+              "n_samples": 53,
+              "classes": [
+                "benign"
+              ]
+            },
+            "CTU-IoT-Malware-Capture-8-1": {
+              "f1_macro": 1.0,
+              "fpr": 0.0,
+              "fnr": 0.0,
+              "n_samples": 2634,
+              "classes": [
+                "benign",
+                "c2"
+              ]
+            },
+            "data_1": {
+              "f1_macro": 0.6497578698292376,
+              "fpr": 0.007731958762886598,
+              "fnr": 0.00026599095630748553,
+              "n_samples": 143250,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_10": {
+              "f1_macro": 0.6551714097780472,
+              "fpr": 0.0,
+              "fnr": 2.008024064160385e-06,
+              "n_samples": 498016,
+              "classes": [
+                "benign",
+                "dos",
+                "recon"
+              ]
+            },
+            "data_36": {
+              "f1_macro": 0.9285700997295807,
+              "fpr": 0.0,
+              "fnr": 5.315353265022185e-06,
+              "n_samples": 752549,
+              "classes": [
+                "benign",
+                "dos"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

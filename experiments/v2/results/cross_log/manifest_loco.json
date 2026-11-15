@@ -1,0 +1,66 @@
+{
+  "run_id": "crosslog_v2_loco",
+  "created_utc": "2026-11-03T14:22:55Z",
+  "git_commit": "44c8e79aa19e23522728c9df4e34d7850080cf55",
+  "git_dirty": true,
+  "python": "3.15.0",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1"
+  },
+  "command": "experiments/v2/cross_log_v2.py primary loco",
+  "inputs": {
+    "CTU-IoT-Malware-Capture-1-1.parquet": "716865c458614de5b6ce599e30d6d63af64e361eee938c9371f1da8eced21794",
+    "CTU-IoT-Malware-Capture-20-1.parquet": "0ef6917b155b3465df68fa56ddc7e05ac8e44694a039f82dd38676650e866ef4",
+    "CTU-IoT-Malware-Capture-21-1.parquet": "64aa2abbebb7e9dd73d8850a4755e201b7ebe313aa47a238e9be9a5c059a7495",
+    "CTU-IoT-Malware-Capture-3-1.parquet": "855cead294317c14d84f7e5796267c14c37674c03a0337fb1c8131ff9f03f4f9",
+    "CTU-IoT-Malware-Capture-34-1.parquet": "9cc4a83b4968ef08449708951af61946f22a2c61a024b860c61664e098335402",
+    "CTU-IoT-Malware-Capture-42-1.parquet": "9b19135fb223065184948746b7b77ecfe69ffa1ada9a267b7b88a7d43bcca7bc",
+    "CTU-IoT-Malware-Capture-48-1.parquet": "8af4906d306c16771b63de89bb9f0b07bf1cf8c2a75d5a95ee8d6314e0c0a581",
+    "CTU-IoT-Malware-Capture-8-1.parquet": "8ee0feb325916ed8b3bcda6c85bb8063533f00fa391dbf30697bb87c80fd8683",
+    "alert_categories.json": "69032806b1fbf9904efe7d3af3ce80d02f570a1bc945eafaf4feef84298f9e89"
+  },
+  "outputs": {
+    "loco.json": "7c500806158c8dc13dbd62638b383c26cbd264e8dbbbeab544a415755f4e5e79",
+    "loco_predictions.parquet": "fcda463d6328091d0d1e4c773c9cdbfcacef8dd86e9549a81ebfbb12fe8b420a"
+  },
+  "config": {
+    "rf_params": {
+      "n_estimators": 300,
+      "max_depth": 24,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced_subsample",
+      "n_jobs": -1
+    },
+    "budget_per_class": 60000,
+    "captures": [
+      "CTU-IoT-Malware-Capture-1-1",
+      "CTU-IoT-Malware-Capture-20-1",
+      "CTU-IoT-Malware-Capture-21-1",
+      "CTU-IoT-Malware-Capture-3-1",
+      "CTU-IoT-Malware-Capture-34-1",
+      "CTU-IoT-Malware-Capture-42-1",
+      "CTU-IoT-Malware-Capture-48-1",
+      "CTU-IoT-Malware-Capture-8-1"
+    ],
+    "variant": "start_300",
+    "conditions": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "Z",
+      "P",
+      "MAJ",
+      "STR"
+    ]
+  },
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ]
+}

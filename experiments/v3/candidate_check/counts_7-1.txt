@@ -1,0 +1,5 @@
+11333397	Malicious Okiru
+5778	Malicious C&C-HeartBeat
+75955	Benign -
+39584	Malicious DDoS
+TS_RANGE	1532100684.348571	1532187079.130022

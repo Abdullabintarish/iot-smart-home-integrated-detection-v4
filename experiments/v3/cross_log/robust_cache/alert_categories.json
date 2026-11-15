@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "A client was using an unusual port",
+    "Attempted Information Leak",
+    "Malware Command and Control Activity Detected",
+    "Misc Attack",
+    "Misc activity",
+    "Potential Corporate Privacy Violation",
+    "Potentially Bad Traffic"
+  ],
+  "counts_by_capture": {
+    "CTU-IoT-Malware-Capture-1-1": {
+      "Misc Attack": 38,
+      "Attempted Information Leak": 3
+    },
+    "CTU-IoT-Malware-Capture-20-1": {},
+    "CTU-IoT-Malware-Capture-21-1": {},
+    "CTU-IoT-Malware-Capture-3-1": {
+      "Attempted Information Leak": 50470,
+      "Misc Attack": 41,
+      "Malware Command and Control Activity Detected": 13,
+      "A client was using an unusual port": 5
+    },
+    "CTU-IoT-Malware-Capture-34-1": {
+      "Misc activity": 7853,
+      "Potential Corporate Privacy Violation": 12,
+      "Potentially Bad Traffic": 12
+    },
+    "CTU-IoT-Malware-Capture-36-1": {
+      "Misc Attack": 2
+    },
+    "CTU-IoT-Malware-Capture-42-1": {
+      "Misc activity": 1917,
+      "Potentially Bad Traffic": 94,
+      "Potential Corporate Privacy Violation": 8
+    },
+    "CTU-IoT-Malware-Capture-48-1": {
+      "Potential Corporate Privacy Violation": 11,
+      "Potentially Bad Traffic": 11,
+      "Misc Attack": 6
+    },
+    "CTU-IoT-Malware-Capture-49-1": {
+      "Malware Command and Control Activity Detected": 1367,
+      "Potential Corporate Privacy Violation": 13,
+      "Potentially Bad Traffic": 13,
+      "Misc Attack": 1
+    },
+    "CTU-IoT-Malware-Capture-7-1": {
+      "Misc Attack": 36
+    },
+    "CTU-IoT-Malware-Capture-8-1": {}
+  }
+}

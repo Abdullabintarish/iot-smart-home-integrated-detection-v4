@@ -1,0 +1,5 @@
+13626744	Malicious Okiru
+15688	Malicious C&C-HeartBeat
+2663	Benign -
+3	Malicious Okiru-Attack
+TS_RANGE	1545395809.340185	1545482199.268061

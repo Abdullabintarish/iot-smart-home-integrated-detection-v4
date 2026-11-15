@@ -6,3 +6,10 @@ code/data/
 __pycache__/
 *.pyc
 code/demo/cache/
+
+# v3 cross-log raw captures, sensor output, third-party ruleset and large derived tables (regenerable, >100 MB)
+experiments/v3/cross_log/pcaps/
+experiments/v3/cross_log/sensor_out/
+experiments/v3/cross_log/ruleset/
+experiments/v3/cross_log/results/conn_labelled_*.parquet
+experiments/v3/cross_log/results/records_linked_*.parquet

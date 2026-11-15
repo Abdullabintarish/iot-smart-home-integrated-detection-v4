@@ -1,0 +1,126 @@
+{
+  "cross_log_primary": {
+    "values_checked": 40,
+    "mismatches": [],
+    "majority_baseline_all_benign": true,
+    "manifest": {
+      "outputs_hash_equal": {
+        "primary.json": true,
+        "primary_predictions.parquet": true
+      },
+      "all": true
+    }
+  },
+  "cross_log_loco": {
+    "values_checked": 320,
+    "mismatches": [],
+    "majority_baseline_all_benign": true,
+    "manifest": {
+      "outputs_hash_equal": {
+        "loco.json": true,
+        "loco_predictions.parquet": true
+      },
+      "all": true
+    }
+  },
+  "ablation_runB": {
+    "runs_checked": 25,
+    "mismatches": [],
+    "manifest": {
+      "outputs_hash_equal": {
+        "runB_metrics.json": true,
+        "runB_predictions.parquet": true
+      },
+      "all": true
+    },
+    "reproduces_historical_ablation": {
+      "event_only|42": {
+        "historical": 0.994877598558214,
+        "v2": 0.9948775985582141,
+        "equal": true
+      },
+      "event_only|1": {
+        "historical": 0.994321170386509,
+        "v2": 0.994321170386509,
+        "equal": true
+      },
+      "event_only|2": {
+        "historical": 0.9948385627108094,
+        "v2": 0.9948385627108094,
+        "equal": true
+      },
+      "event_only|3": {
+        "historical": 0.9972761743952951,
+        "v2": 0.9972761743952953,
+        "equal": true
+      },
+      "event_only|4": {
+        "historical": 0.9946071416851864,
+        "v2": 0.9946071416851865,
+        "equal": true
+      },
+      "event_plus_incident|42": {
+        "historical": 0.9964330510971822,
+        "v2": 0.9964330510971822,
+        "equal": true
+      },
+      "event_plus_incident|1": {
+        "historical": 0.9962835622339896,
+        "v2": 0.9962835622339895,
+        "equal": true
+      },
+      "event_plus_incident|2": {
+        "historical": 0.9958955208268644,
+        "v2": 0.9958955208268643,
+        "equal": true
+      },
+      "event_plus_incident|3": {
+        "historical": 0.9967339528396018,
+        "v2": 0.9967339528396018,
+        "equal": true
+      },
+      "event_plus_incident|4": {
+        "historical": 0.9966409022042374,
+        "v2": 0.9966409022042374,
+        "equal": true
+      },
+      "incident_only|42": {
+        "historical": 0.8574142532318809,
+        "v2": 0.8574142532318809,
+        "equal": true
+      },
+      "incident_only|1": {
+        "historical": 0.8533487832836404,
+        "v2": 0.8533487832836404,
+        "equal": true
+      },
+      "incident_only|2": {
+        "historical": 0.8542090670805862,
+        "v2": 0.8542090670805862,
+        "equal": true
+      },
+      "incident_only|3": {
+        "historical": 0.8559505419615903,
+        "v2": 0.8559505419615903,
+        "equal": true
+      },
+      "incident_only|4": {
+        "historical": 0.8623112513001928,
+        "v2": 0.8623112513001928,
+        "equal": true
+      }
+    }
+  },
+  "ablation_loso": {
+    "runs_checked": 195,
+    "mismatches": [],
+    "manifest": {
+      "outputs_hash_equal": {
+        "loso_metrics.json": true,
+        "loso_predictions.parquet": true
+      },
+      "all": true
+    }
+  },
+  "all_ok": true
+}

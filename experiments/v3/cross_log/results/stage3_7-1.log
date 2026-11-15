@@ -1,0 +1,5 @@
+{"benign_and_attack_present": true, "match_rate_ge_0_90": true, "cross_source_incidents_exist": true, "pass": true} 1.0 36
+
+real	8m20.118s
+user	0m0.000s
+sys	0m0.000s

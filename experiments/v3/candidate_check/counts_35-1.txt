@@ -1,0 +1,6 @@
+81	Malicious C&C
+12	Malicious C&C-FileDownload
+8262389	Benign -
+2185302	Malicious DDoS
+3	Malicious Attack
+TS_RANGE	1545402842.657233	1545489237.289245

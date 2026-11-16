@@ -1,0 +1,46 @@
+﻿start 2026-11-16 05:02:22Z
+[09:02:24] loading Run B test events
+[09:02:24] 1,692,332 test events
+                                  name  n_alerts  false_alarm_alerts  false_alarm_share  attack_incidents_detected  attack_incidents_missed  f1_macro      fpr  delay_median_s  delay_p90_s
+                          A_fragmented   1569860                 566           0.000361                      64221                       22  0.995451 0.004609        0.000000     0.000000
+                 C_fragmented_w60_open     76772                 482           0.006278                      64221                       22  0.995451 0.004609        0.000000     0.000000
+               C_fragmented_w60_closed     76772                 482           0.006278                      64221                       22  0.995451 0.004609       15.028434    15.038669
+                C_fragmented_w300_open     64700                 479           0.007403                      64221                       22  0.995451 0.004609        0.000000     0.000000
+              C_fragmented_w300_closed     64700                 479           0.007403                      64221                       22  0.995451 0.004609       15.028688    15.038712
+                C_fragmented_w900_open     64152                 479           0.007467                      64221                       22  0.995451 0.004609        0.000000     0.000000
+              C_fragmented_w900_closed     64152                 479           0.007467                      64221                       22  0.995451 0.004609       15.028690    15.038720
+                          B_integrated     62543                3661           0.058536                      58882                     5361  0.834100 0.102111       15.028713    15.038860
+                 A_ablation_event_only   1569867                 517           0.000329                      64215                       28  0.994878 0.004210        0.000000     0.000000
+        C_ablation_event_only_w60_open     76586                 306           0.003996                      64215                       28  0.994878 0.004210        0.000000     0.000000
+      C_ablation_event_only_w60_closed     76586                 306           0.003996                      64215                       28  0.994878 0.004210       15.028434    15.038669
+       C_ablation_event_only_w300_open     64494                 279           0.004326                      64215                       28  0.994878 0.004210        0.000000     0.000000
+     C_ablation_event_only_w300_closed     64494                 279           0.004326                      64215                       28  0.994878 0.004210       15.028688    15.038712
+       C_ablation_event_only_w900_open     63946                 279           0.004363                      64215                       28  0.994878 0.004210        0.000000     0.000000
+     C_ablation_event_only_w900_closed     63946                 279           0.004363                      64215                       28  0.994878 0.004210       15.028690    15.038719
+            A_ablation_event_plus_thin   1570716                1386           0.000882                      64191                       52  0.996433 0.011286        0.000000     0.000000
+   C_ablation_event_plus_thin_w60_open     76841                 586           0.007626                      64191                       52  0.996433 0.011286        0.000000     0.000000
+ C_ablation_event_plus_thin_w60_closed     76841                 586           0.007626                      64191                       52  0.996433 0.011286       15.028434    15.038669
+  C_ablation_event_plus_thin_w300_open     64698                 507           0.007836                      64191                       52  0.996433 0.011286        0.000000     0.000000
+C_ablation_event_plus_thin_w300_closed     64698                 507           0.007836                      64191                       52  0.996433 0.011286       15.028688    15.038712
+  C_ablation_event_plus_thin_w900_open     64147                 503           0.007841                      64191                       52  0.996433 0.011286        0.000000     0.000000
+C_ablation_event_plus_thin_w900_closed     64147                 503           0.007841                      64191                       52  0.996433 0.011286       15.028690    15.038719
+{
+  "n_test": 1692332,
+  "integrated_prediction_constant_within_incident": true,
+  "true_incidents": 175489,
+  "attack_incidents": 64243,
+  "C_equals_A_event_metrics_fragmented": true,
+  "C_open_delay_equals_A_fragmented": true,
+  "C_equals_A_event_metrics_ablation_event_only": true,
+  "C_open_delay_equals_A_ablation_event_only": true,
+  "C_equals_A_event_metrics_ablation_event_plus_thin": true,
+  "C_open_delay_equals_A_ablation_event_plus_thin": true,
+  "multi_event_benign_fpr": {
+    "n_benign_in_multi_event_groups": 16428,
+    "integrated": 0.7633308984660336,
+    "fragmented": 0.03183588994399805
+  },
+  "minutes": 4.1
+}
+[09:06:33] done
+exit 0 end 2026-11-16 05:06:33Z

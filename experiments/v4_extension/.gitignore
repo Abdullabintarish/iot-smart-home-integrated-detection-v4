@@ -1,0 +1,2 @@
+﻿# Alert-group ids are rebuilt exactly by run_alert_workload.py from e2_events.parquet + the event table (~65 MB)
+results/e2/groups_*.parquet

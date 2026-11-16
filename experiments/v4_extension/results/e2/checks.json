@@ -1,0 +1,18 @@
+{
+  "n_test": 1692332,
+  "integrated_prediction_constant_within_incident": true,
+  "true_incidents": 175489,
+  "attack_incidents": 64243,
+  "C_equals_A_event_metrics_fragmented": true,
+  "C_open_delay_equals_A_fragmented": true,
+  "C_equals_A_event_metrics_ablation_event_only": true,
+  "C_open_delay_equals_A_ablation_event_only": true,
+  "C_equals_A_event_metrics_ablation_event_plus_thin": true,
+  "C_open_delay_equals_A_ablation_event_plus_thin": true,
+  "multi_event_benign_fpr": {
+    "n_benign_in_multi_event_groups": 16428,
+    "integrated": 0.7633308984660336,
+    "fragmented": 0.03183588994399805
+  },
+  "minutes": 4.1
+}

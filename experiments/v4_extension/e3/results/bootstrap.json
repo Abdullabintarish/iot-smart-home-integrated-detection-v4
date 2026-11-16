@@ -1,0 +1,42 @@
+{
+  "P1_flow": {
+    "prevented_diff": 0.9529169653239037,
+    "prevented_diff_ci": [
+      0.8702734607070549,
+      0.973739330819737
+    ],
+    "wrongly_blocked_diff": 0.005284715040673577,
+    "wrongly_blocked_diff_ci": [
+      0.0034090755464766557,
+      0.00722918830989564
+    ],
+    "prevented_excl_dos_diff": 0.7683809583522736,
+    "prevented_excl_dos_diff_ci": [
+      0.6791207265615863,
+      0.8386056177602218
+    ],
+    "n_boot": 1000,
+    "seed": 42,
+    "clusters": 175489
+  },
+  "P2_host": {
+    "prevented_diff": 0.8114448638919418,
+    "prevented_diff_ci": [
+      0.5333279921630801,
+      0.8999464524566956
+    ],
+    "wrongly_blocked_diff": -0.0041447148778164114,
+    "wrongly_blocked_diff_ci": [
+      -0.007280866212638221,
+      -0.0014282440118072416
+    ],
+    "prevented_excl_dos_diff": 0.16106086493095287,
+    "prevented_excl_dos_diff_ci": [
+      0.10122496838737446,
+      0.236276504198081
+    ],
+    "n_boot": 1000,
+    "seed": 42,
+    "clusters": 175489
+  }
+}

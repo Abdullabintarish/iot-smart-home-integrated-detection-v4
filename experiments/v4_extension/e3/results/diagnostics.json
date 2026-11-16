@@ -1,0 +1,31 @@
+{
+  "flows": 171489,
+  "flows_with_one_incident": 170445,
+  "attack_events_in_single_incident_flows_share": 0.9058256478870996,
+  "benign_events": 122807,
+  "benign_events_from_hosts_with_attacks_share": 0.9469411352773051,
+  "hosts": 4258,
+  "hosts_with_attacks": 23,
+  "benign_events_per_source": {
+    "CTU-IoT-Malware-Capture-1-1": 116802,
+    "CTU-IoT-Malware-Capture-3-1": 1153,
+    "CTU-IoT-Malware-Capture-42-1": 1070,
+    "CTU-IoT-Malware-Capture-21-1": 1003,
+    "CTU-IoT-Malware-Capture-20-1": 806,
+    "CTU-IoT-Malware-Capture-8-1": 523,
+    "CTU-IoT-Malware-Capture-34-1": 462,
+    "CTU-Honeypot-Capture-5-1": 390,
+    "data_1": 388,
+    "CTU-Honeypot-Capture-4-1": 131,
+    "CTU-IoT-Malware-Capture-44-1": 53,
+    "data_10": 14,
+    "data_36": 12
+  },
+  "B_P2_attack_events_at_or_before_first_B_alert_on_host_share": 0.7794906102164668,
+  "B_P2_dos_events_at_or_before_first_B_alert_on_host_share": 0.9773513842020247,
+  "dos_incidents": 13,
+  "dos_incident_size_median": 72.0,
+  "dos_incident_size_max": 271637,
+  "dos_events_in_incidents_over_1000_events_share": 0.9998080829081837,
+  "dos_incident_span_median_s": 102.9133939743042
+}

@@ -1,0 +1,22 @@
+{
+  "P1_flow": {
+    "captures_with_attacks": 9,
+    "AC_more_prevented": 8,
+    "AC_less_prevented": 0,
+    "prevented_ties": 1,
+    "captures_with_benign": 13,
+    "AC_fewer_wrongly_blocked": 3,
+    "AC_more_wrongly_blocked": 3,
+    "wrongly_blocked_ties": 7
+  },
+  "P2_host": {
+    "captures_with_attacks": 9,
+    "AC_more_prevented": 8,
+    "AC_less_prevented": 1,
+    "prevented_ties": 0,
+    "captures_with_benign": 13,
+    "AC_fewer_wrongly_blocked": 5,
+    "AC_more_wrongly_blocked": 6,
+    "wrongly_blocked_ties": 2
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "join": {
+    "test_events": 1692332,
+    "e2_rows": 1692332,
+    "e2_event_id_unique": true,
+    "test_event_id_unique": true,
+    "joined": 1692332,
+    "incident_id_matches": true,
+    "label_matches": true,
+    "ts_matches": true
+  },
+  "replay_events": 1692332,
+  "P1_flow_keys": 171489,
+  "P1_flow_one_key_per_incident": true,
+  "P2_host_keys": 4258,
+  "P2_host_one_key_per_incident": true,
+  "integrated_constant_within_incident": true,
+  "attack_incidents": 64243,
+  "true_incidents": 175489,
+  "C_triggers_equal_A": true,
+  "C_blocking_equals_A_P1_flow_60": true,
+  "C_blocking_equals_A_P1_flow_300": true,
+  "C_blocking_equals_A_P1_flow_900": true,
+  "C_blocking_equals_A_P1_flow_end": true,
+  "C_blocking_equals_A_P2_host_60": true,
+  "C_blocking_equals_A_P2_host_300": true,
+  "C_blocking_equals_A_P2_host_900": true,
+  "C_blocking_equals_A_P2_host_end": true,
+  "minutes": 0.7
+}

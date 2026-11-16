@@ -1,0 +1,70 @@
+{
+  "incident_rich_minus_incident_thin": {
+    "window_s": 300,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": 0.12430631764127031,
+    "fpr_point": -0.0030698575814082363,
+    "f1_macro_diff": [
+      0.0944986375754205,
+      0.1611904530070532
+    ],
+    "fpr_diff": [
+      -0.006178999979519943,
+      -0.0003168154340093276
+    ],
+    "n_boot": 1000
+  },
+  "incident_rich_minus_event_only": {
+    "window_s": 300,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": -0.013157027685062883,
+    "fpr_point": 0.0841157263022466,
+    "f1_macro_diff": [
+      -0.017335248039991254,
+      -0.009435828483057379
+    ],
+    "fpr_diff": [
+      0.08123052737222247,
+      0.08695099659743356
+    ],
+    "n_boot": 1000
+  },
+  "event_plus_rich_minus_event_only": {
+    "window_s": 300,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": 0.00012681145433934837,
+    "fpr_point": 0.010137858591122654,
+    "f1_macro_diff": [
+      -0.003483867687193251,
+      0.003640431347512459
+    ],
+    "fpr_diff": [
+      0.008963007226903952,
+      0.011300442687440787
+    ],
+    "n_boot": 1000
+  },
+  "event_plus_rich_minus_event_plus_rich_permuted": {
+    "window_s": 300,
+    "seed": 42,
+    "boot_seed": 42,
+    "cluster": "Run B incident_id",
+    "f1_macro_point": 0.012625376811121414,
+    "fpr_point": -0.0027848575406939358,
+    "f1_macro_diff": [
+      0.0081290554138627,
+      0.01951825387029383
+    ],
+    "fpr_diff": [
+      -0.003303337584456715,
+      -0.0022841200062304954
+    ],
+    "n_boot": 1000
+  }
+}

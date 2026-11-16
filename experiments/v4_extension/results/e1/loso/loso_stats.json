@@ -1,0 +1,73 @@
+{
+  "unit": "held-out source, seed-mean (n = 13)",
+  "tests": {
+    "f1_macro": [
+      {
+        "x": "incident_rich",
+        "y": "event_only",
+        "n": 13,
+        "mean_x": 0.47821729767735555,
+        "mean_y": 0.3720877432278187,
+        "mean_diff": 0.10612955444953685,
+        "median_diff": 0.07712385453593434,
+        "folds_positive": 10,
+        "folds_negative": 3,
+        "p_sign_flip": 0.048095703125,
+        "p_sign_flip_holm": 0.06494140625
+      },
+      {
+        "x": "event_plus_rich",
+        "y": "event_only",
+        "n": 13,
+        "mean_x": 0.4867632496729605,
+        "mean_y": 0.3720877432278187,
+        "mean_diff": 0.11467550644514181,
+        "median_diff": 0.08665448638482592,
+        "folds_positive": 9,
+        "folds_negative": 4,
+        "p_sign_flip": 0.032470703125,
+        "p_sign_flip_holm": 0.06494140625
+      }
+    ],
+    "fpr": [
+      {
+        "x": "incident_rich",
+        "y": "event_only",
+        "n": 13,
+        "mean_x": 0.12520816918718886,
+        "mean_y": 0.17080387553058604,
+        "mean_diff": -0.045595706343397185,
+        "median_diff": 0.0,
+        "folds_positive": 6,
+        "folds_negative": 6,
+        "p_sign_flip": 0.5859375,
+        "p_sign_flip_holm": 0.5859375
+      },
+      {
+        "x": "event_plus_rich",
+        "y": "event_only",
+        "n": 13,
+        "mean_x": 0.1363883194040957,
+        "mean_y": 0.17080387553058604,
+        "mean_diff": -0.034415556126490304,
+        "median_diff": 0.0,
+        "folds_positive": 3,
+        "folds_negative": 6,
+        "p_sign_flip": 0.27734375,
+        "p_sign_flip_holm": 0.5546875
+      }
+    ]
+  },
+  "means": {
+    "f1_macro_event_only": 0.3720877432278187,
+    "f1_macro_event_plus_rich": 0.4867632496729605,
+    "f1_macro_incident_rich": 0.47821729767735555,
+    "fpr_event_only": 0.17080387553058604,
+    "fpr_event_plus_rich": 0.1363883194040957,
+    "fpr_incident_rich": 0.12520816918718886
+  },
+  "event_only_matches_v3_rf_event_only": {
+    "compared": 65,
+    "all_match": true
+  }
+}
